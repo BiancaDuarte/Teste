@@ -3,7 +3,7 @@ extends layout
 block body
 	.container
 		// Static navbar
-		nav.navbar.navbar-default
+		nav.navbar.navbar-inverse
 			.container-fluid
 				.navbar-header
 					button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#navbar', aria-expanded='false', aria-controls='navbar')
@@ -48,6 +48,42 @@ block body
 							a(href='navbar-fixed.html') Fixed top
 
 		// Main component for a primary marketing message or call to action
+
+		.jumbotron
+			img.className#IdName(src="/images/castelo.jpg" alt="Image Title")
+
+		.jumbotron
+		.container
+			h1 Hello, world!
+			p
+				| This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.
+			p
+				a.btn.btn-primary.btn-lg(href='#', role='button') Learn more »
+	.container
+		.row
+			.col-md-3
+				h2 Heading
+				img.className#IdName(src="/images/castelo.jpg" alt="Image Title")
+				p
+					a.btn.btn-default(href='#', role='button') View details »
+			.col-md-3
+				h2 Heading
+				img.className#IdName(src="/images/logo.jpg" alt="Image Title")
+				p
+					a.btn.btn-default(href='#', role='button') View details »
+			.col-md-3
+				h2 Heading
+				p
+					| Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+				p
+					a.btn.btn-default(href='#', role='button') View details »
+
+			.col-md-3
+				h2 Heading
+				p
+					| Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+				p
+					a.btn.btn-default(href='#', role='button') View details »
 
 			
 			

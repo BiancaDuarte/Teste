@@ -704,7 +704,7 @@ musica: [
 	},
 ],
 
-Seriados:[
+seriados:[
 	{
 		"Código":"1050",
 		"Nome":"Breaking Bad",
@@ -775,11 +775,242 @@ Seriados:[
 		"Estoque2":"23 disponíveis"
 	},
 
+	{
+		"Código":"1055",
+		"Nome":"Doctor Who",
+		"Preço1":"55,60",
+		"Preço2":"68,80",
+		"Moldura":"Em madeira de reflorestamento com pintura na cor preto fosco.",
+		"Tamannho1":"40cm x 25cm(com moldura)",
+		"Tamannho2":"60cm x 45cm(com moldura)",
+		"Observações":":A cor do produto pode variar de acordo com as configurações do seu monitor",
+		"Impressão e acabamento":"Fotográfica de alta resolução com laminação fosca anti-risco",
+		"Estoque1":"2 disponíveis",
+		"Estoque2":"6 disponíveis"
+	},
 
+	{
+		"Código":"1056",
+		"Nome":"Doctor Who",
+		"Preço1":"55,60",
+		"Preço2":"68,80",
+		"Moldura":"Em madeira de reflorestamento com pintura na cor preto fosco.",
+		"Tamannho1":"40cm x 25cm(com moldura)",
+		"Tamannho2":"60cm x 45cm(com moldura)",
+		"Observações":":A cor do produto pode variar de acordo com as configurações do seu monitor",
+		"Impressão e acabamento":"Fotográfica de alta resolução com laminação fosca anti-risco",
+		"Estoque1":"13 disponíveis",
+		"Estoque2":"9 disponíveis"
+	},
 
+	{
+		"Código":"1057",
+		"Nome":"Game Of Thrones",
+		"Preço1":"55,60",
+		"Preço2":"68,80",
+		"Moldura":"Em madeira de reflorestamento com pintura na cor preto fosco.",
+		"Tamannho1":"40cm x 25cm(com moldura)",
+		"Tamannho2":"60cm x 45cm(com moldura)",
+		"Observações":":A cor do produto pode variar de acordo com as configurações do seu monitor",
+		"Impressão e acabamento":"Fotográfica de alta resolução com laminação fosca anti-risco",
+		"Estoque1":"23 disponíveis",
+		"Estoque2":"18 disponíveis"
+	},
 
+	{
+		"Código":"1058",
+		"Nome":"Game Of Thrones",
+		"Preço1":"55,60",
+		"Preço2":"68,80",
+		"Moldura":"Em madeira de reflorestamento com pintura na cor preto fosco.",
+		"Tamannho1":"40cm x 25cm(com moldura)",
+		"Tamannho2":"60cm x 45cm(com moldura)",
+		"Observações":":A cor do produto pode variar de acordo com as configurações do seu monitor",
+		"Impressão e acabamento":"Fotográfica de alta resolução com laminação fosca anti-risco",
+		"Estoque1":"5 disponíveis",
+		"Estoque2":"8 disponíveis"
+	},
 
+	{
+		"Código":"1059",
+		"Nome":"Game Of Thrones",
+		"Preço1":"55,60",
+		"Preço2":"68,80",
+		"Moldura":"Em madeira de reflorestamento com pintura na cor preto fosco.",
+		"Tamannho1":"40cm x 25cm(com moldura)",
+		"Tamannho2":"60cm x 45cm(com moldura)",
+		"Observações":":A cor do produto pode variar de acordo com as configurações do seu monitor",
+		"Impressão e acabamento":"Fotográfica de alta resolução com laminação fosca anti-risco",
+		"Estoque1":"10 disponíveis",
+		"Estoque2":"14 disponíveis"
+	},
 
+	{
+		"Código":"1060",
+		"Nome":"Game Of Thrones",
+		"Preço1":"55,60",
+		"Preço2":"68,80",
+		"Moldura":"Em madeira de reflorestamento com pintura na cor preto fosco.",
+		"Tamannho1":"40cm x 25cm(com moldura)",
+		"Tamannho2":"60cm x 45cm(com moldura)",
+		"Observações":":A cor do produto pode variar de acordo com as configurações do seu monitor",
+		"Impressão e acabamento":"Fotográfica de alta resolução com laminação fosca anti-risco",
+		"Estoque1":"Produto Esgotado",
+		"Estoque2":"Produto Esgotado"
+	},
 
+	{
+		"Código":"1061",
+		"Nome":"How I Met You Mother",
+		"Preço1":"55,60",
+		"Preço2":"68,80",
+		"Moldura":"Em madeira de reflorestamento com pintura na cor preto fosco.",
+		"Tamannho1":"40cm x 25cm(com moldura)",
+		"Tamannho2":"60cm x 45cm(com moldura)",
+		"Observações":":A cor do produto pode variar de acordo com as configurações do seu monitor",
+		"Impressão e acabamento":"Fotográfica de alta resolução com laminação fosca anti-risco",
+		"Estoque1":"13 disponíveis",
+		"Estoque2":"10 disponíveis"
+	},
 
+	{
+		"Código":"1062",
+		"Nome":"How I Met You Mother",
+		"Preço1":"55,60",
+		"Preço2":"68,80",
+		"Moldura":"Em madeira de reflorestamento com pintura na cor preto fosco.",
+		"Tamannho1":"40cm x 25cm(com moldura)",
+		"Tamannho2":"60cm x 45cm(com moldura)",
+		"Observações":":A cor do produto pode variar de acordo com as configurações do seu monitor",
+		"Impressão e acabamento":"Fotográfica de alta resolução com laminação fosca anti-risco",
+		"Estoque1":"10 disponíveis",
+		"Estoque2":"11 disponíveis"
+	},
+
+	{
+		"Código":"1063",
+		"Nome":"stranger Things",
+		"Preço1":"55,60",
+		"Preço2":"68,80",
+		"Moldura":"Em madeira de reflorestamento com pintura na cor preto fosco.",
+		"Tamannho1":"40cm x 25cm(com moldura)",
+		"Tamannho2":"60cm x 45cm(com moldura)",
+		"Observações":":A cor do produto pode variar de acordo com as configurações do seu monitor",
+		"Impressão e acabamento":"Fotográfica de alta resolução com laminação fosca anti-risco",
+		"Estoque1":"3 disponíveis",
+		"Estoque2":"6 disponíveis"
+	},
+
+	{
+		"Código":"1064",
+		"Nome":"Stranger Things",
+		"Preço1":"55,60",
+		"Preço2":"68,80",
+		"Moldura":"Em madeira de reflorestamento com pintura na cor preto fosco.",
+		"Tamannho1":"40cm x 25cm(com moldura)",
+		"Tamannho2":"60cm x 45cm(com moldura)",
+		"Observações":":A cor do produto pode variar de acordo com as configurações do seu monitor",
+		"Impressão e acabamento":"Fotográfica de alta resolução com laminação fosca anti-risco",
+		"Estoque1":"10 disponíveis",
+		"Estoque2":"Produto Esgotado"
+	},
+
+	{
+		"Código":"1065",
+		"Nome":"Supernatural",
+		"Preço1":"55,60",
+		"Preço2":"68,80",
+		"Moldura":"Em madeira de reflorestamento com pintura na cor preto fosco.",
+		"Tamannho1":"40cm x 25cm(com moldura)",
+		"Tamannho2":"60cm x 45cm(com moldura)",
+		"Observações":":A cor do produto pode variar de acordo com as configurações do seu monitor",
+		"Impressão e acabamento":"Fotográfica de alta resolução com laminação fosca anti-risco",
+		"Estoque1":"12 disponíveis",
+		"Estoque2":"9 disponíveis"
+	},
 ],
+
+desenhos:[
+	{
+		"Código":"1066",
+		"Nome":"Alladin",
+		"Preço1":"55,60",
+		"Preço2":"68,80",
+		"Moldura":"Em madeira de reflorestamento com pintura na cor preto fosco.",
+		"Tamannho1":"40cm x 25cm(com moldura)",
+		"Tamannho2":"60cm x 45cm(com moldura)",
+		"Observações":":A cor do produto pode variar de acordo com as configurações do seu monitor",
+		"Impressão e acabamento":"Fotográfica de alta resolução com laminação fosca anti-risco",
+		"Estoque1":"30 disponíveis",
+		"Estoque2":"24 disponíveis"
+	},
+
+	{
+		"Código":"1067",
+		"Nome":"Bambi",
+		"Preço1":"55,60",
+		"Preço2":"68,80",
+		"Moldura":"Em madeira de reflorestamento com pintura na cor preto fosco.",
+		"Tamannho1":"40cm x 25cm(com moldura)",
+		"Tamannho2":"60cm x 45cm(com moldura)",
+		"Observações":":A cor do produto pode variar de acordo com as configurações do seu monitor",
+		"Impressão e acabamento":"Fotográfica de alta resolução com laminação fosca anti-risco",
+		"Estoque1":"20 disponíveis",
+		"Estoque2":"16 disponíveis"
+	},
+	{
+		"Código":"1068",
+		"Nome":"Dragon Ball",
+		"Preço1":"55,60",
+		"Preço2":"68,80",
+		"Moldura":"Em madeira de reflorestamento com pintura na cor preto fosco.",
+		"Tamannho1":"40cm x 25cm(com moldura)",
+		"Tamannho2":"60cm x 45cm(com moldura)",
+		"Observações":":A cor do produto pode variar de acordo com as configurações do seu monitor",
+		"Impressão e acabamento":"Fotográfica de alta resolução com laminação fosca anti-risco",
+		"Estoque1":"15 disponíveis",
+		"Estoque2":"8 disponíveis"
+	},
+
+	{
+		"Código":"1069",
+		"Nome":"Dragon Ball",
+		"Preço1":"55,60",
+		"Preço2":"68,80",
+		"Moldura":"Em madeira de reflorestamento com pintura na cor preto fosco.",
+		"Tamannho1":"40cm x 25cm(com moldura)",
+		"Tamannho2":"60cm x 45cm(com moldura)",
+		"Observações":":A cor do produto pode variar de acordo com as configurações do seu monitor",
+		"Impressão e acabamento":"Fotográfica de alta resolução com laminação fosca anti-risco",
+		"Estoque1":"6 disponíveis",
+		"Estoque2":"7 disponíveis"
+	},
+
+	{
+		"Código":"1070",
+		"Nome":"Hora de Aventura",
+		"Preço1":"55,60",
+		"Preço2":"68,80",
+		"Moldura":"Em madeira de reflorestamento com pintura na cor preto fosco.",
+		"Tamannho1":"40cm x 25cm(com moldura)",
+		"Tamannho2":"60cm x 45cm(com moldura)",
+		"Observações":":A cor do produto pode variar de acordo com as configurações do seu monitor",
+		"Impressão e acabamento":"Fotográfica de alta resolução com laminação fosca anti-risco",
+		"Estoque1":"23 disponíveis",
+		"Estoque2":"14 disponíveis"
+	},
+
+	{
+		"Código":"1071",
+		"Nome":"Toy Story",
+		"Preço1":"55,60",
+		"Preço2":"68,80",
+		"Moldura":"Em madeira de reflorestamento com pintura na cor preto fosco.",
+		"Tamannho1":"40cm x 25cm(com moldura)",
+		"Tamannho2":"60cm x 45cm(com moldura)",
+		"Observações":":A cor do produto pode variar de acordo com as configurações do seu monitor",
+		"Impressão e acabamento":"Fotográfica de alta resolução com laminação fosca anti-risco",
+		"Estoque1":"12 disponíveis",
+		"Estoque2":"20 disponíveis"
+	},
+]

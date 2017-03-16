@@ -503,7 +503,7 @@ filmes:[
 		"Impressão e acabamento":"Fotográfica de alta resolução com laminação fosca anti-risco",
 		"Estoque1":"8 disponíveis",
 		"Estoque2":"Produto Esgotado"
-	},
+	}
 ],
 
 musica: [
@@ -701,7 +701,7 @@ musica: [
 		"Impressão e acabamento":"Fotográfica de alta resolução com laminação fosca anti-risco",
 		"Estoque1":"20 disponíveis",
 		"Estoque2":"17 disponíveis"
-	},
+	}
 ],
 
 seriados:[
@@ -927,7 +927,7 @@ seriados:[
 		"Impressão e acabamento":"Fotográfica de alta resolução com laminação fosca anti-risco",
 		"Estoque1":"12 disponíveis",
 		"Estoque2":"9 disponíveis"
-	},
+	}
 ],
 
 desenhos:[
@@ -1012,5 +1012,5 @@ desenhos:[
 		"Impressão e acabamento":"Fotográfica de alta resolução com laminação fosca anti-risco",
 		"Estoque1":"12 disponíveis",
 		"Estoque2":"20 disponíveis"
-	},
+	}
 ]

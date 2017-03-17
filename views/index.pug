@@ -1,93 +1,78 @@
 extends layout
 
 block body
-	.container
-		.oneFifth
-			.userPanel.width200px
-				.userLogo
-					img.width50p(src='/images/avatar.png')
-			 
-				.userName
-					span.userNameSpan.show Olá, Bianca!
-			  
-					i.fa.fa-power-off.logout
-			  
-				.userMenu
-					ul
-						li
-							a.zoom(href='')
-								i.fa.fa-heart.Icon
-									span.show Interesse
-				  
-						li
-							a.zoom(href='')
-								i.fa.fa-film.Icon
-									span.show Filmes
-				 
-						li
-							a.zoom(href='')
-								i.fa.fa-music.Icon
-									span.show Música
-				  
-						li
-							a.zoom(href='')
-								i.fa.fa-youtube-play.Icon
-									span.show Seriados
-				  
-						li
-							a.zoom(href='')
-								i.fa.fa-child.Icon
-									span.show Animações
-				  
-						li
-							a.zoom(href='')
-								i.fa.fa-coffee.Icon
-									span.show Canecas
-			
-				.panelToggle
-					span
-						i.fa.fa-arrow-left.zoom
-		  
-				.fourFifth
-				.usecontent
-					
+	div.navbar.navbar-inverse.navbar-static-top
+		div.container
+			div.navbar-header
+				button(type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse")
+					span.icon-bar
+					span.icon-bar
+					span.icon-bar
+				a.navbar-brand(href="#") Indo
+			div.collapse.navbar-collapse
+				ul.nav.navbar-nav
+					li.dropdown
+						a(href="#" id="drop1" data-toggle="dropdown" class="dropdown-toggle" role="button") Music 
+							b.caret
+						ul(role="menu" class="dropdown-menu" aria-labelledby="drop1")
+							li(role="presentation")
+								a(href="#" role="menuitem") Grones
+							li(role="presentation")
+								a(href="#" role="menuitem") Nach
+							li(role="presentation")
+								a(href="#" role="menuitem") Zpu
+							li(role="presentation")
+								a(href="#" role="menuitem") Madnass
+					li.dropdown
+						a(href="#" id="drop1" data-toggle="dropdown" class="dropdown-toggle" role="button") Music 
+							b.caret
+						ul(role="menu" class="dropdown-menu" aria-labelledby="drop1")
+							li(role="presentation")
+								a(href="#" role="menuitem") Grones
+							li(role="presentation")
+								a(href="#" role="menuitem") Nach
+							li(role="presentation")
+								a(href="#" role="menuitem") Zpu
+							li(role="presentation")
+								a(href="#" role="menuitem") Madnass
+					li.dropdown
+						a(href="#" id="drop1" data-toggle="dropdown" class="dropdown-toggle" role="button") Music 
+							b.caret
+						ul(role="menu" class="dropdown-menu" aria-labelledby="drop1")
+							li(role="presentation")
+								a(href="#" role="menuitem") Grones
+							li(role="presentation")
+								a(href="#" role="menuitem") Nach
+							li(role="presentation")
+								a(href="#" role="menuitem") Zpu
+							li(role="presentation")
+								a(href="#" role="menuitem") Madnass
+					li.dropdown
+						a(href="#" id="drop1" data-toggle="dropdown" class="dropdown-toggle" role="button") Music 
+							b.caret
+						ul(role="menu" class="dropdown-menu" aria-labelledby="drop1")
+							li(role="presentation")
+								a(href="#" role="menuitem") Grones
+							li(role="presentation")
+								a(href="#" role="menuitem") Nach
+							li(role="presentation")
+								a(href="#" role="menuitem") Zpu
+							li(role="presentation")
+								a(href="#" role="menuitem") Madnass
+					li.dropdown
+						a(href="#" id="drop1" data-toggle="dropdown" class="dropdown-toggle" role="button") Music 
+							b.caret
+						ul(role="menu" class="dropdown-menu" aria-labelledby="drop1")
+							li(role="presentation")
+								a(href="#" role="menuitem") Grones
+							li(role="presentation")
+								a(href="#" role="menuitem") Nach
+							li(role="presentation")
+								a(href="#" role="menuitem") Zpu
+							li(role="presentation")
+								a(href="#" role="menuitem") Madnass
+block content
+	
 
-		.jumbotron
-			img.className#IdName(src="/images/castelo.jpg" alt="Image Title")
 
-		.jumbotron
-		.container
-			h1 Hello, world!
-			p
-				| This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.
-			p
-				a.btn.btn-primary.btn-lg(href='#', role='button') Learn more »
-	.container
-		.row
-			.col-md-3
-				h2 Heading
-				img.className#IdName(src="/images/castelo.jpg" alt="Image Title" )
-				p
-					a.btn.btn-default(href='#', role='button') View details »
-			.col-md-3
-				h2 Heading
-				p
-					img.col-md-3#IdName(src="/images/seriados/stranger.jpg" alt="Image Title" style="widht:1000")
-				p
-					a.btn.btn-default(href='#', role='button') View details »
-			.col-md-3
-				h2 Heading
-				p
-					| Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
-				p
-					a.btn.btn-default(href='#', role='button') View details »
-
-			.col-md-3
-				h2 Heading
-				p
-					| Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
-				p
-					a.btn.btn-default(href='#', role='button') View details »
-
-			
 			

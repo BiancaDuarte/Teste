@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
 body {
-  padding: 0px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  background-image: url("../images/fundo.jpg"); 
+	padding: 0px;
+	font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+	background-image: url("../images/fundo2.jpg"); 
 	background-size: 100% auto;
 	background-repeat: none;
 	background-position:relative;
@@ -13,203 +13,51 @@ a {
   color: #00B7FF;
 }
 
-* {
-    box-sixing: border-box;
+.open > .dropdown-menu {
+  -webkit-transform: scale(1, 1);
+  transform: scale(1, 1);  
+  opacity:1;
+}
+  
+.dropdown-menu {
+  opacity:.3;
+  -webkit-transform-origin: top;
+  transform-origin: top;
+  -webkit-animation-fill-mode: forwards;  
+  animation-fill-mode: forwards; 
+  -webkit-transform: scale(1, 0);
+  transition: all 0.3s linear;
+  -webkit-transition: all 0.3s linear;
 }
 
-.container {
-	width: 100%;
-	font-size: 0;
-	font-family: 'Open Sans', sans-serif;
-	padding: 0;
-	margin: 0;
+.caret-up {
+    width: 0; 
+    height: 0; 
+    border-left: 4px solid rgba(0, 0, 0, 0);
+    border-right: 4px solid rgba(0, 0, 0, 0);
+    border-bottom: 4px solid;
+    
+    display: inline-block;
+    margin-left: 2px;
+    vertical-align: middle;
 }
 
-.oneFifth {
-	display: inline-block;
-	width: 20%;
-	padding: 0;
-	margin: 0;
-}
-
-.fourFifth {
-	display: inline-block;
-	background:rgba(0, 122, 204,0.3);
+.branco{
 	width: 80%;
-	padding: 0;
-	margin: 0;
-}	
-
-.userPanel {
-
-	background:rgba(0, 122, 204,0.3);
-    box-shadow:0px 0px 20px white;
-	width: 200px;
-	min-height: 700px;
-	padding: 0;
-	margin: 0;
-}
-
-.userLogo {
-	width: 100%;
-	background:rgba(0, 122, 204,0.3);
-	text-align: center;	
-	margin: 0;
-	padding: 0;
-}
-	.userLogo img {
-		border-radius: 50%;
-	}
-
-.userName {
-	width: 100%;
-	background:rgba(0, 122, 204,0.3);
-	padding: 0 0 10px;
-	text-align: center;
-	color: #fff;
-	margin: 0;
-}
-	.userName span {
-		width: 100%;
-		font-size: 23px;
-		padding: 2px 5px 20px 0;
-		line-height: 120%;
-		font-weight: 700;
-	}
-	.userName i {
-		font-size: 17px;
-		margin: 0 10px;
-		color: #fff;
-		border: 2px solid #fff;
-		border-radius: 50%;
-		width: 28px;
-		height: 28px;
-		line-height: 28px;
-		margin: 7px 0 0;
-		transition: 0.5s;
-	}
-
-.userNameSpan {
-		display: inline-block;
-	}
-
-.logout:hover {
-	border: 2px solid #EDE540;
-	border-radius: 50%;
-	transform: scale(1.15);
-	color: #EDE540;
-	cursor: pointer;
-}
-
-.userMenu {
-	background:rgba(0, 122, 204,0.3);
-
-	font-family: courier;
-	width: 100%;
+	background-color: white;
+	height: auto;
 	margin: 0 auto;
-	color: #fff;
-	font-size: 17px;
-	padding: 20px 0;
-}
-	.userMenu ul {
-		width: 80%;
-		margin: 0 auto;
-		list-style: none;
-		padding: 0;
-	}
-	.userMenu li a {
-		display: block;
-		text-decoration: none;
-		color: #fff;
-		line-height: 150%;
-		color: #fff;
-		padding: 3px 0;
-	}
-
-.showI2 {
-	margin: 0;
-	text-align: center;
 }
 
-.Icon {
-	padding: 0 10px;
-	width: 10%;
-}
-
-.Icon2 {
-	padding: 0;
-	font-size: 20px !important;
-}
-
-.zoom {
-	transition: 0.5s;
-}
-
-.zoom:hover {
-	transform: scale(1.15);
-	color: #EDE540;
-	cursor: pointer;
-}
-
-.panelToggle {
-	background: transparent;
-	border-left: 5px solid #0F4B99;
-	display: inline-block;
-	position: fixed;
-	height: 100%;
-
-}
-	.panelToggle span {
-		width: 100%;
-		background: #0F4B99;
-		display: inline-block;
-		height: 50px;
-		border-top-right-radius: 5px;
-		border-bottom-right-radius: 5px;
-		vertical-align: top;
-		font-size: 20px;
-		color: #fff;
-		font-family: courier;
-		text-align: center;
-		margin: 0;
-		padding: 0;
-	}	
-		.panelToggle span i {
-			line-height: 50px;
-			padding: 0 10px;
-			margin: 0;
-		}
-
-.userContent {
-	background: #fff;
+.container{
 	width: 100%;
-	font-size: 15px;
+	padding: 15px;
 }
 
-.width50p {
-	width: 50%;
-	padding: 20px 0;
+.acdc{
+	background-image: url("../images/música/acdc.jpg");
 }
 
-.width90p {
-	width: 78%;
-	padding: 5px 0;
-}
-
-.width45px {
-	width: 45px;
-}
-
-.width200px {
-	width: 200px;
-}
-
-.show {
-	display: inline-block;
-	font-family: 'Josefin Sans', cursive;
-	font-size: 22px;
-}
-
-.hide {
-	display: none;
+.imagem img{
+	width: 100%;
 }

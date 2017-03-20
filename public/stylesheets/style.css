@@ -45,7 +45,13 @@ a {
     margin-left: 2px;
     vertical-align: middle;
 }
-
+.laranja{
+	padding: 30px;
+	width: 100%;
+	background-color: #ff531a;
+	height: 250px;
+	margin: 0 auto;
+}
 .branco{
 	width: 80%;
 	background-color: white;

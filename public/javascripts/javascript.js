@@ -13,11 +13,10 @@ $(document).ready(function () {
 				$('b', this).toggleClass("caret caret-up");
 			});
 	});	
-	var select = document.getElementById('mySelect');
-		select.onchange = function () {
-    select.className = this.options[this.selectedIndex].className;
-}
-});
 
+	 $('.myCarousel').carousel({
+            interval: 3000
+        });
+});
 
 

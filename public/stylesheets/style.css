@@ -115,3 +115,16 @@ a {
 .navbar-static-top{
 	margin-top: 50px;
 }
+
+.item img{
+	cursor:pointer;
+}
+.carousel{
+    background: #ff531a;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+.carousel .item img{
+    margin: 0 auto; /* Align slide image horizontally center */
+}

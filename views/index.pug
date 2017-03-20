@@ -116,9 +116,32 @@ block body
 								a(href="#" class='cordoitem' role="menuitem") Zpu
 							li(role="presentation")
 								a(href="#" class='cordoitem' role="menuitem") Madnass
-block content
+					br
+
+		
+block promo
+	#contenedor
+	#myCarousel.carousel.slide
+		ol.carousel-indicators
+			li.active(data-target='#myCarousel', data-slide-to='0')         
+			li(data-target='#myCarousel', data-slide-to='1')       
+		// Carousel items
+		.carousel-inner
+			.active.item
+				img(src='/images/promoçãocaneca.jpg', alt='banner1')       
+			.item
+				img(src='/images/promoquadros.png', alt='banner2')           
+			
+		// Carousel nav
+		a.carousel-control.left(href='#myCarousel', data-slide='prev') &lsaquo;      
+		a.carousel-control.right(href='#myCarousel', data-slide='next') &rsaquo;
 	
+
+block content
+	br
 	div.branco
+		div.titulo
+			h1 MAIS VENDIDOS
 		div.container
 				div.row
 					div.col-md-4.imagem
@@ -162,3 +185,4 @@ block content
 							img.className#IdName(src="/images/seriados/stranger.jpg" alt="Image Title" style="widht:1000")
 						p
 							a.btn.btn-default(href='#', role='button') View details »
+

@@ -12,5 +12,12 @@ $(document).ready(function () {
 				$(this).toggleClass('open');
 				$('b', this).toggleClass("caret caret-up");
 			});
-	});
+	});	
+	var select = document.getElementById('mySelect');
+		select.onchange = function () {
+    select.className = this.options[this.selectedIndex].className;
+}
 });
+
+
+

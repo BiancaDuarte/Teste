@@ -92,7 +92,7 @@ a {
 }
 
 .dropdown-toggle{
-	margin-left: 110px;
+	margin-left: 70px;
 }
 
 .dropdown li a  {
@@ -105,7 +105,7 @@ a {
 	color: rgb(255, 71, 26);
 }
 
-.dropdown h1  {
+ .dropdown h1  {
 	font-family: 'Farsan', cursive;
 	font-size: 40px;
 	text-align: center;

@@ -17,7 +17,7 @@ a {
   -webkit-transform: scale(1, 1);
   transform: scale(1, 1);  
   opacity:1;
-  color: rgb(255, 71, 26);
+  color: #ff5500;
 }
   
 .dropdown-menu {
@@ -32,7 +32,7 @@ a {
 }
 
 .dropdown-menu:hover{
- color: rgb(255, 71, 26);
+ color: #ff5500;
 }
 
 .caret-up {
@@ -46,9 +46,9 @@ a {
     vertical-align: middle;
 }
 .laranja{
-	padding: 30px;
+	
 	width: 100%;
-	background-color: #ff531a;
+	background-color: #ff5500;
 	height: 250px;
 	margin: 0 auto;
 }
@@ -66,6 +66,7 @@ a {
 .container-nav{
 	width: 100%;
 	padding: 10px;
+	margin: 0;
 }
 
 .imagem h2{
@@ -119,7 +120,7 @@ a {
 	color: white;
 } 
 .navbar-static-top{
-	margin-top: 50px;
+	margin-top: 0px;
 }
 
 .item img{

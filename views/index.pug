@@ -3,10 +3,22 @@ extends layout
 block logo
 
 	div.laranja
-		img.className#IdName(src="/images/logo2.png" alt="Image Title" )
+		div.col-md-4.logo
+			img.className#IdName(src="/images/logo2.png" alt="Image Title" )
+		div.col-md-4.logo
+
+			
+		div.col-md-4.logo
+			form.navbar-form.navbar-left(role='search')
+				.form-group
+					input.form-control(type='text', placeholder='O que você procura?')
+		 
+				button.btn.btn-default(type='submit')
+					span.glyphicon.glyphicon-inverse.glyphicon-search
+			i.fa.fa-4x.fa-cart-plus(aria-hidden='true')
+
 block body
 
-	
 	div.navbar.navbar-inverse.navbar-static-top
 		div.container-nav
 			div.navbar-header
@@ -168,13 +180,12 @@ block content
 	br
 	div.branco
 		div.titulo
-			h1 MAIS VENDIDOS
 		div.container
 				div.row
 					div.col-md-4.imagem
 						h2 Heading
 						p
-							img.className#IdName(src="/images/filmes/alicewonderlandpromo.jpg" alt="Image Title" )
+							img.className#IdName(src="/images/seriados/stranger.jpg" alt="Image Title" style="widht:1000")
 						p
 							a.btn.btn-default(href='#', role='button') View details »
 

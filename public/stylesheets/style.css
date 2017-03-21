@@ -43,12 +43,12 @@ a {
 .laranja {
   width: 100%;
   background-color: #ff5500;
-  height: 250px;
+  height: 200px;
   margin: 0 auto;
 }
 .branco {
   width: 80%;
-  background-color: black;
+  background-color: white;
   height: auto;
   margin: 0 auto;
 }
@@ -62,7 +62,7 @@ a {
 }
 .imagem h2 {
   font-family: 'Farsan', cursive;
-  color: white;
+  color: black;
 }
 .imagem:hover {
   /* Gradiente */
@@ -119,4 +119,20 @@ a {
 .carousel .item img {
   margin: 0 auto;
   /* Align slide image horizontally center */
+}
+.carrinho {
+  float: right;
+}
+.logo i {
+  float: right;
+}
+.logo form {
+  padding-top: 50px;
+  padding-left: 140px;
+}
+.logo input {
+  width: 40%;
+}
+.logo img {
+  width: 100%;
 }

@@ -1013,4 +1013,155 @@ desenhos:[
 		"Estoque1":"12 disponíveis",
 		"Estoque2":"20 disponíveis"
 	}
+],
+
+canecas:[
+	{
+		"Código":"6000",
+		"Nome":"Alice no País das Maravilhas",
+		"Preço":"28,50",
+		"Material":"Cerâmica",
+		"Capacidade":"300ml",
+		"Observações":":A cor do produto pode variar de acordo com as configurações do seu monitor",
+		"Dimensões com Embalagem":"12x12x12cm",
+		"Estoque":"30 disponíveis"
+	},
+
+	{
+		"Código":"6001",
+		"Nome":"Bastardos Inglórios",
+		"Preço":"28,50",
+		"Material":"Cerâmica",
+		"Capacidade":"300ml",
+		"Observações":":A cor do produto pode variar de acordo com as configurações do seu monitor",
+		"Dimensões com Embalagem":"12x12x12cm",
+		"Estoque":"24 disponíveis"
+	},
+
+	{
+		"Código":"6002",
+		"Nome":"Batman",
+		"Preço":"28,50",
+		"Material":"Cerâmica",
+		"Capacidade":"300ml",
+		"Observações":":A cor do produto pode variar de acordo com as configurações do seu monitor",
+		"Dimensões com Embalagem":"12x12x12cm",
+		"Estoque":"19 disponíveis"
+	},
+
+	{
+		"Código":"6003",
+		"Nome":"Cazuza",
+		"Preço":"28,50",
+		"Material":"Cerâmica",
+		"Capacidade":"300ml",
+		"Observações":":A cor do produto pode variar de acordo com as configurações do seu monitor",
+		"Dimensões com Embalagem":"12x12x12cm",
+		"Estoque":"49 disponíveis"
+	},
+
+	{
+		"Código":"6004",
+		"Nome":"Clube da Luta",
+		"Preço":"28,50",
+		"Material":"Cerâmica",
+		"Capacidade":"300ml",
+		"Observações":":A cor do produto pode variar de acordo com as configurações do seu monitor",
+		"Dimensões com Embalagem":"12x12x12cm",
+		"Estoque":"10 disponíveis"
+	},
+
+	{
+		"Código":"6005",
+		"Nome":"David Bowie",
+		"Preço":"28,50",
+		"Material":"Cerâmica",
+		"Capacidade":"300ml",
+		"Observações":":A cor do produto pode variar de acordo com as configurações do seu monitor",
+		"Dimensões com Embalagem":"12x12x12cm",
+		"Estoque":"4 disponíveis"
+	},
+
+	{
+		"Código":"6006",
+		"Nome":"Dexter",
+		"Preço":"28,50",
+		"Material":"Cerâmica",
+		"Capacidade":"300ml",
+		"Observações":":A cor do produto pode variar de acordo com as configurações do seu monitor",
+		"Dimensões com Embalagem":"12x12x12cm",
+		"Estoque":"20 disponíveis"
+	},
+
+	{
+		"Código":"6007",
+		"Nome":"Harry Potter",
+		"Preço":"28,50",
+		"Material":"Cerâmica",
+		"Capacidade":"300ml",
+		"Observações":":A cor do produto pode variar de acordo com as configurações do seu monitor",
+		"Dimensões com Embalagem":"12x12x12cm",
+		"Estoque":"12 disponíveis"
+	},
+
+	{
+		"Código":"6008",
+		"Nome":"O Hobbit",
+		"Preço":"28,50",
+		"Material":"Cerâmica",
+		"Capacidade":"300ml",
+		"Observações":":A cor do produto pode variar de acordo com as configurações do seu monitor",
+		"Dimensões com Embalagem":"12x12x12cm",
+		"Estoque":"9 disponíveis"
+	},
+
+	{
+		"Código":"6009",
+		"Nome":"Pink Floyd",
+		"Preço":"28,50",
+		"Material":"Cerâmica",
+		"Capacidade":"300ml",
+		"Observações":":A cor do produto pode variar de acordo com as configurações do seu monitor",
+		"Dimensões com Embalagem":"12x12x12cm",
+		"Estoque":"5 disponíveis"
+	},
+
+	{
+		"Código":"6010",
+		"Nome":"Star Trek",
+		"Preço":"28,50",
+		"Material":"Cerâmica",
+		"Capacidade":"300ml",
+		"Observações":":A cor do produto pode variar de acordo com as configurações do seu monitor",
+		"Dimensões com Embalagem":"12x12x12cm",
+		"Estoque":"14 disponíveis"
+	},
+
+	{
+		"Código":"6011",
+		"Nome":"Star Wars",
+		"Preço":"28,50",
+		"Material":"Cerâmica",
+		"Capacidade":"300ml",
+		"Observações":":A cor do produto pode variar de acordo com as configurações do seu monitor",
+		"Dimensões com Embalagem":"12x12x12cm",
+		"Estoque":"14 disponíveis"
+	},
+
+	{
+		"Código":"6012",
+		"Nome":"Stranger Things",
+		"Preço":"28,50",
+		"Material":"Cerâmica",
+		"Capacidade":"300ml",
+		"Observações":":A cor do produto pode variar de acordo com as configurações do seu monitor",
+		"Dimensões com Embalagem":"12x12x12cm",
+		"Estoque":"8 disponíveis"
+	}
 ]
+
+
+
+
+
+

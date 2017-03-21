@@ -1,137 +1,121 @@
 @import url('https://fonts.googleapis.com/css?family=Farsan');
 body {
-	padding: 0px;
-	font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-	background-image: url("../images/fundo2.jpg"); 
-	background-size: 100% auto;
-	background-repeat: none;
-	background-position:relative;
-	background-attachment: fixed;
+  padding: 0px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-image: url("../images/fundo2.jpg");
+  background-size: 100% auto;
+  background-repeat: none;
+  background-position: relative;
+  background-attachment: fixed;
 }
-
 a {
   color: #00B7FF;
 }
-
 .open > .dropdown-menu {
   -webkit-transform: scale(1, 1);
-  transform: scale(1, 1);  
-  opacity:1;
+  transform: scale(1, 1);
+  opacity: 1;
   color: #ff5500;
 }
-  
 .dropdown-menu {
-  opacity:.3;
+  opacity: .3;
   -webkit-transform-origin: top;
   transform-origin: top;
-  -webkit-animation-fill-mode: forwards;  
-  animation-fill-mode: forwards; 
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
   -webkit-transform: scale(1, 0);
   transition: all 0.3s linear;
   -webkit-transition: all 0.3s linear;
 }
-
-.dropdown-menu:hover{
- color: #ff5500;
+.dropdown-menu:hover {
+  color: #ff5500;
 }
-
 .caret-up {
-    width: 0; 
-    height: 0; 
-    border-left: 4px solid rgba(0, 0, 0, 0);
-    border-right: 4px solid rgba(0, 0, 0, 0);
-    border-bottom: 4px solid;
-    display: inline-block;
-    margin-left: 2px;
-    vertical-align: middle;
+  width: 0;
+  height: 0;
+  border-left: 4px solid rgba(0, 0, 0, 0);
+  border-right: 4px solid rgba(0, 0, 0, 0);
+  border-bottom: 4px solid;
+  display: inline-block;
+  margin-left: 2px;
+  vertical-align: middle;
 }
-.laranja{
-	
-	width: 100%;
-	background-color: #ff5500;
-	height: 250px;
-	margin: 0 auto;
+.laranja {
+  width: 100%;
+  background-color: #ff5500;
+  height: 250px;
+  margin: 0 auto;
 }
-.branco{
-	width: 80%;
-	background-color: white;
-	height: auto;
-	margin: 0 auto;
+.branco {
+  width: 80%;
+  background-color: white;
+  height: auto;
+  margin: 0 auto;
 }
-
-.container{
-	width: 100%;
+.container {
+  width: 100%;
 }
-
-.container-nav{
-	width: 100%;
-	padding: 10px;
-	margin: 0;
+.container-nav {
+  width: 100%;
+  padding: 10px;
+  margin: 0;
 }
-
-.imagem h2{
-	font-family: 'Farsan', cursive;
-
+.imagem h2 {
+  font-family: 'Farsan', cursive;
 }
-
 .imagem:hover {
-   /* Gradiente */
-   background: #ededed;
-   background: -moz-linear-gradient(top,  #ffd6cc 0%, #ff471a 100%);
-   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ededed), color-stop(100%,#ffffff));
-   background: -webkit-linear-gradient(top,  #ffd6cc 0%,#ff471a 100%);
-   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ededed', endColorstr='#ff471a',GradientType=0 );
-   /* Gradiente */
+  /* Gradiente */
+  background: #ededed;
+  background: -moz-linear-gradient(top, #ffd6cc 0%, #ff471a 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ededed), color-stop(100%, #ffffff));
+  background: -webkit-linear-gradient(top, #ffd6cc 0%, #ff471a 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ededed', endColorstr='#ff471a', GradientType=0);
+  /* Gradiente */
 }
-
 .cordoitem:hover {
-   /* Gradiente */
-   background: 0%  #ff471a;
-   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ff471a), color-stop(100%, #ff471a));
-   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ededed', endColorstr=' #ff471a',GradientType=0 );
-   /* Gradiente */
+  /* Gradiente */
+  background: 0%  #ff471a;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ff471a), color-stop(100%, #ff471a));
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ededed', endColorstr=' #ff471a', GradientType=0);
+  /* Gradiente */
 }
 .imagem img {
-   width: 100%;
-   background: #FFF;
-   overflow: hidden;
-   cursor: pointer;
+  width: 100%;
+  background: #FFF;
+  overflow: hidden;
+  cursor: pointer;
 }
-
-.dropdown-toggle{
-	margin-left: 70px;
+.dropdown-toggle {
+  margin-left: 70px;
 }
-
-.dropdown li a  {
-	font-family: 'Farsan', cursive;
-	font-size: 25px;
-	text-align: center;
-} 
-
-.caret{
-	color: rgb(255, 71, 26);
+.dropdown li a {
+  font-family: 'Farsan', cursive;
+  font-size: 25px;
+  text-align: center;
 }
-
- .dropdown h1  {
-	font-family: 'Farsan', cursive;
-	font-size: 40px;
-	text-align: center;
-	opacity: 1;
-	color: white;
-} 
-.navbar-static-top{
-	margin-top: 0px;
+.caret {
+  color: #ff471a;
 }
-
-.item img{
-	cursor:pointer;
+.dropdown h1 {
+  font-family: 'Farsan', cursive;
+  font-size: 40px;
+  text-align: center;
+  opacity: 1;
+  color: white;
 }
-.carousel{
-    background: #ff531a;
-    width: 80%;
-    margin: 0 auto;
-    margin-top: 20px;
+.navbar-static-top {
+  margin-top: 0px;
 }
-.carousel .item img{
-    margin: 0 auto; /* Align slide image horizontally center */
+.item img {
+  cursor: pointer;
+}
+.carousel {
+  background: #ff531a;
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+.carousel .item img {
+  margin: 0 auto;
+  /* Align slide image horizontally center */
 }

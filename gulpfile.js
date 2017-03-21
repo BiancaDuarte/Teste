@@ -1,5 +1,6 @@
 var gulp = require('gulp');
 var path = require('path');
+var less = require('gulp-less');
 
 gulp.task('bootstrap', function(){
 	gulp.src('./bower_components/bootstrap/dist/css/bootstrap.min.css')
@@ -12,6 +13,12 @@ gulp.task('bootstrap', function(){
    		.pipe(gulp.dest('./public/fonts'));
 
     console.log('bootstrap');
+});
+ 
+gulp.task('less', function () {
+  return gulp.src('./less/*.less')
+    .pipe(less())
+    .pipe(gulp.dest('./public/stylesheets'));
 });
 
 

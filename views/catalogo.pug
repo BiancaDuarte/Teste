@@ -1,0 +1,33 @@
+doctype html
+html
+	head
+		title= "catalogo"
+		link(rel='stylesheet', href='/stylesheets/bootstrap.min.css')
+		link(rel='stylesheet', href='/stylesheets/font-awesome.min.css')
+		link(rel='stylesheet', href='/stylesheets/style.css')
+		script(src='/javascripts/jquery-3.1.1.min.js')
+		script(src='/javascripts/bootstrap.min.js')
+		script(src='/javascripts/javascript.js')
+   
+	body
+		div.branco
+				div.container
+						div.row
+							div.col-md-4.imagem
+								h2= dados.filmes[1].Nome
+								p
+									div #{dados}
+							
+							div.col-md-4.imagem
+								h2= dados.filmes[12].Nome
+								p
+									div 
+									- for (var x = 0; x < 3; x++)
+										img(src=dados.filmes[x].Imagem) 
+								
+							div.col-md-4.imagem
+								h2= dados.filmes[24].Nome
+								p
+									img.className#IdName(src="/images/seriados/stranger.jpg" alt="Image Title" style="widht:1000")
+								p
+									a.btn.btn-default(href='#', role='button') View details »

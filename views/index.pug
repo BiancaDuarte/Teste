@@ -174,12 +174,13 @@ block promo
 		// Carousel nav
 		a.carousel-control.left(href='#myCarousel', data-slide='prev') &lsaquo;      
 		a.carousel-control.right(href='#myCarousel', data-slide='next') &rsaquo;
-	
+
 
 block content
 	br
+	div.preto
+		h2 Lançamentos do mês
 	div.branco
-		div.titulo
 		div.container
 				div.row
 					- for (var x = 0; x < 6; x++)
@@ -190,5 +191,6 @@ block content
 											img(src=dados.lancamentos[x].Imagem)
 											
 										div
-											p A partir de R$#{dados.lancamentos[x].Preço1}
+											h1 A partir de R$#{dados.lancamentos[x].Preço1}
+											p ou a partir de 3xR$15,90
 

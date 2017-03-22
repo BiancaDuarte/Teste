@@ -52,6 +52,19 @@ a {
   height: auto;
   margin: 0 auto;
 }
+.preto {
+  width: 80%;
+  background-color: black;
+  height: 80px;
+  padding: 6px;
+  margin: 0 auto;
+}
+.preto h2 {
+  font-family: 'Farsan', cursive;
+  color: white;
+  text-align: center;
+  font-size: 40px;
+}
 .container {
   width: 100%;
 }
@@ -62,6 +75,23 @@ a {
 }
 .imagem h2 {
   font-family: 'Farsan', cursive;
+  color: black;
+  text-align: center;
+}
+.imagem h1 {
+  font-family: 'Farsan', cursive;
+  font-size: 30px;
+  color: red;
+  text-align: center;
+}
+.imagem p {
+  font-family: 'Farsan', cursive;
+  font-size: 19px;
+  color: grey;
+  text-align: center;
+}
+.imagem:hover h1,
+.imagem:hover p {
   color: black;
 }
 .imagem:hover {

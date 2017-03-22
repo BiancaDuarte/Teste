@@ -7,6 +7,7 @@ router.get('/', function (req, res){
 	data = JSON.parse(data);
 		console.log(data);
 	res.render('catalogo', { dados:data });
+	
 			res.end();
 	});
 

@@ -22,8 +22,14 @@ html
 								h2= dados.filmes[12].Nome
 								p
 									div 
-									- for (var x = 0; x < 3; x++)
-										img(src=dados.filmes[x].Imagem) 
+									p Código do Produto: #{dados.filmes[12].Código}
+									p Código do Produto: #{dados.filmes[12].Preço1}
+									p Código do Produto: #{dados.filmes[12].Preço2}
+									p Código do Produto: #{dados.filmes[12].Moldura}
+									p Código do Produto: #{dados.filmes[12].Tamanho1}
+									p Código do Produto: #{dados.filmes[12].Tamanho2}
+									p Código do Produto: #{dados.filmes[12].Observação}
+									p Código do Produto: #{dados.filmes[12].Estoque}
 								
 							div.col-md-4.imagem
 								h2= dados.filmes[24].Nome

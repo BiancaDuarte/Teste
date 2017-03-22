@@ -182,45 +182,13 @@ block content
 		div.titulo
 		div.container
 				div.row
-					div.col-md-4.imagem
-						h2 Heading
-						p
-							img.className#IdName(src="/images/seriados/stranger.jpg" alt="Image Title" style="widht:1000")
-						p
-							a.btn.btn-default(href='#', role='button') View details »
-
-					div.col-md-4.imagem
-						h2 Heading
-						p
-							img.className#IdName(src="/images/seriados/stranger.jpg" alt="Image Title" style="widht:1000")
-						p
-							a.btn.btn-default(href='#', role='button') View details »
-					div.col-md-4.imagem
-						h2 Heading
-						p
-							img.className#IdName(src="/images/seriados/stranger.jpg" alt="Image Title" style="widht:1000")
-						p
-							a.btn.btn-default(href='#', role='button') View details »
-	div.branco
-		div.container
-				div.row
-					div.col-md-4.imagem
-						h2 Heading
-						p
-							img.className#IdName(src="/images/música/acdc.jpg" alt="Image Title" )
-						p
-							a.btn.btn-default(href='#', role='button') View details »
-
-					div.col-md-4.imagem
-						h2 Heading
-						p
-							img.className#IdName(src="/images/seriados/stranger.jpg" alt="Image Title" style="widht:1000")
-						p
-							a.btn.btn-default(href='#', role='button') View details »
-					div.col-md-4.imagem
-						h2 Heading
-						p
-							img.className#IdName(src="/images/seriados/stranger.jpg" alt="Image Title" style="widht:1000")
-						p
-							a.btn.btn-default(href='#', role='button') View details »
+					- for (var x = 0; x < 6; x++)
+						div.col-md-4.imagem
+								h2= dados.lancamentos[x].Nome
+									p
+										div
+											img(src=dados.lancamentos[x].Imagem)
+											
+										div
+											p A partir de R$#{dados.lancamentos[x].Preço1}
 

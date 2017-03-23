@@ -11,29 +11,15 @@ html
    
 	body
 		div.branco
-				div.container
-						div.row
+			div.container
+					div.row
+						- for (var x = 0; x < 36; x++)
 							div.col-md-4.imagem
-								h2= dados.filmes[1].Nome
-								p
-									div #{dados}
-							
-							div.col-md-4.imagem
-								h2= dados.filmes[12].Nome
-								p
-									div 
-									p Código do Produto: #{dados.filmes[12].Código}
-									p Código do Produto: #{dados.filmes[12].Preço1}
-									p Código do Produto: #{dados.filmes[12].Preço2}
-									p Código do Produto: #{dados.filmes[12].Moldura}
-									p Código do Produto: #{dados.filmes[12].Tamanho1}
-									p Código do Produto: #{dados.filmes[12].Tamanho2}
-									p Código do Produto: #{dados.filmes[12].Observação}
-									p Código do Produto: #{dados.filmes[12].Estoque}
-								
-							div.col-md-4.imagem
-								h2= dados.filmes[24].Nome
-								p
-									img.className#IdName(src="/images/seriados/stranger.jpg" alt="Image Title" style="widht:1000")
-								p
-									a.btn.btn-default(href='#', role='button') View details »
+									h2= dados.filmes[x].Nome
+										p
+											div
+												img(src=dados.filmes[x].Imagem)
+												
+											div
+												h1 A partir de R$#{dados.filmes[x].Preço1}
+												p ou a partir de 3xR$15,90

@@ -15,6 +15,7 @@ html
 		div.branco
 			div.container
 					div.row
+
 						- for (var x = 0; x < 36; x++)
 							div.col-md-4.imagem
 									h2= dados.filmes[x].Nome
@@ -24,9 +25,9 @@ html
 												
 											div
 												h1 A partir de R$#{dados.filmes[x].Preço1}
-												p ou a partir de 3xR$15,90
+												p ou a partir de 4xR$13,90
 
-						- for (var x = 0; x < 12; x++)
+						- for (var x = 0; x < 13; x++)
 							div.col-md-4.imagem
 									h2= dados.musica[x].Nome
 										p

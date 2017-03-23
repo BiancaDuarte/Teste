@@ -546,6 +546,7 @@
 	{
 		"Código":"1036",
 		"Nome":"AC/DC - Angus Young",
+		"Imagem": "/images/Música/acdc.jpg",
 		"Preço1":"55,60",
 		"Preço2":"68,80",
 		"Moldura":"Em madeira de reflorestamento com pintura na cor preto fosco.",
@@ -560,6 +561,7 @@
 	{
 		"Código":"1037",
 		"Nome":"AC/DC",
+		"Imagem": "/images/Música/acdc2.jpg",
 		"Preço1":"55,60",
 		"Preço2":"68,80",
 		"Moldura":"Em madeira de reflorestamento com pintura na cor preto fosco.",
@@ -574,6 +576,7 @@
 	{
 		"Código":"1038",
 		"Nome":"Artic Monkeys",
+		"Imagem": "/images/Música/articmonkeys.jpg",
 		"Preço1":"55,60",
 		"Preço2":"68,80",
 		"Moldura":"Em madeira de reflorestamento com pintura na cor preto fosco.",
@@ -588,6 +591,7 @@
 	{
 		"Código":"1039",
 		"Nome":"The Beatles",
+		"Imagem": "/images/Música/beatles.jpg",
 		"Preço1":"55,60",
 		"Preço2":"68,80",
 		"Moldura":"Em madeira de reflorestamento com pintura na cor preto fosco.",
@@ -602,6 +606,7 @@
 	{
 		"Código":"1040",
 		"Nome":"Black Sabbath",
+		"Imagem": "/images/Música/blacksabbath.jpg",
 		"Preço1":"55,60",
 		"Preço2":"68,80",
 		"Moldura":"Em madeira de reflorestamento com pintura na cor preto fosco.",
@@ -616,6 +621,7 @@
 	{
 		"Código":"1041",
 		"Nome":"David Bowie",
+		"Imagem": "/images/Música/davidbowie.jpg",
 		"Preço1":"55,60",
 		"Preço2":"68,80",
 		"Moldura":"Em madeira de reflorestamento com pintura na cor preto fosco.",
@@ -630,6 +636,7 @@
 	{
 		"Código":"1042",
 		"Nome":"David Bowie",
+		"Imagem": "/images/Música/davidbowie2.jpg",
 		"Preço1":"55,60",
 		"Preço2":"68,80",
 		"Moldura":"Em madeira de reflorestamento com pintura na cor preto fosco.",
@@ -644,6 +651,7 @@
 	{
 		"Código":"1043",
 		"Nome":"Led Zeppelin",
+		"Imagem": "/images/Música/ledzep.jpg",
 		"Preço1":"55,60",
 		"Preço2":"68,80",
 		"Moldura":"Em madeira de reflorestamento com pintura na cor preto fosco.",
@@ -658,6 +666,7 @@
 	{
 		"Código":"1044",
 		"Nome":"Led Zeppelin",
+		"Imagem": "/images/Música/ledzep2.jpg",
 		"Preço1":"55,60",
 		"Preço2":"68,80",
 		"Moldura":"Em madeira de reflorestamento com pintura na cor preto fosco.",
@@ -672,6 +681,7 @@
 	{
 		"Código":"1045",
 		"Nome":"Pink Floyd",
+		"Imagem": "/images/Música/pinkfloyd.jpg",
 		"Preço1":"55,60",
 		"Preço2":"68,80",
 		"Moldura":"Em madeira de reflorestamento com pintura na cor preto fosco.",
@@ -686,6 +696,7 @@
 	{
 		"Código":"1046",
 		"Nome":"Pink Floyd",
+		"Imagem": "/images/Música/pinkfloyd2.jpg",
 		"Preço1":"55,60",
 		"Preço2":"68,80",
 		"Moldura":"Em madeira de reflorestamento com pintura na cor preto fosco.",
@@ -700,6 +711,7 @@
 	{
 		"Código":"1047",
 		"Nome":"Pink Floyd",
+		"Imagem": "/images/Música/pinkfloyd3.jpg",
 		"Preço1":"55,60",
 		"Preço2":"68,80",
 		"Moldura":"Em madeira de reflorestamento com pintura na cor preto fosco.",
@@ -714,6 +726,7 @@
 	{
 		"Código":"1048",
 		"Nome":"Rolling Stones",
+		"Imagem": "/images/Música/rollingstones.jpg",
 		"Preço1":"55,60",
 		"Preço2":"68,80",
 		"Moldura":"Em madeira de reflorestamento com pintura na cor preto fosco.",
@@ -728,6 +741,7 @@
 	{
 		"Código":"1049",
 		"Nome":"Sex Pistols",
+		"Imagem": "/images/Música/sexpistols.jpg",
 		"Preço1":"55,60",
 		"Preço2":"68,80",
 		"Moldura":"Em madeira de reflorestamento com pintura na cor preto fosco.",

@@ -10,6 +10,8 @@ html
 		script(src='/javascripts/javascript.js')
    
 	body
+		div.titulocatalogo
+			h2 Catálogo de Produtos
 		div.branco
 			div.container
 					div.row
@@ -22,4 +24,15 @@ html
 												
 											div
 												h1 A partir de R$#{dados.filmes[x].Preço1}
+												p ou a partir de 3xR$15,90
+
+						- for (var x = 0; x < 12; x++)
+							div.col-md-4.imagem
+									h2= dados.musica[x].Nome
+										p
+											div
+												img(src=dados.musica[x].Imagem)
+												
+											div
+												h1 A partir de R$#{dados.musica[x].Preço1}
 												p ou a partir de 3xR$15,90

@@ -52,14 +52,16 @@ a {
   height: auto;
   margin: 0 auto;
 }
-.preto {
+.preto,
+.titulocatalogo {
   width: 80%;
   background-color: black;
   height: 80px;
   padding: 6px;
   margin: 0 auto;
 }
-.preto h2 {
+.preto,
+.titulocatalogo h2 {
   font-family: 'Farsan', cursive;
   color: white;
   text-align: center;

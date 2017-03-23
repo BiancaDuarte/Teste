@@ -38,3 +38,25 @@ html
 											div
 												h1 A partir de R$#{dados.musica[x].Preço1}
 												p #{dados.musica[x].Pagamento}
+
+						- for (var x = 0; x < 16; x++)
+							div.col-md-4.imagem
+									h2= dados.seriados[x].Nome
+										p
+											div
+												img(src=dados.seriados[x].Imagem)
+												
+											div
+												h1 A partir de R$#{dados.seriados[x].Preço1}
+												p #{dados.seriados[x].Pagamento}
+
+						- for (var x = 0; x < 13; x++)
+							div.col-md-4.imagem
+									h2= dados.canecas[x].Nome
+										p
+											div
+												img(src=dados.canecas[x].Imagem)
+												
+											div
+												h1 A partir de R$#{dados.canecas[x].Preço}
+												p #{dados.canecas[x].Pagamento}

@@ -810,6 +810,7 @@
 	{
 		"Código":"1050",
 		"Nome":"Breaking Bad",
+		"Imagem": "/images/Seriados/breakingbad.jpg",
 		"Preço1":"55,60",
 		"Preço2":"68,80",
 		"Pagamento":"ou a partir de 3xR$15,90",
@@ -825,6 +826,7 @@
 	{
 		"Código":"1051",
 		"Nome":"Breaking Bad",
+		"Imagem": "/images/Seriados/breakingbad2.jpg",
 		"Preço1":"55,60",
 		"Preço2":"68,80",
 		"Pagamento":"ou a partir de 3xR$15,90",
@@ -840,6 +842,7 @@
 	{
 		"Código":"1052",
 		"Nome":"Breaking Bad",
+		"Imagem": "/images/Seriados/breakingbad3.jpg",
 		"Preço1":"55,60",
 		"Preço2":"68,80",
 		"Pagamento":"ou a partir de 3xR$15,90",
@@ -855,6 +858,7 @@
 	{
 		"Código":"1053",
 		"Nome":"Breaking Bad",
+		"Imagem": "/images/Seriados/breakingbad4.jpg",
 		"Preço1":"55,60",
 		"Preço2":"68,80",
 		"Pagamento":"ou a partir de 3xR$15,90",
@@ -870,6 +874,7 @@
 	{
 		"Código":"1054",
 		"Nome":"Dexter",
+		"Imagem": "/images/Seriados/dexter.jpg",
 		"Preço1":"55,60",
 		"Preço2":"68,80",
 		"Pagamento":"ou a partir de 3xR$15,90",
@@ -901,6 +906,7 @@
 	{
 		"Código":"1056",
 		"Nome":"Doctor Who",
+		"Imagem": "/images/Seriados/doctorwho2.jpg",
 		"Preço1":"55,60",
 		"Preço2":"68,80",
 		"Pagamento":"ou a partir de 3xR$15,90",
@@ -916,6 +922,7 @@
 	{
 		"Código":"1057",
 		"Nome":"Game Of Thrones",
+		"Imagem": "/images/Seriados/got.jpg",
 		"Preço1":"55,60",
 		"Preço2":"68,80",
 		"Pagamento":"ou a partir de 3xR$15,90",
@@ -931,6 +938,7 @@
 	{
 		"Código":"1058",
 		"Nome":"Game Of Thrones",
+		"Imagem": "/images/Seriados/got2.jpg",
 		"Preço1":"55,60",
 		"Preço2":"68,80",
 		"Pagamento":"ou a partir de 3xR$15,90",
@@ -946,6 +954,7 @@
 	{
 		"Código":"1059",
 		"Nome":"Game Of Thrones",
+		"Imagem": "/images/Seriados/got3.jpg",
 		"Preço1":"55,60",
 		"Preço2":"68,80",
 		"Pagamento":"ou a partir de 3xR$15,90",
@@ -961,6 +970,7 @@
 	{
 		"Código":"1060",
 		"Nome":"Game Of Thrones",
+		"Imagem": "/images/Seriados/got4.jpg",
 		"Preço1":"55,60",
 		"Preço2":"68,80",
 		"Pagamento":"ou a partir de 3xR$15,90",
@@ -976,6 +986,7 @@
 	{
 		"Código":"1061",
 		"Nome":"How I Met You Mother",
+		"Imagem": "/images/Seriados/howimet.jpg",
 		"Preço1":"55,60",
 		"Preço2":"68,80",
 		"Pagamento":"ou a partir de 3xR$15,90",
@@ -991,6 +1002,7 @@
 	{
 		"Código":"1062",
 		"Nome":"How I Met You Mother",
+		"Imagem": "/images/Seriados/howimet2.jpg",
 		"Preço1":"55,60",
 		"Preço2":"68,80",
 		"Pagamento":"ou a partir de 3xR$15,90",
@@ -1006,6 +1018,7 @@
 	{
 		"Código":"1063",
 		"Nome":"stranger Things",
+		"Imagem": "/images/Seriados/stranger.jpg",
 		"Preço1":"55,60",
 		"Preço2":"68,80",
 		"Pagamento":"ou a partir de 3xR$15,90",
@@ -1021,6 +1034,7 @@
 	{
 		"Código":"1064",
 		"Nome":"Stranger Things",
+		"Imagem": "/images/Seriados/stranger2.jpg",
 		"Preço1":"55,60",
 		"Preço2":"68,80",
 		"Pagamento":"ou a partir de 3xR$15,90",
@@ -1036,6 +1050,7 @@
 	{
 		"Código":"1065",
 		"Nome":"Supernatural",
+		"Imagem": "/images/Seriados/supernatural.jpg",
 		"Preço1":"55,60",
 		"Preço2":"68,80",
 		"Pagamento":"ou a partir de 3xR$15,90",
@@ -1070,6 +1085,7 @@
 	{
 		"Código":"1067",
 		"Nome":"Bambi",
+		"Imagem": "/images/Desenhos/bambi.jpg",
 		"Preço1":"55,60",
 		"Preço2":"68,80",
 		"Pagamento":"ou a partir de 3xR$15,90",
@@ -1084,6 +1100,7 @@
 	{
 		"Código":"1068",
 		"Nome":"Dragon Ball",
+		"Imagem": "/images/Desenhos/dragonball.jpg",
 		"Preço1":"55,60",
 		"Preço2":"68,80",
 		"Pagamento":"ou a partir de 3xR$15,90",
@@ -1115,6 +1132,7 @@
 	{
 		"Código":"1070",
 		"Nome":"Hora de Aventura",
+		"Imagem": "/images/Desenhos/adventuretime.jpg",
 		"Preço1":"55,60",
 		"Preço2":"68,80",
 		"Pagamento":"ou a partir de 3xR$15,90",
@@ -1130,6 +1148,7 @@
 	{
 		"Código":"1071",
 		"Nome":"Toy Story",
+		"Imagem": "/images/Desenhos/toystory.jpg",
 		"Preço1":"55,60",
 		"Preço2":"68,80",
 		"Pagamento":"ou a partir de 3xR$15,90",
@@ -1147,7 +1166,9 @@
 	{
 		"Código":"6000",
 		"Nome":"Alice no País das Maravilhas",
+		"Imagem": "/images/Canecas/alice.jpg",
 		"Preço":"28,50",
+		"Pagamento":"ou a partir de 2xR$14,25",
 		"Material":"Cerâmica",
 		"Capacidade":"300ml",
 		"Observações":":A cor do produto pode variar de acordo com as configurações do seu monitor",
@@ -1158,7 +1179,9 @@
 	{
 		"Código":"6001",
 		"Nome":"Bastardos Inglórios",
+		"Imagem": "/images/Canecas/bastardos.jpg",
 		"Preço":"28,50",
+		"Pagamento":"ou a partir de 2xR$14,25",
 		"Material":"Cerâmica",
 		"Capacidade":"300ml",
 		"Observações":":A cor do produto pode variar de acordo com as configurações do seu monitor",
@@ -1169,7 +1192,9 @@
 	{
 		"Código":"6002",
 		"Nome":"Batman",
+		"Imagem": "/images/Canecas/batman.jpg",
 		"Preço":"28,50",
+		"Pagamento":"ou a partir de 2xR$14,25",
 		"Material":"Cerâmica",
 		"Capacidade":"300ml",
 		"Observações":":A cor do produto pode variar de acordo com as configurações do seu monitor",
@@ -1180,7 +1205,9 @@
 	{
 		"Código":"6003",
 		"Nome":"Cazuza",
+		"Imagem": "/images/Canecas/cazuza.jpg",
 		"Preço":"28,50",
+		"Pagamento":"ou a partir de 2xR$14,25",
 		"Material":"Cerâmica",
 		"Capacidade":"300ml",
 		"Observações":":A cor do produto pode variar de acordo com as configurações do seu monitor",
@@ -1191,7 +1218,9 @@
 	{
 		"Código":"6004",
 		"Nome":"Clube da Luta",
+		"Imagem": "/images/Canecas/clubedaluta.jpg",
 		"Preço":"28,50",
+		"Pagamento":"ou a partir de 2xR$14,25",
 		"Material":"Cerâmica",
 		"Capacidade":"300ml",
 		"Observações":":A cor do produto pode variar de acordo com as configurações do seu monitor",
@@ -1202,7 +1231,9 @@
 	{
 		"Código":"6005",
 		"Nome":"David Bowie",
+		"Imagem": "/images/Canecas/davidbowie.jpg",
 		"Preço":"28,50",
+		"Pagamento":"ou a partir de 2xR$14,25",
 		"Material":"Cerâmica",
 		"Capacidade":"300ml",
 		"Observações":":A cor do produto pode variar de acordo com as configurações do seu monitor",
@@ -1214,6 +1245,8 @@
 		"Código":"6006",
 		"Nome":"Dexter",
 		"Preço":"28,50",
+		"Imagem": "/images/Canecas/dexter.jpg",
+		"Pagamento":"ou a partir de 2xR$14,25",
 		"Material":"Cerâmica",
 		"Capacidade":"300ml",
 		"Observações":":A cor do produto pode variar de acordo com as configurações do seu monitor",
@@ -1224,7 +1257,9 @@
 	{
 		"Código":"6007",
 		"Nome":"Harry Potter",
+		"Imagem": "/images/Canecas/hp.jpg",
 		"Preço":"28,50",
+		"Pagamento":"ou a partir de 2xR$14,25",
 		"Material":"Cerâmica",
 		"Capacidade":"300ml",
 		"Observações":":A cor do produto pode variar de acordo com as configurações do seu monitor",
@@ -1235,7 +1270,9 @@
 	{
 		"Código":"6008",
 		"Nome":"O Hobbit",
+		"Imagem": "/images/Canecas/hobbit.jpg",
 		"Preço":"28,50",
+		"Pagamento":"ou a partir de 2xR$14,25",
 		"Material":"Cerâmica",
 		"Capacidade":"300ml",
 		"Observações":":A cor do produto pode variar de acordo com as configurações do seu monitor",
@@ -1246,7 +1283,9 @@
 	{
 		"Código":"6009",
 		"Nome":"Pink Floyd",
+		"Imagem": "/images/Canecas/pf.jpg",
 		"Preço":"28,50",
+		"Pagamento":"ou a partir de 2xR$14,25",
 		"Material":"Cerâmica",
 		"Capacidade":"300ml",
 		"Observações":":A cor do produto pode variar de acordo com as configurações do seu monitor",
@@ -1257,7 +1296,9 @@
 	{
 		"Código":"6010",
 		"Nome":"Star Trek",
+		"Imagem": "/images/Canecas/startrek.jpg",
 		"Preço":"28,50",
+		"Pagamento":"ou a partir de 2xR$14,25",
 		"Material":"Cerâmica",
 		"Capacidade":"300ml",
 		"Observações":":A cor do produto pode variar de acordo com as configurações do seu monitor",
@@ -1268,7 +1309,9 @@
 	{
 		"Código":"6011",
 		"Nome":"Star Wars",
+		"Imagem": "/images/Canecas/starwars.jpg",
 		"Preço":"28,50",
+		"Pagamento":"ou a partir de 2xR$14,25",
 		"Material":"Cerâmica",
 		"Capacidade":"300ml",
 		"Observações":":A cor do produto pode variar de acordo com as configurações do seu monitor",
@@ -1279,7 +1322,9 @@
 	{
 		"Código":"6012",
 		"Nome":"Stranger Things",
+		"Imagem": "/images/Canecas/stranger.jpg",
 		"Preço":"28,50",
+		"Pagamento":"ou a partir de 2xR$14,25",
 		"Material":"Cerâmica",
 		"Capacidade":"300ml",
 		"Observações":":A cor do produto pode variar de acordo com as configurações do seu monitor",

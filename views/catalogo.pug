@@ -25,7 +25,8 @@ html
 												
 											div
 												h1 A partir de R$#{dados.filmes[x].Preço1}
-												p ou a partir de 4xR$13,90
+												p #{dados.filmes[x].Pagamento}
+											
 
 						- for (var x = 0; x < 13; x++)
 							div.col-md-4.imagem
@@ -36,4 +37,4 @@ html
 												
 											div
 												h1 A partir de R$#{dados.musica[x].Preço1}
-												p ou a partir de 3xR$15,90
+												p #{dados.musica[x].Pagamento}

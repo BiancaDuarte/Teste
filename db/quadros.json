@@ -1,8 +1,9 @@
 {"filmes":[
 	{
 		"Código":"1000",
-		"Nome":"Alice in Wonderland/Chapeleiro",
+		"Nome":"Alice no País das Maravilhas",
 		"Imagem": "/images/Promo/alicewonderlandpromo.jpg",
+		"variavel":"promo",
 		"Preço1":"44,48",
 		"Preço2":"68,80",
 		"Pagamento":"ou a partir de 4xR$13,90",
@@ -17,7 +18,7 @@
 
 	{
 		"Código":"1001",
-		"Nome":"Alice in Wonderland/Cheshire",
+		"Nome":"Alice no País das Maravilhas",
 		"Imagem": "/images/filmes/alicewonderland2.jpg",
 		"Preço1":"55,60",
 		"Preço2":"68,80",

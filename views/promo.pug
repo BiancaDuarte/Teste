@@ -1,7 +1,7 @@
 doctype html
 html
 	head
-		title= title
+		title= "catalogo"
 		link(rel='stylesheet', href='/stylesheets/bootstrap.min.css')
 		link(rel='stylesheet', href='/stylesheets/font-awesome.min.css')
 		link(rel='stylesheet', href='/stylesheets/style.css')
@@ -10,10 +10,17 @@ html
 		script(src='/javascripts/javascript.js')
    
 	body
-		include logo
 
+		include logo 
 		include body
 
-		block promo
-
-		block content
+			- for (var x = 0; x < 9; x++)
+				div.col-md-4.imagem
+						h2= dados.filmes[x].Nome
+							p
+								div
+									img(src=dados.filmes[x].Imagem)
+									
+								div
+									h1 A partir de R$#{dados.filmes[x].Preço1}
+									p #{dados.filmes[x].Pagamento}

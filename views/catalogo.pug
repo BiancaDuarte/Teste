@@ -10,6 +10,9 @@ html
 		script(src='/javascripts/javascript.js')
    
 	body
+
+		include logo 
+		include body
 		div.titulocatalogo
 			h2 Catálogo de Produtos
 		div.branco
@@ -20,8 +23,15 @@ html
 							div.col-md-4.imagem
 									h2= dados.filmes[x].Nome
 										p
-											div
-												img(src=dados.filmes[x].Imagem)
+											.grid
+												figure.effect-zoe
+													img(src=dados.filmes[x].Imagem)
+													figcaption
+														p.icon-links
+															a(href='#')
+																i.fa.fa-cart-plus(aria-hidden='true')
+															a(href="#") 
+																i.fa.fa-fw.fa-heart
 												
 											div
 												h1 A partir de R$#{dados.filmes[x].Preço1}
@@ -32,9 +42,15 @@ html
 							div.col-md-4.imagem
 									h2= dados.musica[x].Nome
 										p
-											div
-												img(src=dados.musica[x].Imagem)
-												
+											.grid
+												figure.effect-zoe
+													img(src=dados.musica[x].Imagem)
+													figcaption
+														p.icon-links
+															a(href='#')
+																i.fa.fa-cart-plus(aria-hidden='true')
+															a(href="#") 
+																i.fa.fa-fw.fa-heart
 											div
 												h1 A partir de R$#{dados.musica[x].Preço1}
 												p #{dados.musica[x].Pagamento}
@@ -43,9 +59,16 @@ html
 							div.col-md-4.imagem
 									h2= dados.seriados[x].Nome
 										p
-											div
-												img(src=dados.seriados[x].Imagem)
-												
+											.grid
+												figure.effect-zoe
+													img(src=dados.seriados[x].Imagem)
+													figcaption
+														p.icon-links
+															a(href='#')
+																i.fa.fa-cart-plus(aria-hidden='true')
+															a(href="#") 
+																i.fa.fa-fw.fa-heart
+	
 											div
 												h1 A partir de R$#{dados.seriados[x].Preço1}
 												p #{dados.seriados[x].Pagamento}
@@ -54,8 +77,15 @@ html
 							div.col-md-4.imagem
 									h2= dados.canecas[x].Nome
 										p
-											div
-												img(src=dados.canecas[x].Imagem)
+											.grid
+												figure.effect-zoe
+													img(src=dados.canecas[x].Imagem)
+													figcaption
+														p.icon-links
+															a(href='#')
+																i.fa.fa-cart-plus(aria-hidden='true')
+															a(href="#") 
+																i.fa.fa-fw.fa-heart
 												
 											div
 												h1 A partir de R$#{dados.canecas[x].Preço}

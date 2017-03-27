@@ -9,8 +9,15 @@ gulp.task('bootstrap', function(){
    	gulp.src('./bower_components/bootstrap/dist/js/bootstrap.min.js')
    		.pipe(gulp.dest('./public/javascripts'));
 
+    gulp.src('./bower_components/materialize/dist/js/materialize.min.js')
+      .pipe(gulp.dest('./public/javascripts'));
+
    	gulp.src('./bower_components/bootstrap/dist/fonts/*.*')
    		.pipe(gulp.dest('./public/fonts'));
+
+    gulp.src('./bower_components/materialize/dist/css/materialize.min.js')
+      .pipe(gulp.dest('./public/stylesheets'));
+
 
     console.log('bootstrap');
 });

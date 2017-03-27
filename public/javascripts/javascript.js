@@ -17,6 +17,16 @@ $(document).ready(function () {
 	 $('.myCarousel').carousel({
             interval: 3000
         });
+
+	$(masonry).masonry({
+  // set itemSelector so .grid-sizer is not used in layout
+  itemSelector: '.gallery-filter',
+  // use element for option
+  columnWidth: '.gallery-filter',
+  // no transitions
+  transitionDuration: 0
+});
+
 });
 
 

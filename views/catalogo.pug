@@ -1,158 +1,131 @@
 doctype html
 html
-	head
-		title= "catalogo"
-		link(rel='stylesheet', href='/stylesheets/bootstrap.min.css')
-		link(rel='stylesheet', href='/stylesheets/font-awesome.min.css')
-		link(rel='stylesheet', href='/stylesheets/style.css')
-		script(src='/javascripts/jquery-3.1.1.min.js')
-		script(src='/javascripts/bootstrap.min.js')
-		script(src='/javascripts/javascript.js')
-   
-	body
+head
+	title= "catalogo"
+	link(rel='stylesheet', href='/stylesheets/bootstrap.min.css')
+	link(rel='stylesheet', href='/stylesheets/materialize.min.css')
+	link(rel='stylesheet', href='/stylesheets/font-awesome.min.css')
+	link(rel='stylesheet', href='/stylesheets/style.css')
+	script(src='/javascripts/jquery-3.1.1.min.js')
+	script(src='/javascripts/bootstrap.min.js')
+	script(src='/javascripts/materialize.min.js')
+	script(src='/javascripts/javascript.js')
 
-		include logo 
-		include body
-		.categories-container
-			ul.categories.container
-				li
-					a(href='#all') All    
-				li
-					a(href='#custom-category') Custom Category
+body
 
-					// Visible in the custom-category filter
-				div.col.l4.m6.s12.gallery-item.gallery-expand.gallery-filter.custom-category
-				
-								- for (var x = 0; x < 36; x++)
-									div.col-md-4.imagem
-											h2= dados.filmes[x].Nome
-												p
-													.grid
-														figure.effect-zoe
-															img(src=dados.filmes[x].Imagem)
-															figcaption
-																p.icon-links
-																	a(href='#')
-																		i.fa.fa-cart-plus(aria-hidden='true')
-																	a(href="#") 
-																		i.fa.fa-fw.fa-heart
+	include logo 
+	include body
 
-														
-													div
-														h1 A partir de R$#{dados.filmes[x].Preço1}
-														p #{dados.filmes[x].Pagamento} 
+	div.titulopromo
+		.fixed-action-btn.toolbar
+			a.btn-floating.btn-large.red
+				i.large.material-icons mode_edit
+				ul
+					li.waves-effect.waves-light
+						a(href='#!')
+							i.material-icons format_quote
+					li.waves-effect.waves-light
+						a(href='#!')
+							i.material-icons format_quote
+					li.waves-effect.waves-light
+						a(href='#!')
+							i.material-icons publish
+					li.waves-effect.waves-light
+						a(href='#!')
+							i.material-icons attach_file
+		h2 Catálogo de Produtos
 
-				div.col.l4.m6.s12.gallery-item.gallery-expand.gallery-filter.all
-				
-								- for (var x = 0; x < 13; x++)
-									div.col-md-4.imagem
-											h2= dados.musica[x].Nome
-												p
-													.grid
-														figure.effect-zoe
-															img(src=dados.musica[x].Imagem)
-															figcaption
-																p.icon-links
-																	a(href='#')
-																		i.fa.fa-cart-plus(aria-hidden='true')
-																	a(href="#") 
-																		i.fa.fa-fw.fa-heart
-													div
-														h1 A partir de R$#{dados.musica[x].Preço1}
-														p #{dados.musica[x].Pagamento}
-		div.titulopromo
-			h2 Catálogo de Produtos
-				div.branco
-					div.container
-							div.row
+	div.branco
+		div.container
+				div.row
 
-								- for (var x = 0; x < 36; x++)
-									div.col-md-4.imagem
-											h2= dados.filmes[x].Nome
-												p
-													.grid
-														figure.effect-zoe
-															img(src=dados.filmes[x].Imagem)
-															figcaption
-																p.icon-links
-																	a(href='#')
-																		i.fa.fa-cart-plus(aria-hidden='true')
-																	a(href="#") 
-																		i.fa.fa-fw.fa-heart
+					- for (var x = 0; x < 36; x++)
+						div.col-md-4.imagem
+								h2= dados.filmes[x].Nome
+									p
+										.grid
+											figure.effect-zoe
+												img(src=dados.filmes[x].Imagem)
+												figcaption
+													p.icon-links
+														a(href='#')
+															i.fa.fa-cart-plus(aria-hidden='true')
+														a(href="#") 
+															i.fa.fa-fw.fa-heart
 
-														
-													div
-														h1 A partir de R$#{dados.filmes[x].Preço1}
-														p #{dados.filmes[x].Pagamento}
-													
+											
+										div
+											h1 A partir de R$#{dados.filmes[x].Preço1}
+											p #{dados.filmes[x].Pagamento}
+										
 
-								- for (var x = 0; x < 13; x++)
-									div.col-md-4.imagem
-											h2= dados.musica[x].Nome
-												p
-													.grid
-														figure.effect-zoe
-															img(src=dados.musica[x].Imagem)
-															figcaption
-																p.icon-links
-																	a(href='#')
-																		i.fa.fa-cart-plus(aria-hidden='true')
-																	a(href="#") 
-																		i.fa.fa-fw.fa-heart
-													div
-														h1 A partir de R$#{dados.musica[x].Preço1}
-														p #{dados.musica[x].Pagamento}
+					- for (var x = 0; x < 13; x++)
+						div.col-md-4.imagem
+								h2= dados.musica[x].Nome
+									p
+										.grid
+											figure.effect-zoe
+												img(src=dados.musica[x].Imagem)
+												figcaption
+													p.icon-links
+														a(href='#')
+															i.fa.fa-cart-plus(aria-hidden='true')
+														a(href="#") 
+															i.fa.fa-fw.fa-heart
+										div
+											h1 A partir de R$#{dados.musica[x].Preço1}
+											p #{dados.musica[x].Pagamento}
 
-								- for (var x = 0; x < 16; x++)
-									div.col-md-4.imagem
-											h2= dados.seriados[x].Nome
-												p
-													.grid
-														figure.effect-zoe
-															img(src=dados.seriados[x].Imagem)
-															figcaption
-																p.icon-links
-																	a(href='#')
-																		i.fa.fa-cart-plus(aria-hidden='true')
-																	a(href="#") 
-																		i.fa.fa-fw.fa-heart
-			
-													div
-														h1 A partir de R$#{dados.seriados[x].Preço1}
-														p #{dados.seriados[x].Pagamento}
+					- for (var x = 0; x < 16; x++)
+						div.col-md-4.imagem
+								h2= dados.seriados[x].Nome
+									p
+										.grid
+											figure.effect-zoe
+												img(src=dados.seriados[x].Imagem)
+												figcaption
+													p.icon-links
+														a(href='#')
+															i.fa.fa-cart-plus(aria-hidden='true')
+														a(href="#") 
+															i.fa.fa-fw.fa-heart
 
-								- for (var x = 0; x < 6; x++)
-									div.col-md-4.imagem
-											h2= dados.desenhos[x].Nome
-												p
-													.grid
-														figure.effect-zoe
-															img(src=dados.desenhos[x].Imagem)
-															figcaption
-																p.icon-links
-																	a(href='#')
-																		i.fa.fa-cart-plus(aria-hidden='true')
-																	a(href="#") 
-																		i.fa.fa-fw.fa-heart
-			
-													div
-														h1 A partir de R$#{dados.desenhos[x].Preço1}
-														p #{dados.desenhos[x].Pagamento}
+										div
+											h1 A partir de R$#{dados.seriados[x].Preço1}
+											p #{dados.seriados[x].Pagamento}
 
-								- for (var x = 0; x < 13; x++)
-									div.col-md-4.imagem
-											h2= dados.canecas[x].Nome
-												p
-													.grid
-														figure.effect-zoe
-															img(src=dados.canecas[x].Imagem)
-															figcaption
-																p.icon-links
-																	a(href='#')
-																		i.fa.fa-cart-plus(aria-hidden='true')
-																	a(href="#") 
-																		i.fa.fa-fw.fa-heart
-														
-													div
-														h1 A partir de R$#{dados.canecas[x].Preço}
-														p #{dados.canecas[x].Pagamento}
+					- for (var x = 0; x < 6; x++)
+						div.col-md-4.imagem
+								h2= dados.desenhos[x].Nome
+									p
+										.grid
+											figure.effect-zoe
+												img(src=dados.desenhos[x].Imagem)
+												figcaption
+													p.icon-links
+														a(href='#')
+															i.fa.fa-cart-plus(aria-hidden='true')
+														a(href="#") 
+															i.fa.fa-fw.fa-heart
+
+										div
+											h1 A partir de R$#{dados.desenhos[x].Preço1}
+											p #{dados.desenhos[x].Pagamento}
+
+					- for (var x = 0; x < 13; x++)
+						div.col-md-4.imagem
+								h2= dados.canecas[x].Nome
+									p
+										.grid
+											figure.effect-zoe
+												img(src=dados.canecas[x].Imagem)
+												figcaption
+													p.icon-links
+														a(href='#')
+															i.fa.fa-cart-plus(aria-hidden='true')
+														a(href="#") 
+															i.fa.fa-fw.fa-heart
+											
+										div
+											h1 A partir de R$#{dados.canecas[x].Preço}
+											p #{dados.canecas[x].Pagamento}

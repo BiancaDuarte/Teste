@@ -2,31 +2,22 @@
 $(document).ready(function () {
 	$(function(){
 		$(".dropdown").hover(
-			function() {
+			function(){
 				$('.dropdown-menu', this).stop( true, true ).fadeIn("fast");
 				$(this).toggleClass('open');
 				$('b', this).toggleClass("caret caret-up");
 			},
-			function() {
+			function(){
 				$('.dropdown-menu', this).stop( true, true ).fadeOut("fast");
 				$(this).toggleClass('open');
 				$('b', this).toggleClass("caret caret-up");
-			});
-	});	
+			}
+		);
+	});
 
-	 $('.myCarousel').carousel({
-            interval: 3000
-        });
-
-	$(masonry).masonry({
-  // set itemSelector so .grid-sizer is not used in layout
-  itemSelector: '.gallery-filter',
-  // use element for option
-  columnWidth: '.gallery-filter',
-  // no transitions
-  transitionDuration: 0
-});
-
+	$('.myCarousel').carousel({
+        interval: 3000
+    });
 });
 
 

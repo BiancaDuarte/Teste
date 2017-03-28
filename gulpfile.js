@@ -15,7 +15,7 @@ gulp.task('bootstrap', function(){
    	gulp.src('./bower_components/bootstrap/dist/fonts/*.*')
    		.pipe(gulp.dest('./public/fonts'));
 
-    gulp.src('./bower_components/materialize/dist/css/materialize.min.js')
+    gulp.src('./bower_components/materialize/dist/css/materialize.min.css')
       .pipe(gulp.dest('./public/stylesheets'));
 
 

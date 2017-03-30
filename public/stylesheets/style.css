@@ -115,6 +115,7 @@ a {
 }
 #resultados-busca h5 {
   font-family: 'Farsan', cursive;
+  cursor: pointer;
   font-size: 30px;
   color: black;
   text-align: center;
@@ -191,6 +192,9 @@ a {
 .logo img {
   width: 100%;
   cursor: pointer;
+}
+.logo ul {
+  margin-top: 80px;
 }
 @font-face {
   font-weight: normal;
@@ -353,21 +357,12 @@ figure.effect-zoe:hover p.icon-links a:first-child {
   background-color: #26A69A;
   padding: 10px;
   border-style: outset black;
+  border-radius: 10px;
   z-index: 1024;
   position: relative;
   bottom: 0;
   width: 100%;
   max-height: 400px;
   overflow-y: auto;
-}
-#style-3::-webkit-scrollbar-track {
-  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-  background-color: #F5F5F5;
-}
-#style-3::-webkit-scrollbar {
-  width: 6px;
-  background-color: #F5F5F5;
-}
-#style-3::-webkit-scrollbar-thumb {
-  background-color: #000000;
+  box-shadow: 0px 30px 30px #444;
 }

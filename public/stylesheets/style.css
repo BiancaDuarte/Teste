@@ -43,8 +43,19 @@ a {
 .laranja {
   width: 100%;
   background-color: #ff5500;
-  height: 200px;
+  height: 215px;
   margin: 0 auto;
+}
+.logo nav {
+  margin-top: 80px;
+  color: #fff;
+  background-color: #222222;
+  width: 100%;
+  height: 56px;
+  line-height: 56px;
+}
+.redor {
+  position: absolute;
 }
 .branco {
   width: 80%;
@@ -94,6 +105,18 @@ a {
   font-family: 'Farsan', cursive;
   font-size: 19px;
   color: grey;
+  text-align: center;
+}
+#resultados-busca h3 {
+  font-family: 'Farsan', cursive;
+  font-size: 19px;
+  color: red;
+  text-align: center;
+}
+#resultados-busca h5 {
+  font-family: 'Farsan', cursive;
+  font-size: 30px;
+  color: black;
   text-align: center;
 }
 .imagem:hover h1,
@@ -161,10 +184,6 @@ a {
 }
 .logo i {
   float: right;
-}
-.logo form {
-  padding-top: 50px;
-  padding-left: 140px;
 }
 .logo input {
   width: 40%;
@@ -329,4 +348,26 @@ figure.effect-zoe:hover p.icon-links a:nth-child(2) {
 figure.effect-zoe:hover p.icon-links a:first-child {
   -webkit-transition-delay: 0.2s;
   transition-delay: 0.2s;
+}
+#resultados-busca {
+  background-color: #26A69A;
+  padding: 10px;
+  border-style: outset black;
+  z-index: 1024;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  max-height: 400px;
+  overflow-y: auto;
+}
+#style-3::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #F5F5F5;
+}
+#style-3::-webkit-scrollbar {
+  width: 6px;
+  background-color: #F5F5F5;
+}
+#style-3::-webkit-scrollbar-thumb {
+  background-color: #000000;
 }

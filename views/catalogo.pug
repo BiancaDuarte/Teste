@@ -17,122 +17,126 @@ body
 	include logo 
 	include body
 
-	div.titulopromo
-		.fixed-action-btn.toolbar
-			a.btn-floating.btn-large.waves-light
-				i.large.material-icons search
-			ul
-				li.waves-effect.waves-light
-					a(href='#!' type='select' id='resultado')
-						i.material-icons.small movie
-				li.waves-effect.waves-light
-					a(href='#!')
-						i.material-icons.small queue_music
-				li.waves-effect.waves-light
-					a(href='#!')
-						i.material-icons.small theaters
-				li.waves-effect.waves-light
-					a(href='#!')
-						i.material-icons.small face
-				li.waves-effect.waves-light
-					a(href='#!')
-						i.fa.fa-coffee.fa-2x
-				li.waves-effect.waves-light
-					a(href='http://localhost:45000/promocao')
-						i.material-icons.small loyalty
-		h2 Catálogo de Produtos
+	#wrapper
+		#style-3.scrollbar
+			.force-overflow
 
-	div.branco
-		div.container
-				div.row
+			div.titulopromo
+				.fixed-action-btn.toolbar
+					a.btn-floating.btn-large.waves-light
+						i.large.material-icons search
+					ul
+						li.waves-effect.waves-light
+							a(href='#!' type='select' id='resultado')
+								i.material-icons.small movie
+						li.waves-effect.waves-light
+							a(href='#!')
+								i.material-icons.small queue_music
+						li.waves-effect.waves-light
+							a(href='#!')
+								i.material-icons.small theaters
+						li.waves-effect.waves-light
+							a(href='#!')
+								i.material-icons.small face
+						li.waves-effect.waves-light
+							a(href='#!')
+								i.fa.fa-coffee.fa-2x
+						li.waves-effect.waves-light
+							a(href='http://localhost:45000/promocao')
+								i.material-icons.small loyalty
+				h2 Catálogo de Produtos
 
-					- for (var x = 0; x < 36; x++)
-						div.col-md-4.imagem
-								h2= dados.filmes[x].Nome
-									p
-										.grid
-											figure.effect-zoe
-												img(src=dados.filmes[x].Imagem)
-												figcaption
-													p.icon-links
-														a(href='#')
-															i.fa.fa-cart-plus(aria-hidden='true')
-														a(href="#") 
-															i.fa.fa-fw.fa-heart
+			div.branco
+				div.container
+						div.row
 
-											
-										div
-											h1 A partir de R$#{dados.filmes[x].Preço1}
-											p #{dados.filmes[x].Pagamento}
-										
+							- for (var x = 0; x < 36; x++)
+								div.col-md-4.imagem
+										h2= dados.filmes[x].Nome
+											p
+												.grid
+													figure.effect-zoe
+														img(src=dados.filmes[x].Imagem)
+														figcaption
+															p.icon-links
+																a(href='#')
+																	i.fa.fa-cart-plus(aria-hidden='true')
+																a(href="#") 
+																	i.fa.fa-fw.fa-heart
 
-					- for (var x = 0; x < 13; x++)
-						div.col-md-4.imagem
-								h2= dados.musica[x].Nome
-									p
-										.grid
-											figure.effect-zoe
-												img(src=dados.musica[x].Imagem)
-												figcaption
-													p.icon-links
-														a(href='#')
-															i.fa.fa-cart-plus(aria-hidden='true')
-														a(href="#") 
-															i.fa.fa-fw.fa-heart
-										div
-											h1 A partir de R$#{dados.musica[x].Preço1}
-											p #{dados.musica[x].Pagamento}
+													
+												div
+													h1 A partir de R$#{dados.filmes[x].Preço1}
+													p #{dados.filmes[x].Pagamento}
+												
 
-					- for (var x = 0; x < 16; x++)
-						div.col-md-4.imagem
-								h2= dados.seriados[x].Nome
-									p
-										.grid
-											figure.effect-zoe
-												img(src=dados.seriados[x].Imagem)
-												figcaption
-													p.icon-links
-														a(href='#')
-															i.fa.fa-cart-plus(aria-hidden='true')
-														a(href="#") 
-															i.fa.fa-fw.fa-heart
+							- for (var x = 0; x < 13; x++)
+								div.col-md-4.imagem
+										h2= dados.musica[x].Nome
+											p
+												.grid
+													figure.effect-zoe
+														img(src=dados.musica[x].Imagem)
+														figcaption
+															p.icon-links
+																a(href='#')
+																	i.fa.fa-cart-plus(aria-hidden='true')
+																a(href="#") 
+																	i.fa.fa-fw.fa-heart
+												div
+													h1 A partir de R$#{dados.musica[x].Preço1}
+													p #{dados.musica[x].Pagamento}
 
-										div
-											h1 A partir de R$#{dados.seriados[x].Preço1}
-											p #{dados.seriados[x].Pagamento}
+							- for (var x = 0; x < 16; x++)
+								div.col-md-4.imagem
+										h2= dados.seriados[x].Nome
+											p
+												.grid
+													figure.effect-zoe
+														img(src=dados.seriados[x].Imagem)
+														figcaption
+															p.icon-links
+																a(href='#')
+																	i.fa.fa-cart-plus(aria-hidden='true')
+																a(href="#") 
+																	i.fa.fa-fw.fa-heart
 
-					- for (var x = 0; x < 6; x++)
-						div.col-md-4.imagem
-								h2= dados.desenhos[x].Nome
-									p
-										.grid
-											figure.effect-zoe
-												img(src=dados.desenhos[x].Imagem)
-												figcaption
-													p.icon-links
-														a(href='#')
-															i.fa.fa-cart-plus(aria-hidden='true')
-														a(href="#") 
-															i.fa.fa-fw.fa-heart
+												div
+													h1 A partir de R$#{dados.seriados[x].Preço1}
+													p #{dados.seriados[x].Pagamento}
 
-										div
-											h1 A partir de R$#{dados.desenhos[x].Preço1}
-											p #{dados.desenhos[x].Pagamento}
+							- for (var x = 0; x < 6; x++)
+								div.col-md-4.imagem
+										h2= dados.desenhos[x].Nome
+											p
+												.grid
+													figure.effect-zoe
+														img(src=dados.desenhos[x].Imagem)
+														figcaption
+															p.icon-links
+																a(href='#')
+																	i.fa.fa-cart-plus(aria-hidden='true')
+																a(href="#") 
+																	i.fa.fa-fw.fa-heart
 
-					- for (var x = 0; x < 13; x++)
-						div.col-md-4.imagem
-								h2= dados.canecas[x].Nome
-									p
-										.grid
-											figure.effect-zoe
-												img(src=dados.canecas[x].Imagem)
-												figcaption
-													p.icon-links
-														a(href='#')
-															i.fa.fa-cart-plus(aria-hidden='true')
-														a(href="#") 
-															i.fa.fa-fw.fa-heart
-											
-										div
-											h1 A partir de R$#{dados.canecas[x].Preço}
-											p #{dados.canecas[x].Pagamento}
+												div
+													h1 A partir de R$#{dados.desenhos[x].Preço1}
+													p #{dados.desenhos[x].Pagamento}
+
+							- for (var x = 0; x < 13; x++)
+								div.col-md-4.imagem
+										h2= dados.canecas[x].Nome
+											p
+												.grid
+													figure.effect-zoe
+														img(src=dados.canecas[x].Imagem)
+														figcaption
+															p.icon-links
+																a(href='#')
+																	i.fa.fa-cart-plus(aria-hidden='true')
+																a(href="#") 
+																	i.fa.fa-fw.fa-heart
+													
+												div
+													h1 A partir de R$#{dados.canecas[x].Preço1}
+													p #{dados.canecas[x].Pagamento}

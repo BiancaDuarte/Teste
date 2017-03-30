@@ -1,12 +1,23 @@
 div.laranja
 	div.col-md-4.logo
 		a(href="http://localhost:45000"): img.className#IdName(src="/images/logo2.png" alt="Image Title" )
-	div.col-md-4.logo
 
-		
 	div.col-md-4.logo
-		form.navbar-form.navbar-left(role='search')
-			.form-group
-				input.form-control(type='text', placeholder='O que você procura?', id='txt-search')
-		div#filter-records
-		
+		nav
+			.nav-wrapper
+				form
+					.input-field
+						input(type='search', id='txt-search', required)
+						label.label-icon(for='search')
+							i.material-icons search
+						i.material-icons close
+				div#resultados-busca
+
+
+		//- ul
+		//- 	li.waves-effect.waves-light
+		//- 		a(href='#!' type='select')
+		//- 			i.material-icons.medium shopping_cart
+		//- 	li.waves-effect.waves-light
+		//- 		a(href='#!')
+		//- 			i.fa.fa-heart.fa-3x 

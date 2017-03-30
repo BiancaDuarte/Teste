@@ -1,5 +1,6 @@
 var server = 'http://localhost:45000/dados';
 $(document).ready(function () {
+	$('#resultados-busca').hide();
 	$(function(){
 		$(".dropdown").hover(
 			function(){
@@ -20,52 +21,39 @@ $(document).ready(function () {
 	});
 
 
-	$.getJSON('../quadros.json', function(dados){
-		// datas são seus dados do json
-		console.log(dados);
- 
-// para pegar os valores pelos indices do objeto basta varer o objeto
- 
-		$.each(dados, function(catalogo, resultado){
-			console.log(resultado.indice); // ta ai seus valores
-		});
- 
-	});
-
 $('#txt-search').keyup(function(){
 	var searchField = $(this).val();
 	if(searchField === '')  {
-		$('#filter-records').html('');
+		$('#resultados-busca').hide();
+		$('#resultados-busca').html('');
 		return;
 	}
-	
+
 	var regex = new RegExp(searchField, "i");
-	var output = '<div class="row">';
+	var resultados = '<div class="row">';
 	var count = 1;
-	$.get(server, function(data) {
-	  for (z in data) {
-	  	var bla = data[z];
-	  	for (y in bla){
-	  		var oi = bla[y].Nome;
-	  		console.log(oi);
-	  		if (oi.search(regex) != -1){
-			  output += '<div class="col-md-6 well">';
-			  output += '<div class="col-md-3"><img class="img-responsive" src="'+bla[y].Imagem+'" alt="'+ oi +'" /></div>';
-			  output += '<div class="col-md-7">';
-			  output += '<h5>' + oi + '</h5>';
-			  output += '<p>' + bla[y].Preço1 + '</p>'
-			  output += '</div>';
-			  output += '</div>';
-			  if(count%2 == 0){
-				output += '</div><div class="row">'
-			  }
-			  count++;
+	$.get('/dados', function(data) {
+	$('#txt-search').show();	
+	$('#resultados-busca').show();
+		for (x in data) {
+			var categorias = data[x];
+			for (y in categorias){
+				var nome = categorias[y].Nome;
+				if (nome.search(regex) != -1){
+					console.log(nome);
+					resultados += '<div class="col-md-12 well">';
+					resultados += '<div class="col-md-3"><img class="img-responsive" src="'+categorias[y].Imagem+'" alt="'+ nome +'" /></div>';
+					resultados += '<div class="col-md-7">';
+					resultados += '<h5>' + nome + '</h5>';
+					resultados += '<h3> A partir de R$ ' + categorias[y].Preço1 + '</h3>'
+					resultados += '</div>';
+					resultados += '</div>';
+				}
 			}
-	  	}
-	  }
-	  output += '</div>';
-	  $('#filter-records').html(output);
-});
+		}
+		resultados += '</div>';
+		$('#resultados-busca').html(resultados);
+	});
 });
 
 	});

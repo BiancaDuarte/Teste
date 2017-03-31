@@ -56,4 +56,30 @@ $('#txt-search').keyup(function(){
 	});
 });
 
-	});
+// var myJSON = {"Código": 1000 }; 
+// var myJSON = encodeURIComponent(JSON.stringify(myJSON1)); 
+
+// $('#salvar').attr('href', 'localhost:45000/'+ myJSON +'/Código');
+// // this button then sends the letter to a function w/c generates the PDF
+
+
+	// 	$(function(){
+	// 	    $('#salva').on("click", function() {
+	// 	        var código = $('#Código').val();
+
+	// 	        $.getJSON("http://localhost:45000/" + código, function(data){
+	// 	        });
+	// 	    });
+	// 	});
+
+
+// $filmes.filtrarCodigo(codigo){
+// 	$('#resultado').on("click", function() {
+// 		return $filmes.filter(function(item){ 
+//                                     return (item.Código == codigo)
+//                                 });
+// 	})
+// }
+
+ });
+

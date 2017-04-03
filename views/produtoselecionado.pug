@@ -19,16 +19,13 @@ body
 
 	div.titulopromo
 	div.branco
-		div.container
+		div.container.informacoes
 				div.row
 					- for (var x = 0; x < 1; x++)
-						div.col-md-6.imagem
-									p
-										.grid
-												img(src=dados.filmes[x].Imagem)
-
-						div.col-md-6.imagem
-							#informacoes
-								h2= dados.filmes[x].Nome
+						div.col-md-6
+							p
+								.grid
+								
+						div.col-md-6
 
 

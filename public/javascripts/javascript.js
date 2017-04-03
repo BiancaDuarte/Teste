@@ -56,7 +56,6 @@ $('#txt-search').keyup(function(){
 	});
 });
 
-$('#informacoes').append('<tr><td>'+dados.filmes[x].Nome+'</td><td>'+dados.filmes[x].Preço1+'</td><td>'+'R$ '+n+' '+'</td><td>'+'<span class="glyphicon glyphicon-thumbs-down"></span>'+'</td><td>'+dados.filmes[x].Estoque+'</td>'+'</td></tr>');
 // var myJSON = {"Código": 1000 }; 
 // var myJSON = encodeURIComponent(JSON.stringify(myJSON1)); 
 
@@ -80,7 +79,27 @@ $('#informacoes').append('<tr><td>'+dados.filmes[x].Nome+'</td><td>'+dados.filme
 //                                     return (item.Código == codigo)
 //                                 });
 // 	})
+    $.each(data, function(){
+        item = "<center><h4>" + data.filmes[x].Nome + "</h4></center>";
+
+     $('#informacoes').append(item);
+    });
 // }
 
  });
+
+
+
+$.ajax({
+    url : server,
+    type : 'POST',
+    data : {
+    	nome: data.filmes[x].Nome 
+    },
+		success: tudo
+
+       
+	
+});
+$('#informacoes').append('<tr><td>'+data.filmes[x].Nome+'</td><td>'+data.filmes[x].Imagem+'</td><td>'+data.filmes[x].Preço1+'</td><td>'+data.filmes[x].Estoque+'</td>'+'</td></tr>');
 

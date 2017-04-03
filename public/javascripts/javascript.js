@@ -1,4 +1,5 @@
 var server = 'http://localhost:45000/dados';
+ var json="http://localhost:45000/dados";
 $(document).ready(function () {
 	$('#resultados-busca').hide();
 	$(function(){
@@ -79,27 +80,25 @@ $('#txt-search').keyup(function(){
 //                                     return (item.Código == codigo)
 //                                 });
 // 	})
-    $.each(data, function(){
-        item = "<center><h4>" + data.filmes[x].Nome + "</h4></center>";
 
-     $('#informacoes').append(item);
-    });
-// }
-
- });
-
-
-
-$.ajax({
-    url : server,
-    type : 'POST',
-    data : {
-    	nome: data.filmes[x].Nome 
-    },
-		success: tudo
-
-       
-	
+tudo();
+   	
 });
-$('#informacoes').append('<tr><td>'+data.filmes[x].Nome+'</td><td>'+data.filmes[x].Imagem+'</td><td>'+data.filmes[x].Preço1+'</td><td>'+data.filmes[x].Estoque+'</td>'+'</td></tr>');
+
+function tudo(){
+$.get(json, function(data) {
+    for(var x=0; x<data.filmes.length; x++){
+    	$('#imagem').append( '<img src='+data.filmes[x].Imagem+'>')
+    	$('#informacoes').append('<h1>' +data.filmes[x].Nome+data.filmes[x].Preço1+data.filmes[x].Estoque1 + '</h1>'); 
+    }
+
+});
+};
+
+// $.get(json, function(data) {
+
+// });
+
+// $("#").append(html);
+// $('#informacoes').append('<tr><td>'+data.filmes[x].Nome+'</td><td>'+data.filmes[x].Imagem+'</td><td>'+data.filmes[x].Preço1+'</td><td>'+data.filmes[x].Estoque+'</td>'+'</td></tr>');
 

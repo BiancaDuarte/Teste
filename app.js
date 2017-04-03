@@ -9,6 +9,7 @@ var index = require('./routes/index');
 var catalogo = require('./routes/users');
 var promocao = require('./routes/promocao');
 var dados = require('./routes/dados');
+var produtoselecionado = require('./routes/produtoselecionado');
 var favoritos = require('./routes/favoritos')
 var carrinho = require('./routes/carrinho')
 var app = express();
@@ -29,6 +30,7 @@ app.use('/', index);
 app.use('/catalogo', catalogo);
 app.use('/promocao', promocao);
 app.use('/dados' , dados);
+app.use('/produtoselecionado', produtoselecionado);
 app.use('/favoritos', favoritos);
 app.use('/carrinho', carrinho);
 

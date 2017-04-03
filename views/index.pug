@@ -31,14 +31,15 @@ block content
 										p
 											.grid
 												figure.effect-zoe
-													img(src=dados.lancamentos[x].Imagem)
-													figcaption
-														p.icon-links
-															a(href='#')
-																i.fa.fa-cart-plus(aria-hidden='true')
-															a(href="#") 
-																i.fa.fa-fw.fa-heart
-											div
-												h1 A partir de R$#{dados.lancamentos[x].Preço1}
-												p ou a partir de 3xR$15,90
+													a(href="http://localhost:45000/produtoselecionado?cod="+dados.lancamentos[x].Código+"")
+														img(src=dados.lancamentos[x].Imagem)
+														figcaption
+															p.icon-links
+																a(href='#')
+																	i.material-icons.small shopping_cart
+																a(href="#") 
+																	i.material-icons.small star
+												div
+													h1 A partir de R$#{dados.lancamentos[x].Preço1}
+													p ou a partir de 3xR$15,90
 

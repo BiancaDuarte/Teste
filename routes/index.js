@@ -7,7 +7,7 @@ router.get('/', function(req, res, next) {
 
 fs.readFile(__dirname + '/../db/quadros.json', 'utf8', function(err, data){
 	data = JSON.parse(data);
-	res.render('index', {title: 'Cadastro de Países', dados:data });
+	res.render('index', {title: 'OnGeek Store', dados:data });
 	
 			res.end();
 	});

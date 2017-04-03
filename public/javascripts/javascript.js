@@ -56,6 +56,7 @@ $('#txt-search').keyup(function(){
 	});
 });
 
+$('#informacoes').append('<tr><td>'+dados.filmes[x].Nome+'</td><td>'+dados.filmes[x].Preço1+'</td><td>'+'R$ '+n+' '+'</td><td>'+'<span class="glyphicon glyphicon-thumbs-down"></span>'+'</td><td>'+dados.filmes[x].Estoque+'</td>'+'</td></tr>');
 // var myJSON = {"Código": 1000 }; 
 // var myJSON = encodeURIComponent(JSON.stringify(myJSON1)); 
 

@@ -57,43 +57,50 @@ $('#txt-search').keyup(function(){
 	});
 });
 
-// var myJSON = {"Código": 1000 }; 
-// var myJSON = encodeURIComponent(JSON.stringify(myJSON1)); 
+var getUrlParameter = function getUrlParameter(sParam) {
+    var sPageURL = decodeURIComponent(window.location.search.substring(1)),
+        sURLVariables = sPageURL.split('&'),
+        sParameterName,
+        i;
 
-// $('#salvar').attr('href', 'localhost:45000/'+ myJSON +'/Código');
-// // this button then sends the letter to a function w/c generates the PDF
+    for (i = 0; i < sURLVariables.length; i++) {
+        sParameterName = sURLVariables[i].split('=');
 
-
-	// 	$(function(){
-	// 	    $('#salva').on("click", function() {
-	// 	        var código = $('#Código').val();
-
-	// 	        $.getJSON("http://localhost:45000/" + código, function(data){
-	// 	        });
-	// 	    });
-	// 	});
-
-
-// $filmes.filtrarCodigo(codigo){
-// 	$('#resultado').on("click", function() {
-// 		return $filmes.filter(function(item){ 
-//                                     return (item.Código == codigo)
-//                                 });
-// 	})
-
-tudo();
-   	
-});
-
-function tudo(){
-$.get(json, function(data) {
-    for(var x=0; x<data.filmes.length; x++){
-    	$('#imagem').append( '<img src='+data.filmes[x].Imagem+'>')
-    	$('#informacoes').append('<h1>' +data.filmes[x].Nome+data.filmes[x].Preço1+data.filmes[x].Estoque1 + '</h1>'); 
+        if (sParameterName[0] === sParam) {
+            return sParameterName[1] === undefined ? true : sParameterName[1];
+        }
     }
+};
+
+if(window.location.href == 'http://localhost:45000/produtoselecionado'){
+
+	var cod = getUrlParameter('cod');
+
+	$.get(json, function(data) {
+		$('#imagem').append( '<img src='+data.filmes[0].Imagem+'>')
+	});
+}
+
+// 	var count = 0;//recebendo o valor 5 que você disse
+// $('#aumenta').click(function(){
+// 	alert(count);
+// 	count++;
+// });
 
 });
-};
+
+
+
+
+// function tudo(){
+// $.get(json, function(data) {
+//     for(var x=0; x<data.filmes.length; x++){
+//     	$('#imagem').append( '<img src='+data.filmes[x].Imagem+'>')
+//     	$('#informacoes').append('<h1>' +data.filmes[x].Nome+data.filmes[x].Preço1+data.filmes[x].Estoque1 + '</h1>'); 
+//     }
+
+// });
+// };
 
 // $.get(json, function(data) {
 

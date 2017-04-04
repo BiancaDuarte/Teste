@@ -35,9 +35,9 @@ block content
 														img(src=dados.lancamentos[x].Imagem)
 														figcaption
 															p.icon-links
-																a(href='#')
+																a(href='#' class='addCount')
 																	i.material-icons.small shopping_cart
-																a(href="#") 
+																a(href="http://localhost:45000/post/favoritos" id='favorito')  
 																	i.material-icons.small star
 												div
 													h1 A partir de R$#{dados.lancamentos[x].Preço1}

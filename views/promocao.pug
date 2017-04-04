@@ -18,6 +18,7 @@ html
 		include body
 	
 		div.titulopromo
+			input#aumenta(type='button', value='Adicionar Count')
 			h2 Quadros em Promoção
 		div.branco
 			div.container
@@ -27,11 +28,11 @@ html
 								p
 									.grid
 										figure.effect-zoe
-											a(href="http://localhost:45000/produtoselecionado?cod="+dados.filmes[0].Código+"")
+											a(href="#")
 												img(src=dados.filmes[0].Imagem)
 												figcaption
 													p.icon-links
-														a(href="http://localhost:45000/produtoselecionado?cod="+dados.filmes[0].Código+"")
+														a(href="#" )
 															i.material-icons.small shopping_cart
 														a(href="#") 
 															i.material-icons.small star
@@ -46,7 +47,7 @@ html
 									p
 										.grid
 											figure.effect-zoe
-												a(href="http://localhost:45000/produtoselecionado?cod="+dados.filmes[7].Código+"")
+												a(href="http://localhost:45000/produto/detalhado/"+dados.filmes[7].Código)
 													img(src=dados.filmes[7].Imagem)
 													figcaption
 														p.icon-links

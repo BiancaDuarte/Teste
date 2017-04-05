@@ -23,159 +23,160 @@ html
 		div.branco
 			div.container
 				div.row
-					div.col-md-4.imagem
-							h2= dados.filmes[0].Nome
-								p
-									.grid
-										figure.effect-zoe
-											a(href="#")
-												img(src=dados.filmes[0].Imagem)
-												figcaption
-													p.icon-links
-														a(href="#" )
-															i.material-icons.small shopping_cart
-														a(href="#") 
-															i.material-icons.small star
-
-										
-										div
-											h1 A partir de R$#{dados.filmes[0].Preço1}
-											p #{dados.filmes[0].Pagamento}
-
-					div.col-md-4.imagem
-								h2= dados.filmes[7].Nome
+					each val in [0, 7, 22, 44, 48, 55, 66, 69]
+						div.col-md-4.imagem
+								h2= dados[val].Nome
 									p
 										.grid
 											figure.effect-zoe
-												a(href="http://localhost:45000/produto/detalhado/"+dados.filmes[7].Código)
-													img(src=dados.filmes[7].Imagem)
+												a(href="http://localhost:46000/produto/detalhado/"+dados[val].Código)
+													img(src=dados[val].Imagem)
 													figcaption
 														p.icon-links
-															a(href='#')
+															a(href="#" )
 																i.material-icons.small shopping_cart
 															a(href="#") 
 																i.material-icons.small star
-
-												
-											div
-												h1 A partir de R$#{dados.filmes[7].Preço1}
-												p #{dados.filmes[7].Pagamento}
-
-					div.col-md-4.imagem
-								h2= dados.filmes[22].Nome
-									p
-										.grid
-											figure.effect-zoe
-												a(href="http://localhost:45000/produtoselecionado?cod="+dados.filmes[22].Código+"")
-													img(src=dados.filmes[22].Imagem)
-													figcaption
-														p.icon-links
-															a(href='#')
-																i.material-icons.small shopping_cart
-															a(href="#") 
-																i.material-icons.small star
-
-												
-											div
-												h1 A partir de R$#{dados.filmes[22].Preço1}
-												p #{dados.filmes[22].Pagamento}
-
-		div.branco
-			div.container
-				div.row
-					div.col-md-4.imagem
-							h2= dados.musica[8].Nome
-								p
-									.grid
-										figure.effect-zoe
-											a(href="http://localhost:45000/produtoselecionado?cod="+dados.musica[8].Código+"")
-												img(src=dados.musica[8].Imagem)
-												figcaption
-													p.icon-links
-														a(href='#')
-															i.material-icons.small shopping_cart
-														a(href="#") 
-															i.material-icons.small star
 
 											
-										div
-											h1 A partir de R$#{dados.musica[8].Preço1}
-											p #{dados.musica[8].Pagamento}
-
-					div.col-md-4.imagem
-								h2= dados.musica[12].Nome
-									p
-										.grid
-											figure.effect-zoe
-												a(href="http://localhost:45000/produtoselecionado?cod="+dados.musica[12].Código+"")
-													img(src=dados.musica[12].Imagem)
-													figcaption
-														p.icon-links
-															a(href='#')
-																i.material-icons.small shopping_cart
-															a(href="#") 
-																i.material-icons.small star
-												
 											div
-												h1 A partir de R$#{dados.musica[12].Preço1}
-												p #{dados.musica[12].Pagamento}
+												h1 A partir de R$#{dados[val].Preço1}
+												p #{dados[val].Pagamento}
 
-					div.col-md-4.imagem
-								h2= dados.seriados[5].Nome
-									p
-										.grid
-											figure.effect-zoe
-												a(href="http://localhost:45000/produtoselecionado?cod="+dados.seriados[5].Código+"")
-													img(src=dados.seriados[5].Imagem)
-													figcaption
-														p.icon-links
-															a(href='#')
-																i.material-icons.small shopping_cart
-															a(href="#") 
-																i.material-icons.small star
+		//- 			div.col-md-4.imagem
+		//- 						h2= dados.filmes[7].Nome
+		//- 							p
+		//- 								.grid
+		//- 									figure.effect-zoe
+		//- 										a(href="http://localhost:45000/produto/detalhado/"+dados.filmes[7].Código)
+		//- 											img(src=dados.filmes[7].Imagem)
+		//- 											figcaption
+		//- 												p.icon-links
+		//- 													a(href='#')
+		//- 														i.material-icons.small shopping_cart
+		//- 													a(href="#") 
+		//- 														i.material-icons.small star
 
 												
-											div
-												h1 A partir de R$#{dados.seriados[5].Preço1}
-												p #{dados.seriados[5].Pagamento}
+		//- 									div
+		//- 										h1 A partir de R$#{dados.filmes[7].Preço1}
+		//- 										p #{dados.filmes[7].Pagamento}
 
-		div.branco
-			div.container
-				div.row
-					div.col-md-4.imagem
-							h2= dados.desenhos[0].Nome
-								p
-									.grid
-										figure.effect-zoe
-											a(href="http://localhost:45000/produtoselecionado?cod="+dados.desenhos[0].Código+"")
-												img(src=dados.desenhos[0].Imagem)
-												figcaption
-													p.icon-links
-														a(href='#')
-															i.material-icons.small shopping_cart
-														a(href="#") 
-															i.material-icons.small star
+		//- 			div.col-md-4.imagem
+		//- 						h2= dados.filmes[22].Nome
+		//- 							p
+		//- 								.grid
+		//- 									figure.effect-zoe
+		//- 										a(href="http://localhost:45000/produtoselecionado?cod="+dados.filmes[22].Código+"")
+		//- 											img(src=dados.filmes[22].Imagem)
+		//- 											figcaption
+		//- 												p.icon-links
+		//- 													a(href='#')
+		//- 														i.material-icons.small shopping_cart
+		//- 													a(href="#") 
+		//- 														i.material-icons.small star
+
+												
+		//- 									div
+		//- 										h1 A partir de R$#{dados.filmes[22].Preço1}
+		//- 										p #{dados.filmes[22].Pagamento}
+
+		//- div.branco
+		//- 	div.container
+		//- 		div.row
+		//- 			div.col-md-4.imagem
+		//- 					h2= dados.musica[8].Nome
+		//- 						p
+		//- 							.grid
+		//- 								figure.effect-zoe
+		//- 									a(href="http://localhost:45000/produtoselecionado?cod="+dados.musica[8].Código+"")
+		//- 										img(src=dados.musica[8].Imagem)
+		//- 										figcaption
+		//- 											p.icon-links
+		//- 												a(href='#')
+		//- 													i.material-icons.small shopping_cart
+		//- 												a(href="#") 
+		//- 													i.material-icons.small star
 
 											
-										div
-											h1 A partir de R$#{dados.desenhos[0].Preço1}
-											p #{dados.desenhos[0].Pagamento}
+		//- 								div
+		//- 									h1 A partir de R$#{dados.musica[8].Preço1}
+		//- 									p #{dados.musica[8].Pagamento}
 
-					div.col-md-4.imagem
-								h2= dados.desenhos[3].Nome
-									p
-										.grid
-											figure.effect-zoe
-												a(href="http://localhost:45000/produtoselecionado?cod="+dados.desenhos[3].Código+"")
-													img(src=dados.desenhos[3].Imagem)
-													figcaption
-														p.icon-links
-															a(href='#')
-																i.material-icons.small shopping_cart
-															a(href="#") 
-																i.material-icons.small star
+		//- 			div.col-md-4.imagem
+		//- 						h2= dados.musica[12].Nome
+		//- 							p
+		//- 								.grid
+		//- 									figure.effect-zoe
+		//- 										a(href="http://localhost:45000/produtoselecionado?cod="+dados.musica[12].Código+"")
+		//- 											img(src=dados.musica[12].Imagem)
+		//- 											figcaption
+		//- 												p.icon-links
+		//- 													a(href='#')
+		//- 														i.material-icons.small shopping_cart
+		//- 													a(href="#") 
+		//- 														i.material-icons.small star
+												
+		//- 									div
+		//- 										h1 A partir de R$#{dados.musica[12].Preço1}
+		//- 										p #{dados.musica[12].Pagamento}
+
+		//- 			div.col-md-4.imagem
+		//- 						h2= dados.seriados[5].Nome
+		//- 							p
+		//- 								.grid
+		//- 									figure.effect-zoe
+		//- 										a(href="http://localhost:45000/produtoselecionado?cod="+dados.seriados[5].Código+"")
+		//- 											img(src=dados.seriados[5].Imagem)
+		//- 											figcaption
+		//- 												p.icon-links
+		//- 													a(href='#')
+		//- 														i.material-icons.small shopping_cart
+		//- 													a(href="#") 
+		//- 														i.material-icons.small star
 
 												
-											div
-												h1 A partir de R$#{dados.desenhos[3].Preço1}
-												p #{dados.desenhos[3].Pagamento}
+		//- 									div
+		//- 										h1 A partir de R$#{dados.seriados[5].Preço1}
+		//- 										p #{dados.seriados[5].Pagamento}
+
+		//- div.branco
+		//- 	div.container
+		//- 		div.row
+		//- 			div.col-md-4.imagem
+		//- 					h2= dados.desenhos[0].Nome
+		//- 						p
+		//- 							.grid
+		//- 								figure.effect-zoe
+		//- 									a(href="http://localhost:45000/produtoselecionado?cod="+dados.desenhos[0].Código+"")
+		//- 										img(src=dados.desenhos[0].Imagem)
+		//- 										figcaption
+		//- 											p.icon-links
+		//- 												a(href='#')
+		//- 													i.material-icons.small shopping_cart
+		//- 												a(href="#") 
+		//- 													i.material-icons.small star
+
+											
+		//- 								div
+		//- 									h1 A partir de R$#{dados.desenhos[0].Preço1}
+		//- 									p #{dados.desenhos[0].Pagamento}
+
+		//- 			div.col-md-4.imagem
+		//- 						h2= dados.desenhos[3].Nome
+		//- 							p
+		//- 								.grid
+		//- 									figure.effect-zoe
+		//- 										a(href="http://localhost:45000/produtoselecionado?cod="+dados.desenhos[3].Código+"")
+		//- 											img(src=dados.desenhos[3].Imagem)
+		//- 											figcaption
+		//- 												p.icon-links
+		//- 													a(href='#')
+		//- 														i.material-icons.small shopping_cart
+		//- 													a(href="#") 
+		//- 														i.material-icons.small star
+
+												
+		//- 									div
+		//- 										h1 A partir de R$#{dados.desenhos[3].Preço1}
+		//- 										p #{dados.desenhos[3].Pagamento}

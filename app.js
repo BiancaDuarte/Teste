@@ -30,7 +30,7 @@ app.use('/', index);
 app.use('/catalogo', catalogo);
 app.use('/promocao', promocao);
 app.use('/dados' , dados);
-app.use('/produtoselecionado', produtoselecionado);
+app.use('/produto/detalhado/', produtoselecionado);
 app.use('/favoritos', favoritos);
 app.use('/carrinho', carrinho);
 

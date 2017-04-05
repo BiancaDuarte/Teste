@@ -8,9 +8,9 @@ head
 	link(rel='stylesheet', href='https://fonts.googleapis.com/icon?family=Material+Icons')
 	link(rel='stylesheet', href='/stylesheets/style.css')
 	script(src='/javascripts/jquery-3.1.1.min.js')
-	script(src='/javascripts/jquery.zoom.min.js')
 	script(src='/javascripts/bootstrap.min.js')
 	script(src='/javascripts/materialize.min.js')
+	script(src='/javascripts/jquery.elevateZoom-3.0.8.min.js')
 	script(src='/javascripts/javascript.js')
 
 body
@@ -21,10 +21,17 @@ body
 	div.titulopromo
 	div.branco
 		div.container
-			div.col-md-6
+			div.col-md-6.image
 				br
-				span#ex1.zoom
-					img(src=dados[cod].Imagem)
+				img(src=dados[cod].Imagem)#zoom_01
+				br
+				.row
+					div.col-md-2
+						a.fa.fa-facebook(href='#')
+					div.col-md-2
+						a.fa.fa-pinterest(href='#')
+					div.col-md-8
+
 			div.col-md-6.info
 				h1 #{dados[cod].Nome}
 				div.informacoes.info
@@ -33,20 +40,22 @@ body
 				.row
 					div.col-md-1
 					div.col-md-4
-						a.waves-effect.waves-light.btn-large Tamanho 1
+						a#status.waves-effect.waves-light.btn-large #{dados[cod].Tamanho1}
 					div.col-md-2
 					div.col-md-4
-						a.waves-effect.waves-light.btn-large Tamanho 2
+						a#status2.waves-effect.waves-light.btn-large Tamanho 2
 					div.col-md-1
 
 				div.dados
 					b Moldura: 
 					p #{dados[cod].Moldura}
 					b Impressão e acabamento:
-					p #{dados[cod].Impressão}
-					p Obs:#{dados[cod].Observações}
+					p #{dados[cod].Impressão}.
+					b Obs: 
+					p #{dados[cod].Observações}.
 					b Estoque:  #{dados[cod].Estoque1}
 
+				br
 				a.waves-effect.waves-light.btn-large Comprar
 					i.material-icons.left shopping_cart
 	

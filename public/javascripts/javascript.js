@@ -57,20 +57,26 @@ $('#txt-search').keyup(function(){
 // 	alert(count);
 // 	count++;
 // });
-	$('#ex1').zoom();
 
+$("#zoom_01").elevateZoom({
+  zoomType				: "inner",
+  cursor: "crosshair"
+});
 
+	// $("#status").click(function(){
+	// 	$('#bla').append('<h3>' +data[cod].Preço1+ '</h3>');
+	// 	// tudo();
+	// });
 
-	$("#P1").click(function(){
-		console.log('blblbl');
-		$('#bla').empty();
-		// tudo();
-	});
+	// $("#status2").click(function(){
+	// 	$('#bla').append('<h3>' +data[cod].Preço2+ '</h3>');
+	// 	// tudo();
+	// });
 
-	$("#P2").click(function(){
-		$('#bla').empty();
-		// tudo();
-	});
+	// $("#P2").click(function(){
+	// 	$('#bla').empty();
+	// 	// tudo();
+	// });
 });
 
 

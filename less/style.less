@@ -486,31 +486,40 @@ margin-top: 35px;
   margin-left: 50px;
 }
 
-/* styles unrelated to zoom */
-    * { border:0; margin:0; padding:0; }
+.image span{
+  margin-left: 50px;
+  width: 100%;
+}
 
-    /* these styles are for the demo, but are not required for the plugin */
-    .zoom {
-      display:inline-block;
-      position: relative;
-    }
-    
-    /* magnifying glass icon */
-    .zoom:after {
-      content:'';
-      display:block; 
-      width:33px; 
-      height:33px; 
-      position:absolute; 
-      top:0;
-      right:0;
-      background:url(icon.png);
-    }
+.image a{
+  margin-left: 50px;
+}
 
-   /* .zoom img {
-      display: block;
-    }*/
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 80px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+}
 
-    .zoom img::selection { background-color: transparent; }
+.fa:hover {
+    opacity: 0.9;
+}
 
-    #zoom img:hover { cursor: url(grab.cur), default; }
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+
+.fa-pinterest {
+  background: #cb2027;
+  color: white;
+}
+

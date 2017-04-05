@@ -1,5 +1,5 @@
 var server = 'http://localhost:46000/dados';
- var json="http://localhost:46000/dados";
+var troca=0;
 $(document).ready(function () {
 	$('#resultados-busca').hide();
 	$(function(){
@@ -57,8 +57,29 @@ $('#txt-search').keyup(function(){
 // 	alert(count);
 // 	count++;
 // });
-
+	$('#ex1').zoom();
 });
+
+
+
+// function tudo(){
+//     $.get(server, function(data) {
+//         for(var x=0; x<data.length; x++){
+//         	if (troca==0) {
+//         		if(data[cod].Tamanho1 == "T1"){
+//         		$('#informacoes').append('<h1>' +data.[cod].Preço1+ '</h1>');
+//         	}  
+        	
+//         	}
+//         	else{
+//         		if(data[cod].Tamanho2 == "T2"){
+//         			$('#informacoes').append('<h1>' +data.[cod].Preço2+ '</h1>');
+//         		}
+//         	}  
+//         }
+//     });
+
+// }
 
 
 

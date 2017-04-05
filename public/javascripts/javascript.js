@@ -58,28 +58,37 @@ $('#txt-search').keyup(function(){
 // 	count++;
 // });
 	$('#ex1').zoom();
+
+
+
+	$("#P1").click(function(){
+		console.log('blblbl');
+		$('#bla').empty();
+		// tudo();
+	});
+
+	$("#P2").click(function(){
+		$('#bla').empty();
+		// tudo();
+	});
 });
 
 
 
-// function tudo(){
-//     $.get(server, function(data) {
-//         for(var x=0; x<data.length; x++){
-//         	if (troca==0) {
-//         		if(data[cod].Tamanho1 == "T1"){
-//         		$('#informacoes').append('<h1>' +data.[cod].Preço1+ '</h1>');
-//         	}  
+function tudo(){
+	console.log('entrei');
+    $.get(server, function(data) {
+        	if($('#status').value == 'T1'){
+        		$('.informacoes').append('<h3>' +data[cod].Preço1+ '</h3>');
+        	}  
         	
-//         	}
-//         	else{
-//         		if(data[cod].Tamanho2 == "T2"){
-//         			$('#informacoes').append('<h1>' +data.[cod].Preço2+ '</h1>');
-//         		}
-//         	}  
-//         }
-//     });
+        	
+        	else if ($('#status').value == "T2"){
+        		$('.informacoes').append('<h3>' +data[cod].Preço2+ '</h3>');
+        	}  
+    });
 
-// }
+}
 
 
 

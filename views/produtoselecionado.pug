@@ -22,20 +22,32 @@ body
 	div.branco
 		div.container
 			div.col-md-6
+				br
 				span#ex1.zoom
 					img(src=dados[cod].Imagem)
 			div.col-md-6.info
 				h1 #{dados[cod].Nome}
-			div.informacoes.info
-				h3  A partir de R$ #{dados[cod].Preço1}
-					label(for='status')
-						span.glyphicon.glyphicon-stats Tamanho
-						select#status.form-control
-							option(value='T1' id='T1') #{dados[cod].Tamanho1}
-							option(value='T2' id='T2') #{dados[cod].Tamanho2}
+				div.informacoes.info
+					h3#bla  A partir de R$ #{dados[cod].Preço1}
+					h5 Selecione o tamanho(com moldura):
+				.row
+					div.col-md-1
+					div.col-md-4
+						a.waves-effect.waves-light.btn-large Tamanho 1
+					div.col-md-2
+					div.col-md-4
+						a.waves-effect.waves-light.btn-large Tamanho 2
+					div.col-md-1
 
-				p Moldura: #{dados[cod].Moldura}
-				p Impressão e acabamento: #{dados[cod].Impressão}
-				p Estoque: #{dados[cod].Estoque1}
-				
+				div.dados
+					b Moldura: 
+					p #{dados[cod].Moldura}
+					b Impressão e acabamento:
+					p #{dados[cod].Impressão}
+					p Obs:#{dados[cod].Observações}
+					b Estoque:  #{dados[cod].Estoque1}
+
+				a.waves-effect.waves-light.btn-large Comprar
+					i.material-icons.left shopping_cart
+	
 

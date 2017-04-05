@@ -423,6 +423,14 @@ a {
   font-family: 'Farsan', cursive;
   font-size: 30px;
 }
+.dados {
+  text-align: left;
+  font-family: 'Farsan', cursive;
+  font-size: 23px;
+}
+.espaço {
+  margin-left: 50px;
+}
 /* styles unrelated to zoom */
 * {
   border: 0;
@@ -445,9 +453,9 @@ a {
   right: 0;
   background: url(icon.png);
 }
-.zoom img {
-  display: block;
-}
+/* .zoom img {
+      display: block;
+    }*/
 .zoom img::selection {
   background-color: transparent;
 }

@@ -18,6 +18,10 @@ gulp.task('bootstrap', function(){
     gulp.src('./bower_components/materialize/dist/css/materialize.min.css')
       .pipe(gulp.dest('./public/stylesheets'));
 
+     gulp.src('./bower_components/jquery-zoom/jquery.zoom.min.js')
+      .pipe(gulp.dest('./public/javascripts'));
+
+
 
     console.log('bootstrap');
 });

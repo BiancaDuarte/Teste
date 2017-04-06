@@ -431,12 +431,15 @@ a {
 .espaço {
   margin-left: 50px;
 }
-.image span {
-  margin-left: 50px;
-  width: 100%;
+.image img {
+  padding: 30px;
+  margin-top: 20px;
 }
 .image a {
   margin-left: 50px;
+}
+.opcao p {
+  font-size: 20px;
 }
 .fa {
   padding: 20px;
@@ -460,4 +463,26 @@ a {
 .fa-pinterest {
   background: #cb2027;
   color: white;
+}
+.zoom {
+  display: inline-block;
+  position: relative;
+}
+.zoom img {
+  display: block;
+}
+.zoom img::selection {
+  background-color: transparent;
+  width: 1024px;
+  height: 1024px;
+}
+#zoom img:hover {
+  cursor: url(grab.cur), default;
+}
+#zoom img:active {
+  cursor: url(grabbed.cur), default;
+}
+#zoom .zoomImg {
+  width: 1024px;
+  height: 1024px;
 }

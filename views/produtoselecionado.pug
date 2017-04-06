@@ -2,16 +2,16 @@ doctype html
 html
 head
 	title= "catalogo"
+	script(src='/javascripts/jquery-3.1.1.min.js')
+	script(src='/javascripts/bootstrap.min.js')
+	script(src='/javascripts/materialize.min.js')
+	script(src='/javascripts/jquery.zoom.min.js')
+	script(src='/javascripts/javascript.js')
 	link(rel='stylesheet', href='/stylesheets/bootstrap.min.css')
 	link(rel='stylesheet', href='/stylesheets/materialize.min.css')
 	link(rel='stylesheet', href='/stylesheets/font-awesome.min.css')
 	link(rel='stylesheet', href='https://fonts.googleapis.com/icon?family=Material+Icons')
 	link(rel='stylesheet', href='/stylesheets/style.css')
-	script(src='/javascripts/jquery-3.1.1.min.js')
-	script(src='/javascripts/bootstrap.min.js')
-	script(src='/javascripts/materialize.min.js')
-	script(src='/javascripts/jquery.elevateZoom-3.0.8.min.js')
-	script(src='/javascripts/javascript.js')
 
 body
 
@@ -23,7 +23,9 @@ body
 		div.container
 			div.col-md-6.image
 				br
-				img(src=dados[cod].Imagem)#zoom_01
+				//- img(src=dados[cod].Imagem)#zoom_01
+				span#zoom.zoom
+					img(src=dados[cod].Imagem, alt='Daisy on the Ohoopee')
 				br
 				.row
 					div.col-md-2
@@ -36,15 +38,16 @@ body
 				h1 #{dados[cod].Nome}
 				div.informacoes.info
 					h3#bla  A partir de R$ #{dados[cod].Preço1}
-					h5 Selecione o tamanho(com moldura):
 				.row
-					div.col-md-1
 					div.col-md-4
-						a#status.waves-effect.waves-light.btn-large #{dados[cod].Tamanho1}
-					div.col-md-2
 					div.col-md-4
-						a#status2.waves-effect.waves-light.btn-large Tamanho 2
-					div.col-md-1
+						a.dropdown-button.btn(data-beloworigin='true', href='#', data-activates='dropdown1') Selecione o tamanho:
+						ul#dropdown1.dropdown-content
+							li
+								a#opcao(href='#!' value='P1') #{dados[cod].Tamanho1}
+							li
+								a#opcao(href='#!' value='P2') #{dados[cod].Tamanho2}
+					div.col-md-4
 
 				div.dados
 					b Moldura: 

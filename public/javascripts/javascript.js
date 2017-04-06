@@ -58,11 +58,25 @@ $('#txt-search').keyup(function(){
 // 	count++;
 // });
 
-$("#zoom_01").elevateZoom({
-  zoomType				: "inner",
-  cursor: "crosshair"
-});
+$('#zoom').zoom();
 
+$('.dropdown-button').dropdown({
+      inDuration: 300,
+      outDuration: 225,
+      constrainWidth: false, // Does not change width of dropdown to that of the activator
+      hover: true, // Activate on hover
+      gutter: 0, // Spacing from edge
+      belowOrigin: false, // Displays dropdown below the button
+      alignment: 'left', // Displays dropdown with edge aligned to the left of button
+      stopPropagation: false // Stops event propagation
+    }
+  );
+
+$('.dropdown-button').dropdown('open');
+$('.dropdown-button').dropdown('close');
+
+
+        
 	// $("#status").click(function(){
 	// 	$('#bla').append('<h3>' +data[cod].Preço1+ '</h3>');
 	// 	// tudo();
@@ -84,12 +98,12 @@ $("#zoom_01").elevateZoom({
 function tudo(){
 	console.log('entrei');
     $.get(server, function(data) {
-        	if($('#status').value == 'T1'){
+        	if($('#opcao').value == "P1"){
         		$('.informacoes').append('<h3>' +data[cod].Preço1+ '</h3>');
         	}  
         	
         	
-        	else if ($('#status').value == "T2"){
+        	else if ($('#opcao').value == "P2"){
         		$('.informacoes').append('<h3>' +data[cod].Preço2+ '</h3>');
         	}  
     });

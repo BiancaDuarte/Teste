@@ -1,5 +1,7 @@
-[
-	{
+{
+	"quadros":[
+
+		{
 		"Código":"0",
 		"Posicao":"0",
 		"Nome":"Alice no País das Maravilhas",
@@ -1230,6 +1232,106 @@
 	},
 
 	{
+		"Código":"85",
+		"Posicao":"0",
+		"Nome":"Clube da Luta",
+		"Imagem": "/images/filmes/clubedaluta.jpg",
+		"Preço1":"55,60",
+		"Preço2":"68,80",
+		"Moldura":"Em madeira de reflorestamento com pintura na cor preto fosco.",
+		"Tamanho1":"40cm x 25cm(com moldura)",
+		"Tamanho2":"60cm x 45cm(com moldura)",
+		"Observações":"A cor do produto pode variar de acordo com as configurações do seu monitor",
+		"Impressão":"Fotográfica de alta resolução com laminação fosca anti-risco",
+		"Estoque1":"67 disponíveis",
+		"Estoque2":"56 disponíveis"
+	},
+
+	{
+		"Código":"86",
+		"Posicao":"1",
+		"Nome":"Logan",
+		"Imagem": "/images/filmes/logan.jpg",
+		"Preço1":"55,60",
+		"Preço2":"68,80",
+		"Moldura":"Em madeira de reflorestamento com pintura na cor preto fosco.",
+		"Tamanho1":"40cm x 25cm(com moldura)",
+		"Tamanho2":"60cm x 45cm(com moldura)",
+		"Observações":"A cor do produto pode variar de acordo com as configurações do seu monitor",
+		"Impressão":"Fotográfica de alta resolução com laminação fosca anti-risco",
+		"Estoque1":"Produto Esgotado",
+		"Estoque2":"Produto Esgotado"
+	},
+
+	{
+		"Código":"87",
+		"Posicao":"2",
+		"Nome":"Star Wars",
+		"Imagem": "/images/filmes/starwars4.jpg",
+		"Preço1":"55,60",
+		"Preço2":"68,80",
+		"Moldura":"Em madeira de reflorestamento com pintura na cor preto fosco.",
+		"Tamanho1":"40cm x 25cm(com moldura)",
+		"Tamanho2":"60cm x 45cm(com moldura)",
+		"Observações":"A cor do produto pode variar de acordo com as configurações do seu monitor",
+		"Impressão":"Fotográfica de alta resolução com laminação fosca anti-risco",
+		"Estoque1":"8 disponíveis",
+		"Estoque2":"Produto Esgotado"
+	},
+
+	{
+		"Código":"88",
+		"Posicao":"3",
+		"Nome":"Artic Monkeys",
+		"Imagem": "/images/música/articmonkeys.jpg",
+		"Preço1":"55,60",
+		"Preço2":"68,80",
+		"Moldura":"Em madeira de reflorestamento com pintura na cor preto fosco.",
+		"Tamanho1":"40cm x 25cm(com moldura)",
+		"Tamanho2":"60cm x 45cm(com moldura)",
+		"Observações":"A cor do produto pode variar de acordo com as configurações do seu monitor",
+		"Impressão":"Fotográfica de alta resolução com laminação fosca anti-risco",
+		"Estoque1":"10 disponíveis",
+		"Estoque2":"4 disponíveis"
+	},
+
+	{
+		"Código":"89",
+		"Posicao":"4",
+		"Nome":"Pink Floyd",
+		"Imagem": "/images/música/pinkfloyd3.jpg",
+		"Preço1":"55,60",
+		"Preço2":"68,80",
+		"Moldura":"Em madeira de reflorestamento com pintura na cor preto fosco.",
+		"Tamanho1":"40cm x 25cm(com moldura)",
+		"Tamanho2":"60cm x 45cm(com moldura)",
+		"Observações":"A cor do produto pode variar de acordo com as configurações do seu monitor",
+		"Impressão":"Fotográfica de alta resolução com laminação fosca anti-risco",
+		"Estoque1":"3 disponíveis",
+		"Estoque2":"Produto Esgotado"
+	},
+
+	{
+		"Código":"90",
+		"Posicao":"5",
+		"Nome":"Stranger Things",
+		"Imagem": "/images/seriados/stranger2.jpg",
+		"Preço1":"55,60",
+		"Preço2":"68,80",
+		"Moldura":"Em madeira de reflorestamento com pintura na cor preto fosco.",
+		"Tamanho1":"40cm x 25cm(com moldura)",
+		"Tamanho2":"60cm x 45cm(com moldura)",
+		"Observações":"A cor do produto pode variar de acordo com as configurações do seu monitor",
+		"Impressão":"Fotográfica de alta resolução com laminação fosca anti-risco",
+		"Estoque1":"10 disponíveis",
+		"Estoque2":"Produto Esgotado"
+	}
+
+	],
+
+
+	"canecas":[
+		{
 		"Código":"72",
 		"Posicao":"0",
 		"Nome":"Alice no País das Maravilhas",
@@ -1409,101 +1511,6 @@
 		"Observações":"A cor do produto pode variar de acordo com as configurações do seu monitor",
 		"Dimensões com Embalagem":"12x12x12cm",
 		"Estoque1":"8 disponíveis"
-	},
-
-	{
-		"Código":"85",
-		"Posicao":"0",
-		"Nome":"Clube da Luta",
-		"Imagem": "/images/filmes/clubedaluta.jpg",
-		"Preço1":"55,60",
-		"Preço2":"68,80",
-		"Moldura":"Em madeira de reflorestamento com pintura na cor preto fosco.",
-		"Tamanho1":"40cm x 25cm(com moldura)",
-		"Tamanho2":"60cm x 45cm(com moldura)",
-		"Observações":"A cor do produto pode variar de acordo com as configurações do seu monitor",
-		"Impressão":"Fotográfica de alta resolução com laminação fosca anti-risco",
-		"Estoque1":"67 disponíveis",
-		"Estoque2":"56 disponíveis"
-	},
-
-	{
-		"Código":"86",
-		"Posicao":"1",
-		"Nome":"Logan",
-		"Imagem": "/images/filmes/logan.jpg",
-		"Preço1":"55,60",
-		"Preço2":"68,80",
-		"Moldura":"Em madeira de reflorestamento com pintura na cor preto fosco.",
-		"Tamanho1":"40cm x 25cm(com moldura)",
-		"Tamanho2":"60cm x 45cm(com moldura)",
-		"Observações":"A cor do produto pode variar de acordo com as configurações do seu monitor",
-		"Impressão":"Fotográfica de alta resolução com laminação fosca anti-risco",
-		"Estoque1":"Produto Esgotado",
-		"Estoque2":"Produto Esgotado"
-	},
-
-	{
-		"Código":"87",
-		"Posicao":"2",
-		"Nome":"Star Wars",
-		"Imagem": "/images/filmes/starwars4.jpg",
-		"Preço1":"55,60",
-		"Preço2":"68,80",
-		"Moldura":"Em madeira de reflorestamento com pintura na cor preto fosco.",
-		"Tamanho1":"40cm x 25cm(com moldura)",
-		"Tamanho2":"60cm x 45cm(com moldura)",
-		"Observações":"A cor do produto pode variar de acordo com as configurações do seu monitor",
-		"Impressão":"Fotográfica de alta resolução com laminação fosca anti-risco",
-		"Estoque1":"8 disponíveis",
-		"Estoque2":"Produto Esgotado"
-	},
-
-	{
-		"Código":"88",
-		"Posicao":"3",
-		"Nome":"Artic Monkeys",
-		"Imagem": "/images/música/articmonkeys.jpg",
-		"Preço1":"55,60",
-		"Preço2":"68,80",
-		"Moldura":"Em madeira de reflorestamento com pintura na cor preto fosco.",
-		"Tamanho1":"40cm x 25cm(com moldura)",
-		"Tamanho2":"60cm x 45cm(com moldura)",
-		"Observações":"A cor do produto pode variar de acordo com as configurações do seu monitor",
-		"Impressão":"Fotográfica de alta resolução com laminação fosca anti-risco",
-		"Estoque1":"10 disponíveis",
-		"Estoque2":"4 disponíveis"
-	},
-
-	{
-		"Código":"89",
-		"Posicao":"4",
-		"Nome":"Pink Floyd",
-		"Imagem": "/images/música/pinkfloyd3.jpg",
-		"Preço1":"55,60",
-		"Preço2":"68,80",
-		"Moldura":"Em madeira de reflorestamento com pintura na cor preto fosco.",
-		"Tamanho1":"40cm x 25cm(com moldura)",
-		"Tamanho2":"60cm x 45cm(com moldura)",
-		"Observações":"A cor do produto pode variar de acordo com as configurações do seu monitor",
-		"Impressão":"Fotográfica de alta resolução com laminação fosca anti-risco",
-		"Estoque1":"3 disponíveis",
-		"Estoque2":"Produto Esgotado"
-	},
-
-	{
-		"Código":"90",
-		"Posicao":"5",
-		"Nome":"Stranger Things",
-		"Imagem": "/images/seriados/stranger2.jpg",
-		"Preço1":"55,60",
-		"Preço2":"68,80",
-		"Moldura":"Em madeira de reflorestamento com pintura na cor preto fosco.",
-		"Tamanho1":"40cm x 25cm(com moldura)",
-		"Tamanho2":"60cm x 45cm(com moldura)",
-		"Observações":"A cor do produto pode variar de acordo com as configurações do seu monitor",
-		"Impressão":"Fotográfica de alta resolução com laminação fosca anti-risco",
-		"Estoque1":"10 disponíveis",
-		"Estoque2":"Produto Esgotado"
 	}
 ]
+}

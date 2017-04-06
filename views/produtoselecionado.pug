@@ -44,9 +44,9 @@ body
 						a.dropdown-button.btn(data-beloworigin='true', href='#', data-activates='dropdown1') Selecione o tamanho:
 						ul#dropdown1.dropdown-content
 							li
-								a#opcao(href='#!' value='P1') #{dados[cod].Tamanho1}
+								a#op(href='#!' value='P1') #{dados[cod].Tamanho1}
 							li
-								a#opcao(href='#!' value='P2') #{dados[cod].Tamanho2}
+								a#op(href='#!' value='P2') #{dados[cod].Tamanho2}
 					div.col-md-4
 
 				div.dados
@@ -61,5 +61,29 @@ body
 				br
 				a.waves-effect.waves-light.btn-large Comprar
 					i.material-icons.left shopping_cart
-	
+
+		div.veja
+			div.container
+				h1 Veja também
+					div.row
+						each val in [7, 9, 3, 67]
+							div.col-md-3.imagem
+									h2= dados[val].Nome
+										p
+											.grid
+												figure.effect-zoe
+													a(href="http://localhost:51000/produto/detalhado/"+dados[val].Código)
+														img(src=dados[val].Imagem)
+														figcaption
+															p.icon-links
+																a(href="#" )
+																	i.material-icons.small shopping_cart
+																a(href="#") 
+																	i.material-icons.small star
+												div
+													h1 A partir de R$#{dados[val].Preço1}
+													p #{dados[val].Pagamento}
+						
+						
+			
 

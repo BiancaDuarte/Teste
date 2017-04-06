@@ -12,6 +12,7 @@ var dados = require('./routes/dados');
 var produtoselecionado = require('./routes/produtoselecionado');
 var favoritos = require('./routes/favoritos')
 var carrinho = require('./routes/carrinho')
+var canecas = require('./routes/canecas')
 var app = express();
 
 // view engine setup
@@ -33,6 +34,7 @@ app.use('/dados' , dados);
 app.use('/produto/detalhado/', produtoselecionado);
 app.use('/favoritos', favoritos);
 app.use('/carrinho', carrinho);
+app.use('/canecas', canecas);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

@@ -74,8 +74,6 @@ $('.dropdown-button').dropdown({
 
 $('.dropdown-button').dropdown('open');
 $('.dropdown-button').dropdown('close');
-
-
         
 	// $("#status").click(function(){
 	// 	$('#bla').append('<h3>' +data[cod].Preço1+ '</h3>');
@@ -96,7 +94,6 @@ $('.dropdown-button').dropdown('close');
 
 
 function tudo(){
-	console.log('entrei');
     $.get(server, function(data) {
         	if($('#opcao').value == "P1"){
         		$('.informacoes').append('<h3>' +data[cod].Preço1+ '</h3>');

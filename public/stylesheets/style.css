@@ -46,6 +46,12 @@ a {
   height: 215px;
   margin: 0 auto;
 }
+.veja h1 {
+  font-family: 'Farsan', cursive;
+  color: #ff5500;
+  text-align: center;
+  font-size: 55px;
+}
 .logo nav {
   margin-top: 80px;
   color: #fff;

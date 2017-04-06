@@ -1,0 +1,41 @@
+doctype html
+html
+	head
+	title= "catalogo"
+	link(rel='stylesheet', href='/stylesheets/bootstrap.min.css')
+	link(rel='stylesheet', href='/stylesheets/materialize.min.css')
+	link(rel='stylesheet', href='/stylesheets/font-awesome.min.css')
+	link(href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet")
+	link(rel='stylesheet', href='/stylesheets/style.css')
+	script(src='/javascripts/jquery-3.1.1.min.js')
+	script(src='/javascripts/bootstrap.min.js')
+	script(src='/javascripts/materialize.min.js')
+	script(src='/javascripts/javascript.js')
+
+	body
+
+		include logo 
+		include body
+	
+		div.titulopromo
+			h2 Canecas
+		div.branco
+			div.container
+				div.row
+					each val in [72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84]
+						div.col-md-4.imagem
+								h2= dados[val].Nome
+									p
+										.grid
+											figure.effect-zoe
+												a(href="http://localhost:51000/produto/detalhado/"+dados[val].Código)
+													img(src=dados[val].Imagem)
+													figcaption
+														p.icon-links
+															a(href="#" )
+																i.material-icons.small shopping_cart
+															a(href="#") 
+																i.material-icons.small star
+											div
+												h1 A partir de R$#{dados[val].Preço1}
+												p #{dados[val].Pagamento}

@@ -1,14 +1,12 @@
-{
-	"quadros":[
-
+[
 	{
 		"Código":"0",
 		"Posicao":"0",
 		"Nome":"Alice no País das Maravilhas",
 		"Imagem": "/images/Promo/alicewonderlandpromo.jpg",
 		"variavel":"promo",
-		"Preço1":44.48,
-		"Preço2":68.80,
+		"Preço1":"44,48",
+		"Preço2":"68,80",
 		"Pagamento":"ou a partir de 4xR$13,90",
 		"Moldura":"Em madeira de reflorestamento com pintura na cor preto fosco.",
 		"Tamanho1":"40cm x 25cm(com moldura)",
@@ -1229,14 +1227,10 @@
 		"Impressão":"Fotográfica de alta resolução com laminação fosca anti-risco",
 		"Estoque1":"12 disponíveis",
 		"Estoque2":"20 disponíveis"
-	}
+	},
 
-	],
-
-
-	"canecas":[
 	{
-		"Código":"0",
+		"Código":"72",
 		"Posicao":"0",
 		"Nome":"Alice no País das Maravilhas",
 		"Imagem": "/images/Canecas/alice.jpg",
@@ -1250,7 +1244,7 @@
 	},
 
 	{
-		"Código":"1",
+		"Código":"73",
 		"Posicao":"1",
 		"Nome":"Bastardos Inglórios",
 		"Imagem": "/images/Canecas/bastardos.jpg",
@@ -1264,7 +1258,7 @@
 	},
 
 	{
-		"Código":"2",
+		"Código":"74",
 		"Posicao":"2",
 		"Nome":"Batman",
 		"Imagem": "/images/Canecas/batman.jpg",
@@ -1278,7 +1272,7 @@
 	},
 
 	{
-		"Código":"3",
+		"Código":"75",
 		"Posicao":"3",
 		"Nome":"Cazuza",
 		"Imagem": "/images/Canecas/cazuza.jpg",
@@ -1292,7 +1286,7 @@
 	},
 
 	{
-		"Código":"4",
+		"Código":"76",
 		"Posicao":"4",
 		"Nome":"Clube da Luta",
 		"Imagem": "/images/Canecas/clubedaluta.jpg",
@@ -1306,7 +1300,7 @@
 	},
 
 	{
-		"Código":"5",
+		"Código":"77",
 		"Posicao":"5",
 		"Nome":"David Bowie",
 		"Imagem": "/images/Canecas/davidbowie.jpg",
@@ -1320,7 +1314,7 @@
 	},
 
 	{
-		"Código":"6",
+		"Código":"78",
 		"Posicao":"6",
 		"Nome":"Dexter",
 		"Preço1":"28,50",
@@ -1334,7 +1328,7 @@
 	},
 
 	{
-		"Código":"7",
+		"Código":"79",
 		"Posicao":"7",
 		"Nome":"Harry Potter",
 		"Imagem": "/images/Canecas/hp.jpg",
@@ -1348,7 +1342,7 @@
 	},
 
 	{
-		"Código":"8",
+		"Código":"80",
 		"Posicao":"8",
 		"Nome":"O Hobbit",
 		"Imagem": "/images/Canecas/hobbit.jpg",
@@ -1362,7 +1356,7 @@
 	},
 
 	{
-		"Código":"9",
+		"Código":"81",
 		"Posicao":"9",
 		"Nome":"Pink Floyd",
 		"Imagem": "/images/Canecas/pf.jpg",
@@ -1376,7 +1370,7 @@
 	},
 
 	{
-		"Código":"10",
+		"Código":"82",
 		"Posicao":"10",
 		"Nome":"Star Trek",
 		"Imagem": "/images/Canecas/startrek.jpg",
@@ -1390,7 +1384,7 @@
 	},
 
 	{
-		"Código":"11",
+		"Código":"83",
 		"Posicao":"11",
 		"Nome":"Star Wars",
 		"Imagem": "/images/Canecas/starwars.jpg",
@@ -1404,7 +1398,7 @@
 	},
 
 	{
-		"Código":"12",
+		"Código":"84",
 		"Posicao":"12",
 		"Nome":"Stranger Things",
 		"Imagem": "/images/Canecas/stranger.jpg",
@@ -1415,6 +1409,101 @@
 		"Observações":"A cor do produto pode variar de acordo com as configurações do seu monitor",
 		"Dimensões com Embalagem":"12x12x12cm",
 		"Estoque1":"8 disponíveis"
+	},
+
+	{
+		"Código":"85",
+		"Posicao":"0",
+		"Nome":"Clube da Luta",
+		"Imagem": "/images/filmes/clubedaluta.jpg",
+		"Preço1":"55,60",
+		"Preço2":"68,80",
+		"Moldura":"Em madeira de reflorestamento com pintura na cor preto fosco.",
+		"Tamanho1":"40cm x 25cm(com moldura)",
+		"Tamanho2":"60cm x 45cm(com moldura)",
+		"Observações":"A cor do produto pode variar de acordo com as configurações do seu monitor",
+		"Impressão":"Fotográfica de alta resolução com laminação fosca anti-risco",
+		"Estoque1":"67 disponíveis",
+		"Estoque2":"56 disponíveis"
+	},
+
+	{
+		"Código":"86",
+		"Posicao":"1",
+		"Nome":"Logan",
+		"Imagem": "/images/filmes/logan.jpg",
+		"Preço1":"55,60",
+		"Preço2":"68,80",
+		"Moldura":"Em madeira de reflorestamento com pintura na cor preto fosco.",
+		"Tamanho1":"40cm x 25cm(com moldura)",
+		"Tamanho2":"60cm x 45cm(com moldura)",
+		"Observações":"A cor do produto pode variar de acordo com as configurações do seu monitor",
+		"Impressão":"Fotográfica de alta resolução com laminação fosca anti-risco",
+		"Estoque1":"Produto Esgotado",
+		"Estoque2":"Produto Esgotado"
+	},
+
+	{
+		"Código":"87",
+		"Posicao":"2",
+		"Nome":"Star Wars",
+		"Imagem": "/images/filmes/starwars4.jpg",
+		"Preço1":"55,60",
+		"Preço2":"68,80",
+		"Moldura":"Em madeira de reflorestamento com pintura na cor preto fosco.",
+		"Tamanho1":"40cm x 25cm(com moldura)",
+		"Tamanho2":"60cm x 45cm(com moldura)",
+		"Observações":"A cor do produto pode variar de acordo com as configurações do seu monitor",
+		"Impressão":"Fotográfica de alta resolução com laminação fosca anti-risco",
+		"Estoque1":"8 disponíveis",
+		"Estoque2":"Produto Esgotado"
+	},
+
+	{
+		"Código":"88",
+		"Posicao":"3",
+		"Nome":"Artic Monkeys",
+		"Imagem": "/images/música/articmonkeys.jpg",
+		"Preço1":"55,60",
+		"Preço2":"68,80",
+		"Moldura":"Em madeira de reflorestamento com pintura na cor preto fosco.",
+		"Tamanho1":"40cm x 25cm(com moldura)",
+		"Tamanho2":"60cm x 45cm(com moldura)",
+		"Observações":"A cor do produto pode variar de acordo com as configurações do seu monitor",
+		"Impressão":"Fotográfica de alta resolução com laminação fosca anti-risco",
+		"Estoque1":"10 disponíveis",
+		"Estoque2":"4 disponíveis"
+	},
+
+	{
+		"Código":"89",
+		"Posicao":"4",
+		"Nome":"Pink Floyd",
+		"Imagem": "/images/música/pinkfloyd3.jpg",
+		"Preço1":"55,60",
+		"Preço2":"68,80",
+		"Moldura":"Em madeira de reflorestamento com pintura na cor preto fosco.",
+		"Tamanho1":"40cm x 25cm(com moldura)",
+		"Tamanho2":"60cm x 45cm(com moldura)",
+		"Observações":"A cor do produto pode variar de acordo com as configurações do seu monitor",
+		"Impressão":"Fotográfica de alta resolução com laminação fosca anti-risco",
+		"Estoque1":"3 disponíveis",
+		"Estoque2":"Produto Esgotado"
+	},
+
+	{
+		"Código":"90",
+		"Posicao":"5",
+		"Nome":"Stranger Things",
+		"Imagem": "/images/seriados/stranger2.jpg",
+		"Preço1":"55,60",
+		"Preço2":"68,80",
+		"Moldura":"Em madeira de reflorestamento com pintura na cor preto fosco.",
+		"Tamanho1":"40cm x 25cm(com moldura)",
+		"Tamanho2":"60cm x 45cm(com moldura)",
+		"Observações":"A cor do produto pode variar de acordo com as configurações do seu monitor",
+		"Impressão":"Fotográfica de alta resolução com laminação fosca anti-risco",
+		"Estoque1":"10 disponíveis",
+		"Estoque2":"Produto Esgotado"
 	}
 ]
-}

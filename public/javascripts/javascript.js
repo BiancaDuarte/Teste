@@ -1,6 +1,7 @@
-var server = 'http://localhost:46000/dados';
+var server = 'http://localhost:51000/dados';
 var troca=0;
 $(document).ready(function () {
+	printCatalogo()
 	$('#resultados-busca').hide();
 	$(function(){
 		$(".dropdown").hover(
@@ -37,12 +38,12 @@ $('#txt-search').keyup(function(){
 	$('#txt-search').show();	
 	$('#resultados-busca').show();
 	for (x in data) {
-		if (data[x].Nome.search(regex) != -1){
+		if (data.quadros[x].Nome.search(regex) != -1){
 			resultados += '<div class="col-md-12 well">';
-			resultados += '<div class="col-md-3"><img class="img-responsive" src="'+data[x].Imagem+'" alt="'+ data[x].Nome +'" /></div>';
+			resultados += '<div class="col-md-3"><img class="img-responsive" src="'+data.quadros[x].Imagem+'" alt="'+ data.quadros[x].Nome +'" /></div>';
 			resultados += '<div class="col-md-7">';
-			resultados += '<h5>' + data[x].Nome + '</h5>';
-			resultados += '<h3> A partir de R$ ' + data[x].Preço1 + '</h3>'
+			resultados += '<h5>' + data.quadros[x].Nome + '</h5>';
+			resultados += '<h3> A partir de R$ ' + data.quadros[x].Preço1 + '</h3>'
 			resultados += '</div>';
 			resultados += '</div>';
 		}
@@ -52,13 +53,14 @@ $('#txt-search').keyup(function(){
 	});
 });
 
+
 // 	var count = 0;//recebendo o valor 5 que você disse
 // $('#aumenta').click(function(){
 // 	alert(count);
 // 	count++;
 // });
 
-$('#zoom').zoom();
+$('#zoom').zoom();//Zoom na imagem do produto selecionado
 
 $('.dropdown-button').dropdown({
       inDuration: 300,
@@ -85,12 +87,30 @@ $('.dropdown-button').dropdown('close');
 	// 	// tudo();
 	// });
 
-	// $("#P2").click(function(){
-	// 	$('#bla').empty();
-	// 	// tudo();
-	// });
+	$("#alice").click(function(){
+		mudarconteudo();
+
+		// tudo();
+	});
 });
 
+function mudarconteudo(){
+	$('#conteudo').empty();
+	$.get(server, function(dados) {
+		for (var x = 0; x < 2; x++){
+				$('#conteudo').append('<div class="col-md-4 imagem"><h2>'+dados.quadros[x].Nome+'</h2><p><div class="grid"><figure class="effect-zoe"><a href="http://localhost:51000/produto/detalhado/"'+dados.quadros[x].Código+'><img src='+dados.quadros[x].Imagem+'><figcaption>	<p class="icon-links"><a href="#"><i class="material-icons small"> shopping_cart</i></a><a href="#"><i class="material-icons small"> star</i></a></p></figcaption></a></figure><div><h1>A partir de R$ '+dados.quadros[x].Preço1+'</h1><p>'+dados.quadros[x].Pagamento+'</p></div></div></p></div>');
+		}
+	});
+}
+
+function printCatalogo(){//printar json no catalogo
+	$('#catalogo').empty();
+	$.get(server, function(dados) {
+		for (var x = 0; x < 85; x++){
+				$('#catalogo').append('<div class="col-md-4 imagem"><h2>'+dados.quadros[x].Nome+'</h2><p><div class="grid"><figure class="effect-zoe"><a href="http://localhost:51000/produto/detalhado/"'+dados.quadros[x].Código+'><img src='+dados.quadros[x].Imagem+'><figcaption>	<p class="icon-links"><a href="#"><i class="material-icons small"> shopping_cart</i></a><a href="#"><i class="material-icons small"> star</i></a></p></figcaption></a></figure><div><h1>A partir de R$ '+dados.quadros[x].Preço1+'</h1><p>'+dados.quadros[x].Pagamento+'</p></div></div></p></div>');
+		}
+	});
+}
 
 
 function tudo(){

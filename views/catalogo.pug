@@ -45,21 +45,23 @@ body
 	div.branco
 		div.container
 				div.row
-
-					- for (var x = 0; x < 85; x++)
-						div.col-md-4.imagem
-								h2= dados[x].Nome
-									p
-										.grid
-											figure.effect-zoe
-												a(href="http://localhost:51000/produto/detalhado/"+dados[x].Código)
-													img(src=dados[x].Imagem)
-													figcaption
-														p.icon-links
-															a(href='#')
-																i.material-icons.small shopping_cart
-															a(href="#") 
-																i.material-icons.small star
-											div
-												h1 A partir de R$#{dados[x].Preço1}
-												p #{dados[x].Pagamento}
+					#catalogo
+					#conteudo
+						
+					// - for (var x = 0; x < 85; x++)
+					// 	div.col-md-4.imagem
+					// 			h2= dados[x].Nome
+					// 				p
+					// 					.grid
+					// 						figure.effect-zoe
+					// 							a(href="http://localhost:51000/produto/detalhado/"+dados[x].Código)
+					// 								img(src=dados[x].Imagem)
+					// 								figcaption
+					// 									p.icon-links
+					// 										a(href='#')
+					// 											i.material-icons.small shopping_cart
+					// 										a(href="#") 
+					// 											i.material-icons.small star
+					// 						div
+					// 							h1 A partir de R$#{dados[x].Preço1}
+					// 							p #{dados[x].Pagamento}

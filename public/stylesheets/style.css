@@ -14,13 +14,13 @@ a {
 .sidebar1 {
   background: #F17153;
   /* For browsers that do not support gradients */
-  background: -webkit-linear-gradient(#F17153, #F58D63, #f1ab53);
+  background: -webkit-linear-gradient(#ef6c00, #F58D63, #f1ab53);
   /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(#F17153, #F58D63, #f1ab53);
+  background: -o-linear-gradient(#ef6c00, #F58D63, #f1ab53);
   /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(#F17153, #F58D63, #f1ab53);
+  background: -moz-linear-gradient(#ef6c00, #F58D63, #f1ab53);
   /* For Firefox 3.6 to 15 */
-  background: linear-gradient(#F17153, #F58D63, #f1ab53);
+  background: linear-gradient(#ef6c00, #F58D63, #f1ab53);
   /* Standard syntax */
   padding: 0px;
   min-height: 100%;
@@ -50,6 +50,7 @@ h5 {
   background-color: rgba(255, 255, 255, 0.2);
   border-left: 5px solid white;
   color: white;
+  cursor: pointer;
   font-weight: bolder;
   padding-left: 35px;
 }
@@ -58,13 +59,13 @@ h5 {
 }
 .laranja {
   width: 100%;
-  background-color: #ff5500;
+  background-color: #ef6c00;
   height: 250px;
   margin: 0 auto;
 }
 .veja h1 {
   font-family: 'Farsan', cursive;
-  color: #ff5500;
+  color: #ef6c00;
   text-align: center;
   font-size: 55px;
 }
@@ -80,7 +81,6 @@ h5 {
   width: 100%;
   background-color: white;
   height: auto;
-  margin: 0 auto;
 }
 .preto,
 .titulocatalogo,
@@ -174,7 +174,7 @@ h5 {
   text-align: center;
 }
 .caret {
-  color: #ff5500;
+  color: #ef6c00;
 }
 .dropdown h1 {
   font-family: 'Farsan', cursive;
@@ -195,8 +195,11 @@ h5 {
   width: 80%;
   margin-top: 20px;
 }
+.margin {
+  margin: 0px;
+}
 .separador {
-  width: 80%;
+  width: 100%;
   margin: 0 auto;
 }
 .separador a {
@@ -424,7 +427,7 @@ a {
   background: black;
 }
 ::-webkit-scrollbar-thumb {
-  background: #ff5500;
+  background: #ef6c00;
 }
 ::-webkit-scrollbar {
   /* 1 */

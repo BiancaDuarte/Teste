@@ -1,14 +1,23 @@
 extends layout
 	
 block promo
-	div.col-md-6
-		a.waves-effect.waves-light.btn-large
-			i.material-icons.right cloud
-			| button
-	div.col-md-6
-		a.waves-effect.waves-light.btn-large
-			i.material-icons.right cloud
-			| button
+	div.separador
+		div.col-md-3
+			a(href='http://localhost:51000/quadros').waves-effect.waves-light.btn-large
+				i.material-icons.right aspect_ratio
+				| Quadros
+		div.col-md-3
+			a.waves-effect.waves-light.btn-large
+				i.material-icons.right schedule
+				| Canecas
+		div.col-md-3
+			a.waves-effect.waves-light.btn-large
+				i.material-icons.right loyalty
+				| Promoções
+		div.col-md-3
+			a.waves-effect.waves-light.btn-large
+				i.material-icons.right uperm_phone_msg
+				| Contato
 
 	#contenedor
 	#myCarousel.carousel.slide

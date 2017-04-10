@@ -5,7 +5,7 @@ var fs = require('fs');
 router.get('/', function (req, res){
 	fs.readFile(__dirname + '/../db/quadros.json', 'utf8', function(err, data){
 	data = JSON.parse(data);
-	res.render('catalogo', { dados:data });
+	res.render('quadros', { dados:data });
 	
 			res.end();
 	});

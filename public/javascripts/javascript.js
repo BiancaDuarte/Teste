@@ -1,7 +1,7 @@
 var server = 'http://localhost:51000/dados';
 var troca=0;
 $(document).ready(function () {
-	printCatalogo()
+	printQuadros();
 	$('#resultados-busca').hide();
 	$(function(){
 		$(".dropdown").hover(
@@ -94,38 +94,38 @@ $('.dropdown-button').dropdown('close');
 	});
 });
 
-function mudarconteudo(){
-	$('#conteudo').empty();
+// function mudarconteudo(){
+// 	$('#conteudo').empty();
+// 	$.get(server, function(dados) {
+// 		for (var x = 0; x < 2; x++){
+// 				$('#conteudo').append('<div class="col-md-4 imagem"><h2>'+dados.quadros[x].Nome+'</h2><p><div class="grid"><figure class="effect-zoe"><a href="http://localhost:51000/produto/detalhado/"'+dados.quadros[x].Código+'><img src='+dados.quadros[x].Imagem+'><figcaption>	<p class="icon-links"><a href="#"><i class="material-icons small"> shopping_cart</i></a><a href="#"><i class="material-icons small"> star</i></a></p></figcaption></a></figure><div><h1>A partir de R$ '+dados.quadros[x].Preço1+'</h1><p>'+dados.quadros[x].Pagamento+'</p></div></div></p></div>');
+// 		}
+// 	});
+// }
+
+function printQuadros(){//printar json/quadros no catalogo-quadros
+	$('#quadros').empty();
 	$.get(server, function(dados) {
-		for (var x = 0; x < 2; x++){
-				$('#conteudo').append('<div class="col-md-4 imagem"><h2>'+dados.quadros[x].Nome+'</h2><p><div class="grid"><figure class="effect-zoe"><a href="http://localhost:51000/produto/detalhado/"'+dados.quadros[x].Código+'><img src='+dados.quadros[x].Imagem+'><figcaption>	<p class="icon-links"><a href="#"><i class="material-icons small"> shopping_cart</i></a><a href="#"><i class="material-icons small"> star</i></a></p></figcaption></a></figure><div><h1>A partir de R$ '+dados.quadros[x].Preço1+'</h1><p>'+dados.quadros[x].Pagamento+'</p></div></div></p></div>');
+		for (var x = 0; x < 72; x++){
+				$('#quadros').append('<div class="col-md-4 imagem"><h2>'+dados.quadros[x].Nome+'</h2><p><div class="grid"><figure class="effect-zoe"><a href="http://localhost:51000/produto/detalhado/"'+dados.quadros[x].Código+'><img src='+dados.quadros[x].Imagem+'><figcaption>	<p class="icon-links"><a href="#"><i class="material-icons small"> shopping_cart</i></a><a href="#"><i class="material-icons small"> star</i></a></p></figcaption></a></figure><div><h1>A partir de R$ '+dados.quadros[x].Preço1+'</h1><p>'+dados.quadros[x].Pagamento+'</p></div></div></p></div>');
 		}
 	});
 }
 
-function printCatalogo(){//printar json no catalogo
-	$('#catalogo').empty();
-	$.get(server, function(dados) {
-		for (var x = 0; x < 85; x++){
-				$('#catalogo').append('<div class="col-md-4 imagem"><h2>'+dados.quadros[x].Nome+'</h2><p><div class="grid"><figure class="effect-zoe"><a href="http://localhost:51000/produto/detalhado/"'+dados.quadros[x].Código+'><img src='+dados.quadros[x].Imagem+'><figcaption>	<p class="icon-links"><a href="#"><i class="material-icons small"> shopping_cart</i></a><a href="#"><i class="material-icons small"> star</i></a></p></figcaption></a></figure><div><h1>A partir de R$ '+dados.quadros[x].Preço1+'</h1><p>'+dados.quadros[x].Pagamento+'</p></div></div></p></div>');
-		}
-	});
-}
 
-
-function tudo(){
-    $.get(server, function(data) {
-        	if($('#opcao').value == "P1"){
-        		$('.informacoes').append('<h3>' +data[cod].Preço1+ '</h3>');
-        	}  
+// function tudo(){
+//     $.get(server, function(data) {
+//         	if($('#opcao').value == "P1"){
+//         		$('.informacoes').append('<h3>' +data[cod].Preço1+ '</h3>');
+//         	}  
         	
         	
-        	else if ($('#opcao').value == "P2"){
-        		$('.informacoes').append('<h3>' +data[cod].Preço2+ '</h3>');
-        	}  
-    });
+//         	else if ($('#opcao').value == "P2"){
+//         		$('.informacoes').append('<h3>' +data[cod].Preço2+ '</h3>');
+//         	}  
+//     });
 
-}
+// }
 
 
 

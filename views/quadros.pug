@@ -20,40 +20,86 @@ body
 	.container-fluid
 		.row
 			.col-md-2.col-sm-4.sidebar1
-				.logo
-					img.img-responsive.center-block(src='http://lorempixel.com/output/people-q-g-64-64-1.jpg', alt='Logo')
-				br
-				.left-navigation
-					ul.list
-						h5
-							strong FILMES
-						li Alice
-						li Bastardos Inglórios
-						li Batman
-						li Cisne Negro
-						li Clube da Luta
-						li Donnie Darko
-						li Guardiões da Galáxia
-						li Hobbit
-						li Harry Potter
-						li Interstellar
-						li Kill Bill
-						li Logan
-						li Mad Max
-						li Poderoso Chefão
-						li Robocop
-						li Senhor dos Anéis
-						li Star Wars
-						br
-						ul.list
-						h5
-							strong SÉRIES
-						li Hiking
-						li Rafting
-						li Badminton
-						li Tennis
-						li Sketching
-						li Horse Riding
+				.brand Filtrar busca:
+					form(action='#')
+								p
+									input#test1(name='group1', type='radio')
+									label(for='test1') Menor Preço
+								p
+									input#test2(name='group1', type='radio')
+									label(for='test2') Maior Preço
+				i.fa.fa-chevron-circle-down.fa-2x.toggle-btn(data-toggle='collapse', data-target='#menu-content')
+				.menu-list
+					ul#menu-content.menu-content.collapse.out
+						
+						li.collapsed.active(data-toggle='collapse', data-target='#filmes')
+							a(href='#')
+							i.fa.fa-film.fa-lg
+							strong  Filmes
+							span.arrow
+						ul#filmes.sub-menu.collapse
+							ul.list
+									li#alice Alice
+									li#bastardos Bastardos Inglórios
+									li Batman
+									li Cisne Negro
+									li Clube da Luta
+									li Donnie Darko
+									li Guardiões da Galáxia
+									li Hobbit
+									li Harry Potter
+									li Interstellar
+									li Kill Bill
+									li Logan
+									li Mad Max
+									li Poderoso Chefão
+									li Robocop
+									li Senhor dos Anéis
+									li Star Wars
+						li.collapsed(data-toggle='collapse', data-target='#musica')
+							a(href='#')
+							i.fa.fa-music.fa-sm
+							strong  Música
+						ul#musica.sub-menu.collapse
+								ul.list
+									li#acdc AC/DC
+									li Artic Monkeys
+									li Black Sabbath
+									li David Bowie
+									li Led Zeppelin
+									li Pink Floyd
+									li The Beatles
+									li Rolling Stones
+									li Sex Pistols
+						li.collapsed(data-toggle='collapse', data-target='#seriados')
+							a(href='#')
+							i.fa.fa-video-camera.fa-lg
+							strong  Seriados
+						ul#seriados.sub-menu.collapse
+								ul.list
+									li Breaking Bad
+									li Dexter
+									li Doctor Who
+									li Cisne Negro
+									li Clube da Luta
+									li Game Of Thrones
+									li How I Met You Mother
+									li Stranger Things
+									li Supernatural
+						li.collapsed(data-toggle='collapse', data-target='#desenhos')
+							a(href='#')
+							i.fa.fa-child.fa-lg
+							strong  Desenhos
+						ul#desenhos.sub-menu.collapse
+								ul.list
+									li Aladdin
+									li Bambi
+									li Dragon Ball
+									li Cisne Negro
+									li Hora de Aventura
+									li Toy Story
+
+						
 			.col-md-10
 				div.titulopromo
 					h2 Quadros

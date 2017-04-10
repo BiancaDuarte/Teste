@@ -10,9 +10,9 @@ var quadros = require('./routes/quadros');
 var promocao = require('./routes/promocao');
 var dados = require('./routes/dados');
 var produtoselecionado = require('./routes/produtoselecionado');
-var favoritos = require('./routes/favoritos')
-var carrinho = require('./routes/carrinho')
-var canecas = require('./routes/canecas')
+var favoritos = require('./routes/favoritos');
+var carrinho = require('./routes/carrinho');
+var canecas = require('./routes/canecas');
 var app = express();
 
 // view engine setup

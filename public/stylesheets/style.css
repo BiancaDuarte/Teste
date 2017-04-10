@@ -11,39 +11,55 @@ body {
 a {
   color: #00B7FF;
 }
-.open > .dropdown-menu {
-  -webkit-transform: scale(1, 1);
-  transform: scale(1, 1);
-  opacity: 1;
-  color: #ff5500;
+.sidebar1 {
+  background: #F17153;
+  /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(#F17153, #F58D63, #f1ab53);
+  /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#F17153, #F58D63, #f1ab53);
+  /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#F17153, #F58D63, #f1ab53);
+  /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#F17153, #F58D63, #f1ab53);
+  /* Standard syntax */
+  padding: 0px;
+  min-height: 100%;
 }
-.dropdown-menu {
-  opacity: .3;
-  -webkit-transform-origin: top;
-  transform-origin: top;
-  -webkit-animation-fill-mode: forwards;
-  animation-fill-mode: forwards;
-  -webkit-transform: scale(1, 0);
-  transition: all 0.3s linear;
-  -webkit-transition: all 0.3s linear;
+.logo {
+  max-height: 130px;
 }
-.dropdown-menu:hover {
-  color: #ff5500;
+.logo > img {
+  margin-top: 30px;
+  padding: 3px;
+  border: 3px solid white;
+  border-radius: 100%;
 }
-.caret-up {
-  width: 0;
-  height: 0;
-  border-left: 4px solid rgba(0, 0, 0, 0);
-  border-right: 4px solid rgba(0, 0, 0, 0);
-  border-bottom: 4px solid;
-  display: inline-block;
-  margin-left: 2px;
-  vertical-align: middle;
+.list {
+  color: #fff;
+  list-style: none;
+  padding-left: 0px;
+}
+.list::first-line {
+  color: rgba(255, 255, 255, 0.5);
+}
+.list > li,
+h5 {
+  padding: 5px 0px 5px 40px;
+}
+.list > li:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-left: 5px solid white;
+  color: white;
+  font-weight: bolder;
+  padding-left: 35px;
+}
+.main-content {
+  text-align: center;
 }
 .laranja {
   width: 100%;
   background-color: #ff5500;
-  height: 215px;
+  height: 250px;
   margin: 0 auto;
 }
 .veja h1 {
@@ -61,7 +77,7 @@ a {
   line-height: 56px;
 }
 .branco {
-  width: 80%;
+  width: 100%;
   background-color: white;
   height: auto;
   margin: 0 auto;
@@ -69,10 +85,10 @@ a {
 .preto,
 .titulocatalogo,
 .titulopromo {
-  width: 80%;
+  width: 100%;
   background-color: black;
   height: 80px;
-  padding: 6px;
+  padding: 1px;
   margin: 0 auto;
 }
 .preto,
@@ -209,7 +225,7 @@ a {
   width: 40%;
 }
 .logo img {
-  width: 100%;
+  height: 100%;
   cursor: pointer;
 }
 .logo ul {

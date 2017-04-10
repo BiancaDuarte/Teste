@@ -1,24 +1,7 @@
 extends layout
 	
 block promo
-	div.separador
-		div.col-md-3
-			a(href='http://localhost:51000/quadros').waves-effect.waves-light.btn-large
-				i.material-icons.right aspect_ratio
-				| Quadros
-		div.col-md-3
-			a.waves-effect.waves-light.btn-large
-				i.material-icons.right schedule
-				| Canecas
-		div.col-md-3
-			a.waves-effect.waves-light.btn-large
-				i.material-icons.right loyalty
-				| Promoções
-		div.col-md-3
-			a.waves-effect.waves-light.btn-large
-				i.material-icons.right uperm_phone_msg
-				| Contato
-
+	
 	#contenedor
 	#myCarousel.carousel.slide
 		ol.carousel-indicators
@@ -27,9 +10,9 @@ block promo
 		// Carousel items
 		.carousel-inner
 			.active.item
-				a(href="http://localhost:51000/promocao"): img(src='/images/promoquadros.png')       
+				a(href="http://localhost:52000/promocao"): img(src='/images/promoquadros.png')       
 			.item
-				a(href="http://localhost:51000/canecas"): img(src='/images/promoçãocaneca.jpg')           
+				a(href="http://localhost:52000/canecas"): img(src='/images/promoçãocaneca.jpg')           
 			
 		// Carousel nav
 		a.carousel-control.left(href='#myCarousel', data-slide='prev') &lsaquo;      
@@ -49,7 +32,7 @@ block content
 									p
 										.grid
 											figure.effect-zoe
-												a(href="http://localhost:51000/produto/detalhado/"+dados.quadros[val].Código)
+												a(href="http://localhost:52000/produto/detalhado/"+dados.quadros[val].Código)
 													img(src=dados.quadros[val].Imagem)
 													figcaption
 														p.icon-links
@@ -60,6 +43,8 @@ block content
 											div
 												h1 A partir de R$#{dados.quadros[val].Preço1}
 												p #{dados.quadros[val].Pagamento}
+
+		#canecas
 
 
 

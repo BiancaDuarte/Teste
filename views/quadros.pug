@@ -1,7 +1,7 @@
 doctype html
 html
 head
-	title= "catalogo"
+	title= title
 	link(rel='stylesheet', href='/stylesheets/bootstrap.min.css')
 	link(rel='stylesheet', href='/stylesheets/materialize.min.css')
 	link(rel='stylesheet', href='/stylesheets/font-awesome.min.css')
@@ -10,33 +10,43 @@ head
 	script(src='/javascripts/jquery-3.1.1.min.js')
 	script(src='/javascripts/bootstrap.min.js')
 	script(src='/javascripts/materialize.min.js')
-	script(src='/javascripts/javascript.js')
+	script(src='/../javascripts/javascript.js')
 
 body
 
 	include logo 
 	include body
 
-	div.titulopromo
-		h2 Catálogo de Produtos
-	div.branco
-		div.container
-			div.row
-				#quadros						
-					// - for (var x = 0; x < 85; x++)
-					// 	div.col-md-4.imagem
-					// 			h2= dados[x].Nome
-					// 				p
-					// 					.grid
-					// 						figure.effect-zoe
-					// 							a(href="http://localhost:51000/produto/detalhado/"+dados[x].Código)
-					// 								img(src=dados[x].Imagem)
-					// 								figcaption
-					// 									p.icon-links
-					// 										a(href='#')
-					// 											i.material-icons.small shopping_cart
-					// 										a(href="#") 
-					// 											i.material-icons.small star
-					// 						div
-					// 							h1 A partir de R$#{dados[x].Preço1}
-					// 							p #{dados[x].Pagamento}
+	.container-fluid
+		.row
+			.col-md-2.col-sm-4.sidebar1
+				.logo
+					img.img-responsive.center-block(src='http://lorempixel.com/output/people-q-g-64-64-1.jpg', alt='Logo')
+				br
+				.left-navigation
+					ul.list
+						h5
+							strong FILMES
+						li Alice
+						li Bastardos Inglórios
+						li Clube da Luta
+						li Gym
+						li Art Class
+						li Hike Club
+						br
+						ul.list
+						h5
+							strong SÉRIES
+						li Hiking
+						li Rafting
+						li Badminton
+						li Tennis
+						li Sketching
+						li Horse Riding
+			.col-md-10.col-sm-4
+				div.titulopromo
+					h2 Quadros
+				div.branco
+					div.container
+						div.row
+							#quadros

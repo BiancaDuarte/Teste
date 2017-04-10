@@ -1,7 +1,8 @@
-var server = 'http://localhost:51000/dados';
+var server = 'http://localhost:52000/dados';
 var troca=0;
 $(document).ready(function () {
 	printQuadros();
+	printCanecas();
 	$('#resultados-busca').hide();
 	$(function(){
 		$(".dropdown").hover(
@@ -94,15 +95,6 @@ $('.dropdown-button').dropdown('close');
 	});
 });
 
-// function mudarconteudo(){
-// 	$('#conteudo').empty();
-// 	$.get(server, function(dados) {
-// 		for (var x = 0; x < 2; x++){
-// 				$('#conteudo').append('<div class="col-md-4 imagem"><h2>'+dados.quadros[x].Nome+'</h2><p><div class="grid"><figure class="effect-zoe"><a href="http://localhost:51000/produto/detalhado/"'+dados.quadros[x].Código+'><img src='+dados.quadros[x].Imagem+'><figcaption>	<p class="icon-links"><a href="#"><i class="material-icons small"> shopping_cart</i></a><a href="#"><i class="material-icons small"> star</i></a></p></figcaption></a></figure><div><h1>A partir de R$ '+dados.quadros[x].Preço1+'</h1><p>'+dados.quadros[x].Pagamento+'</p></div></div></p></div>');
-// 		}
-// 	});
-// }
-
 function printQuadros(){//printar json/quadros no catalogo-quadros
 	$('#quadros').empty();
 	$.get(server, function(dados) {
@@ -112,6 +104,14 @@ function printQuadros(){//printar json/quadros no catalogo-quadros
 	});
 }
 
+function printCanecas(){//printar json/canecas no catalogo-canecas
+	$('#canecas').empty();
+	$.get(server, function(dados) {
+		for (var x = 0; x < 13; x++){
+				$('#canecas').append('<div class="col-md-4 imagem"><h2>'+dados.canecas[x].Nome+'</h2><p><div class="grid"><figure class="effect-zoe"><a href="http://localhost:51000/produto/detalhado/"'+dados.canecas[x].Código+'><img src='+dados.canecas[x].Imagem+'><figcaption>	<p class="icon-links"><a href="#"><i class="material-icons small"> shopping_cart</i></a><a href="#"><i class="material-icons small"> star</i></a></p></figcaption></a></figure><div><h1>A partir de R$ '+dados.canecas[x].Preço1+'</h1><p>'+dados.canecas[x].Pagamento+'</p></div></div></p></div>');
+		}
+	});
+}
 
 // function tudo(){
 //     $.get(server, function(data) {

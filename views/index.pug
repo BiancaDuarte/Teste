@@ -1,6 +1,15 @@
 extends layout
 	
 block promo
+	div.col-md-6
+		a.waves-effect.waves-light.btn-large
+			i.material-icons.right cloud
+			| button
+	div.col-md-6
+		a.waves-effect.waves-light.btn-large
+			i.material-icons.right cloud
+			| button
+
 	#contenedor
 	#myCarousel.carousel.slide
 		ol.carousel-indicators
@@ -16,7 +25,6 @@ block promo
 		// Carousel nav
 		a.carousel-control.left(href='#myCarousel', data-slide='prev') &lsaquo;      
 		a.carousel-control.right(href='#myCarousel', data-slide='next') &rsaquo;
-
 
 block content
 	br
@@ -48,20 +56,20 @@ block content
 
 
 					// - for (var x = 85; x < 91; x++)
-					// 	div.col-md-4.imagem
-					// 				h2= dados.quadros[x].Nome
-					// 					p
-					// 						.grid
-					// 							figure.effect-zoe
-					// 								a(href="http://localhost:51000/produto/detalhado/"+dados.quadros[x].Código)
-					// 									img(src=dados.quadros[x].Imagem)
-					// 									figcaption
-					// 										p.icon-links
-					// 											a(href='#' class='addCount')
-					// 												i.material-icons.small shopping_cart
-					// 											a(href="http://localhost:51000/post/favoritos" id='favorito')  
-					// 												i.material-icons.small star
-					// 							div
-					// 								h1 A partir de R$#{dados.quadros[x].Preço1}
-					// 								p ou a partir de 3xR$15,90
+					//  div.col-md-4.imagem
+					//              h2= dados.quadros[x].Nome
+					//                  p
+					//                      .grid
+					//                          figure.effect-zoe
+					//                              a(href="http://localhost:51000/produto/detalhado/"+dados.quadros[x].Código)
+					//                                  img(src=dados.quadros[x].Imagem)
+					//                                  figcaption
+					//                                      p.icon-links
+					//                                          a(href='#' class='addCount')
+					//                                              i.material-icons.small shopping_cart
+					//                                          a(href="http://localhost:51000/post/favoritos" id='favorito')  
+					//                                              i.material-icons.small star
+					//                          div
+					//                              h1 A partir de R$#{dados.quadros[x].Preço1}
+					//                              p ou a partir de 3xR$15,90
 

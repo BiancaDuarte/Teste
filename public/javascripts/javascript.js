@@ -113,6 +113,15 @@ function printCanecas(){//printar json/canecas no catalogo-canecas
 	});
 }
 
+function mudarconteudo(){//printar json/quadros no catalogo-quadros
+	$('#conteudo').empty();
+	$.get(server, function(dados) {
+		for (var x = 0; x < 1; x++){
+				$('#conteudp').append('<div class="col-md-4 imagem"><h2>'+dados.quadros[0].Nome+'</h2><p><div class="grid"><figure class="effect-zoe"><a href="http://localhost:51000/produto/detalhado/"'+dados.quadros[0].Código+'><img src='+dados.quadros[0].Imagem+'><figcaption>	<p class="icon-links"><a href="#"><i class="material-icons small"> shopping_cart</i></a><a href="#"><i class="material-icons small"> star</i></a></p></figcaption></a></figure><div><h1>A partir de R$ '+dados.quadros[0].Preço1+'</h1><p>'+dados.quadros[0].Pagamento+'</p></div></div></p></div>');
+		}
+	});
+}
+
 // function tudo(){
 //     $.get(server, function(data) {
 //         	if($('#opcao').value == "P1"){

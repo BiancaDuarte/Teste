@@ -1236,7 +1236,7 @@
 
 	"canecas":[
 	{
-		"Código":"0",
+		"Código":"72",
 		"Posicao":"0",
 		"Nome":"Alice no País das Maravilhas",
 		"Imagem": "/images/Canecas/alice.jpg",
@@ -1250,7 +1250,7 @@
 	},
 
 	{
-		"Código":"1",
+		"Código":"73",
 		"Posicao":"1",
 		"Nome":"Bastardos Inglórios",
 		"Imagem": "/images/Canecas/bastardos.jpg",
@@ -1264,7 +1264,7 @@
 	},
 
 	{
-		"Código":"2",
+		"Código":"74",
 		"Posicao":"2",
 		"Nome":"Batman",
 		"Imagem": "/images/Canecas/batman.jpg",
@@ -1278,7 +1278,7 @@
 	},
 
 	{
-		"Código":"3",
+		"Código":"75",
 		"Posicao":"3",
 		"Nome":"Cazuza",
 		"Imagem": "/images/Canecas/cazuza.jpg",
@@ -1292,7 +1292,7 @@
 	},
 
 	{
-		"Código":"4",
+		"Código":"76",
 		"Posicao":"4",
 		"Nome":"Clube da Luta",
 		"Imagem": "/images/Canecas/clubedaluta.jpg",
@@ -1306,7 +1306,7 @@
 	},
 
 	{
-		"Código":"5",
+		"Código":"77",
 		"Posicao":"5",
 		"Nome":"David Bowie",
 		"Imagem": "/images/Canecas/davidbowie.jpg",
@@ -1320,7 +1320,7 @@
 	},
 
 	{
-		"Código":"6",
+		"Código":"78",
 		"Posicao":"6",
 		"Nome":"Dexter",
 		"Preço1":"28,50",
@@ -1334,7 +1334,7 @@
 	},
 
 	{
-		"Código":"7",
+		"Código":"79",
 		"Posicao":"7",
 		"Nome":"Harry Potter",
 		"Imagem": "/images/Canecas/hp.jpg",
@@ -1348,7 +1348,7 @@
 	},
 
 	{
-		"Código":"8",
+		"Código":"80",
 		"Posicao":"8",
 		"Nome":"O Hobbit",
 		"Imagem": "/images/Canecas/hobbit.jpg",
@@ -1362,7 +1362,7 @@
 	},
 
 	{
-		"Código":"9",
+		"Código":"81",
 		"Posicao":"9",
 		"Nome":"Pink Floyd",
 		"Imagem": "/images/Canecas/pf.jpg",
@@ -1376,7 +1376,7 @@
 	},
 
 	{
-		"Código":"10",
+		"Código":"82",
 		"Posicao":"10",
 		"Nome":"Star Trek",
 		"Imagem": "/images/Canecas/startrek.jpg",
@@ -1390,7 +1390,7 @@
 	},
 
 	{
-		"Código":"11",
+		"Código":"83",
 		"Posicao":"11",
 		"Nome":"Star Wars",
 		"Imagem": "/images/Canecas/starwars.jpg",
@@ -1404,7 +1404,7 @@
 	},
 
 	{
-		"Código":"12",
+		"Código":"84",
 		"Posicao":"12",
 		"Nome":"Stranger Things",
 		"Imagem": "/images/Canecas/stranger.jpg",

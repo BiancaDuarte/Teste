@@ -25,7 +25,7 @@ body
 				br
 				//- img(src=dados[cod].Imagem)#zoom_01
 				span#zoom.zoom
-					img(src=dados.quadros[cod].Imagem, alt='Daisy on the Ohoopee')
+					img(src=dados[cod].Imagem, alt='Daisy on the Ohoopee')
 				br
 				.row
 					div.col-md-2
@@ -35,28 +35,28 @@ body
 					div.col-md-8
 
 			div.col-md-6.info
-				h1 #{dados.quadros[cod].Nome}
+				h1 #{dados[cod].Nome}
 				div.informacoes.info
-					h3#bla  A partir de R$ #{dados.quadros[cod].Preço1}
+					h3#bla  A partir de R$ #{dados[cod].Preço1}
 				.row
 					div.col-md-4
 					div.col-md-4
 						a.dropdown-button.btn(data-beloworigin='true', href='#', data-activates='dropdown1') Selecione o tamanho:
 						ul#dropdown1.dropdown-content
 							li
-								a#op(href='#!' value='P1') #{dados.quadros[cod].Tamanho1}
+								a#op(href='#!' value='P1') #{dados[cod].Tamanho1}
 							li
-								a#op(href='#!' value='P2') #{dados.quadros[cod].Tamanho2}
+								a#op(href='#!' value='P2') #{dados[cod].Tamanho2}
 					div.col-md-4
 
 				div.dados
 					b Moldura: 
-					p #{dados.quadros[cod].Moldura}
+					p #{dados[cod].Moldura}
 					b Impressão e acabamento:
-					p #{dados.quadros[cod].Impressão}.
+					p #{dados[cod].Impressão}.
 					b Obs: 
-					p #{dados.quadros[cod].Observações}.
-					b Estoque:  #{dados.quadros[cod].Estoque1}
+					p #{dados[cod].Observações}.
+					b Estoque:  #{dados[cod].Estoque1}
 
 				br
 				a.waves-effect.waves-light.btn-large Comprar

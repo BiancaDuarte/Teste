@@ -12,4 +12,8 @@ router.get('/', function (req, res){
 
 });
 
+router.get('/detalhado/:cod', function (req, res){
+	console.log(req.params.cod);
+});
+
 module.exports = router;

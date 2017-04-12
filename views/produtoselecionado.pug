@@ -25,7 +25,7 @@ body
 				br
 				//- img(src=dados[cod].Imagem)#zoom_01
 				span#zoom.zoom
-					img(src=dados[cod].Imagem, alt='Daisy on the Ohoopee')
+					img(src=dados.quadros[cod].Imagem, alt='Daisy on the Ohoopee')
 				br
 				.row
 					div.col-md-2
@@ -35,9 +35,9 @@ body
 					div.col-md-8
 
 			div.col-md-6.info
-				h1 #{dados.[cod].Nome}
+				h1 #{dados.quadros[cod].Nome}
 				div.informacoes.info
-					h3#bla  A partir de R$ #{dados.[cod].Preço1}
+					h3#bla  A partir de R$ #{dados.quadros[cod].Preço1}
 				.row
 					div.col-md-4
 					div.col-md-4
@@ -56,33 +56,33 @@ body
 					p #{dados.quadros[cod].Impressão}.
 					b Obs: 
 					p #{dados.quadros[cod].Observações}.
-					b Estoque:  #{dados,quadros[cod].Estoque1}
+					b Estoque:  #{dados.quadros[cod].Estoque1}
 
 				br
 				a.waves-effect.waves-light.btn-large Comprar
 					i.material-icons.left shopping_cart
 
-		div.veja
-			div.container
-				h1 Veja também
-					div.row
-						each val in [7, 9, 3, 67]
-							div.col-md-3.imagem
-									h2= dados[val].Nome
-										p
-											.grid
-												figure.effect-zoe
-													a(href="http://localhost:52000/produto/detalhado/"+dados[val].Código)
-														img(src=dados[val].Imagem)
-														figcaption
-															p.icon-links
-																a(href="#" )
-																	i.material-icons.small shopping_cart
-																a(href="#") 
-																	i.material-icons.small star
-												div
-													h1 A partir de R$#{dados[val].Preço1}
-													p #{dados[val].Pagamento}
+		//- div.veja
+		//- 	div.container
+		//- 		h1 Veja também
+		//- 			div.row
+		//- 				each val in [7, 9, 3, 67]
+		//- 					div.col-md-3.imagem
+		//- 							h2= dados[val].Nome
+		//- 								p
+		//- 									.grid
+		//- 										figure.effect-zoe
+		//- 											a(href="http://localhost:52000/produto/detalhado/"+dados[val].Código)
+		//- 												img(src=dados[val].Imagem)
+		//- 												figcaption
+		//- 													p.icon-links
+		//- 														a(href="#" )
+		//- 															i.material-icons.small shopping_cart
+		//- 														a(href="#") 
+		//- 															i.material-icons.small star
+		//- 										div
+		//- 											h1 A partir de R$#{dados[val].Preço1}
+		//- 											p #{dados[val].Pagamento}
 						
 						
 			

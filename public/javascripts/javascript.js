@@ -39,21 +39,24 @@ $('#txt-search').keyup(function(){
 	$('#txt-search').show();	
 	$('#resultados-busca').show();
 	for (x in data) {
-		if (data.quadros[x].Nome.search(regex) != -1){
-			resultados += '<div class="col-md-12 well">';
-			resultados += '<div class="col-md-3"><img class="img-responsive" src="'+data.quadros[x].Imagem+'" alt="'+ data.quadros[x].Nome +'" /></div>';
-			resultados += '<div class="col-md-7">';
-			resultados += '<h5>' + data.quadros[x].Nome + '</h5>';
-			resultados += '<h3> A partir de R$ ' + data.quadros[x].Preço1 + '</h3>'
-			resultados += '</div>';
-			resultados += '</div>';
-		}
-	}
-		resultados += '</div>';
-		$('#resultados-busca').html(resultados);
+		var categorias = data[x];
+			for(y in categorias){
+				var nome = categorias[y].Nome;
+					if (nome.search(regex) != -1){
+						resultados += '<div class="col-md-12 well">';
+						resultados += '<div class="col-md-3"><img class="img-responsive" src="'+categorias[y].Imagem+'" alt="'+ categorias[y].Nome +'" /></div>';
+						resultados += '<div class="col-md-7">';
+						resultados += '<h5>' + nome + '</h5>';
+						resultados += '<h3> A partir de R$ ' + categorias[y].Preço1 + '</h3>'
+						resultados += '</div>';
+						resultados += '</div>';
+					}
+				}
+			}
+					resultados += '</div>';
+					$('#resultados-busca').html(resultados);
 	});
 });
-
 
 // 	var count = 0;//recebendo o valor 5 que você disse
 // $('#aumenta').click(function(){

@@ -82,10 +82,15 @@ h5 {
   line-height: 56px;
 }
 .searchbar {
-  float: right;
+  margin-left: 350px;
   margin-top: 60px;
   color: #fff;
-  background-color: #222222;
+}
+.icones {
+  margin-left: 350px;
+}
+.icone {
+  float: right;
 }
 .branco {
   width: 100%;
@@ -146,9 +151,13 @@ h5 {
 #resultados-busca h5 {
   font-family: 'Farsan', cursive;
   cursor: pointer;
-  font-size: 30px;
+  font-size: 20px;
   color: black;
   text-align: center;
+}
+#resultados-busca img {
+  width: 300px;
+  height: 100px;
 }
 .imagem:hover h1,
 .imagem:hover p {

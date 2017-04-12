@@ -24,6 +24,20 @@ $(document).ready(function () {
 	});
 
 
+function filtro(flt){
+	$('#quadros').empty();
+	// for (x in data) {
+	// 	var categorias = data[x];
+	// 	for(y in categorias){
+	// 		var nome = categorias[y].Nome;
+	// 		if (nome.search(flt) != -1){
+	// 			$('#quadros').append('<div class="col-md-4 imagem"><h2>'+categorias[y].Nome+'</h2><p><div class="grid"><figure class="effect-zoe"><a href="http://localhost:52000/produto/detalhado/'+categorias[y].Código+'"><img src='+categorias[y].Imagem+'><figcaption><p class="icon-links"><a href="#"><i class="material-icons small"> shopping_cart</i></a><a href="#"><i class="material-icons small"> star</i></a></p></figcaption></a></figure><div><h1>A partir de R$ '+categorias[y].Preço1+'</h1><p>'+categorias[y].Pagamento+'</p></div></div></p></div>');
+	// 		}
+	// 	}
+	// }
+}
+
+
 $('#txt-search').keyup(function(){
 	var searchField = $(this).val();
 	if(searchField === '')  {
@@ -91,10 +105,15 @@ $('.dropdown-button').dropdown('close');
 	// 	// tudo();
 	// });
 
-	$("#alice").click(function(){
-		mudarconteudo();
+	
+	$('#menu-content').on('click', '#alice', function(){
+		console.log('alice');
+		filtro("alice");
+	});
 
-		// tudo();
+	$('.titulopromo').click(function(){
+		console.log('alice');
+		filtro("alice");
 	});
 });
 
@@ -120,7 +139,7 @@ function printCanecas(){//printar json/canecas no catalogo-canecas
 // 	$('#conteudo').empty();
 // 	$.get(server, function(dados) {
 // 		for (var x = 0; x < 1; x++){
-// 				$('#conteudp').append('<div class="col-md-4 imagem"><h2>'+dados.quadros[0].Nome+'</h2><p><div class="grid"><figure class="effect-zoe"><a href="http://localhost:52000/produto/detalhado/"'+dados.quadros[0].Código+'><img src='+dados.quadros[0].Imagem+'><figcaption>	<p class="icon-links"><a href="#"><i class="material-icons small"> shopping_cart</i></a><a href="#"><i class="material-icons small"> star</i></a></p></figcaption></a></figure><div><h1>A partir de R$ '+dados.quadros[0].Preço1+'</h1><p>'+dados.quadros[0].Pagamento+'</p></div></div></p></div>');
+// 				$('#conteudo').append('<div class="col-md-4 imagem"><h2>'+dados.quadros[0].Nome+'</h2><p><div class="grid"><figure class="effect-zoe"><a href="http://localhost:52000/produto/detalhado/"'+dados.quadros[0].Código+'><img src='+dados.quadros[0].Imagem+'><figcaption>	<p class="icon-links"><a href="#"><i class="material-icons small"> shopping_cart</i></a><a href="#"><i class="material-icons small"> star</i></a></p></figcaption></a></figure><div><h1>A partir de R$ '+dados.quadros[0].Preço1+'</h1><p>'+dados.quadros[0].Pagamento+'</p></div></div></p></div>');
 // 		}
 // 	});
 // }

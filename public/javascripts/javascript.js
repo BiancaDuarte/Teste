@@ -24,7 +24,7 @@ $(document).ready(function () {
 	});
 
 
-function filtro(flt){//filtra os produtos
+function filtroquadros(flt){//filtra os quadros
 	$('#quadros').empty();
 	var regex = new RegExp(flt, "i");
 	$.get('/dados', function(data) {
@@ -32,6 +32,20 @@ function filtro(flt){//filtra os produtos
 		console.log(data.quadros[x]);
 		if (data.quadros[x].Nome.search(regex) != -1){
 			$('#quadros').append('<div class="col-md-4 imagem"><h2>'+data.quadros[x].Nome+'</h2><p><div class="grid"><figure class="effect-zoe"><a href="http://localhost:52000/produto/detalhado/'+data.quadros[x].Código+'"><img src='+data.quadros[x].Imagem+'><figcaption><p class="icon-links"><a href="#"><i class="material-icons small"> shopping_cart</i></a><a href="#"><i class="material-icons small"> star</i></a></p></figcaption></a></figure><div><h1>A partir de R$ '+data.quadros[x].Preço1+'</h1><p>'+data.quadros[x].Pagamento+'</p></div></div></p></div>');
+		}
+	
+	}	
+	});
+}//
+
+function filtrocanecas(flto){//filtra as canecas
+	$('#canecas').empty();
+	var regex = new RegExp(flto, "i");
+	$.get('/dados', function(data) {
+	for (x in data.canecas) {
+		console.log(data.canecas[x]);
+		if (data.canecas[x].Nome.search(regex) != -1){
+			$('#canecas').append('<div class="col-md-4 imagem"><h2>'+data.canecas[x].Nome+'</h2><p><div class="grid"><figure class="effect-zoe"><a href="http://localhost:52000/produto/detalhado/'+data.canecas[x].Código+'"><img src='+data.canecas[x].Imagem+'><figcaption><p class="icon-links"><a href="#"><i class="material-icons small"> shopping_cart</i></a><a href="#"><i class="material-icons small"> star</i></a></p></figcaption></a></figure><div><h1>A partir de R$ '+data.canecas[x].Preço1+'</h1><p>'+data.canecas[x].Pagamento+'</p></div></div></p></div>');
 		}
 	
 	}	
@@ -109,9 +123,15 @@ $('.dropdown-button').dropdown('close');
 	// clicabotao();
 	$('#menu-content').on('click', '.filter', function(){
 		var classe = $(this).data('id');
-		filtro(classe);
+		filtroquadros(classe);
 		console.log(classe);
 	});
+		$('#menu-content').on('click', '.filter', function(){
+		var classe = $(this).data('id');
+		filtrocanecas(classe);
+		console.log(classe);
+	});
+
 
 });
 

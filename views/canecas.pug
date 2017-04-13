@@ -7,9 +7,10 @@ head
 	link(rel='stylesheet', href='/stylesheets/font-awesome.min.css')
 	link(href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet")
 	link(rel='stylesheet', href='/stylesheets/style.css')
-	script(src='/javascripts/jquery-3.1.1.min.js')
-	script(src='/javascripts/bootstrap.min.js')
-	script(src='/javascripts/materialize.min.js')
+	script(src='/../javascripts/jquery-3.1.1.min.js')
+	script(src='/../javascripts/bootstrap.min.js')
+	script(src='/../javascripts/materialize.min.js')
+	script(src='/javascripts/jquery.zoom.min.js')
 	script(src='/../javascripts/javascript.js')
 
 body
@@ -39,31 +40,30 @@ body
 							span.arrow
 						ul#filmes.sub-menu.collapse
 							ul.list
-									li#alice Alice no País das Maravilhas
-									li#bastardos Bastardos Inglórios
-									li Batman
-									li Clube da Luta
-									li Donnie Darko
-									li Hobbit
-									li Harry Potter
+									li(data-id="alice").filter Alice no País das Maravilhas
+									li(data-id="Bastardos").filter Bastardos Inglórios
+									li(data-id="Batman").filter Batman
+									li(data-id="Clube").filter Clube da Luta
+									li(data-id="Hobbit").filter Hobbit
+									li(data-id="Harry").filter Harry Potter
 						li.collapsed(data-toggle='collapse', data-target='#musica')
 							a(href='#')
 							i.fa.fa-music.fa-sm
 							strong  Música
 						ul#musica.sub-menu.collapse
 								ul.list
-									li Cazuza
-									li David Bowie
-									li Pink Floyd
+									li(data-id="Cazuza").filter Cazuza
+									li(data-id="David").filter David Bowie
+									li(data-id="Pink").filter Pink Floyd
 						li.collapsed(data-toggle='collapse', data-target='#seriados')
 							a(href='#')
 							i.fa.fa-video-camera.fa-lg
 							strong  Seriados
 						ul#seriados.sub-menu.collapse
 								ul.list
-									li Dexter
-									li Star Trek
-									li Star Wars
+									li(data-id="Dexter").filter Dexter
+									li(data-id="Star Trek").filter Star Trek
+									li(data-id="Star Wars").filter Star Wars
 			.col-md-10
 				div.titulopromo
 					h2 Canecas

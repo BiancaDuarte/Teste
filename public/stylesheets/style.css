@@ -422,7 +422,7 @@ figure.effect-zoe:hover p.icon-links a:first-child {
   width: 100%;
   max-height: 400px;
   overflow-y: auto;
-  box-shadow: 0px 20px 20px #444;
+  box-shadow: 0px 10px 20px #444;
 }
 header {
   font-family: 'Lobster', cursive;

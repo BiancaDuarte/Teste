@@ -24,18 +24,21 @@ $(document).ready(function () {
 	});
 
 
-function filtro(flt){
+function filtro(flt){//filtra os produtos
 	$('#quadros').empty();
-	// for (x in data) {
-	// 	var categorias = data[x];
-	// 	for(y in categorias){
-	// 		var nome = categorias[y].Nome;
-	// 		if (nome.search(flt) != -1){
-	// 			$('#quadros').append('<div class="col-md-4 imagem"><h2>'+categorias[y].Nome+'</h2><p><div class="grid"><figure class="effect-zoe"><a href="http://localhost:52000/produto/detalhado/'+categorias[y].Código+'"><img src='+categorias[y].Imagem+'><figcaption><p class="icon-links"><a href="#"><i class="material-icons small"> shopping_cart</i></a><a href="#"><i class="material-icons small"> star</i></a></p></figcaption></a></figure><div><h1>A partir de R$ '+categorias[y].Preço1+'</h1><p>'+categorias[y].Pagamento+'</p></div></div></p></div>');
-	// 		}
-	// 	}
-	// }
-}
+	var regex = new RegExp(flt, "i");
+	$.get('/dados', function(data) {
+	for (x in data) {
+		var categorias = data[x];
+		for(y in categorias){
+			var nome = categorias[y].Nome;
+			if (nome.search(regex) != -1){
+				$('#quadros').append('<div class="col-md-4 imagem"><h2>'+categorias[y].Nome+'</h2><p><div class="grid"><figure class="effect-zoe"><a href="http://localhost:52000/produto/detalhado/'+categorias[y].Código+'"><img src='+categorias[y].Imagem+'><figcaption><p class="icon-links"><a href="#"><i class="material-icons small"> shopping_cart</i></a><a href="#"><i class="material-icons small"> star</i></a></p></figcaption></a></figure><div><h1>A partir de R$ '+categorias[y].Preço1+'</h1><p>'+categorias[y].Pagamento+'</p></div></div></p></div>');
+			}
+		}
+	}
+	});
+}//
 
 
 $('#txt-search').keyup(function(){
@@ -105,16 +108,13 @@ $('.dropdown-button').dropdown('close');
 	// 	// tudo();
 	// });
 
-	
-	$('#menu-content').on('click', '#alice', function(){
-		console.log('alice');
-		filtro("alice");
+	// clicabotao();
+	$('#menu-content').on('click', '.filter', function(){
+		var classe = $(this).data('id');
+		printQuadros();
+		console.log(classe);
 	});
 
-	$('.titulopromo').click(function(){
-		console.log('alice');
-		filtro("alice");
-	});
 });
 
 function printQuadros(){//printar json/quadros no catalogo-quadros
@@ -134,6 +134,25 @@ function printCanecas(){//printar json/canecas no catalogo-canecas
 		}
 	});
 }
+
+// function clicabotao(){
+// 	$(".migui").click(function(){
+// 		var bla=0;
+// 		for(bla = 0; bla < 2; bla++){
+	
+		// 		if(bla == 0){
+		// 		console.log(bla);
+		// 			console.log('entrei');
+		// 			filtro("alice");
+		// 		}
+
+		// 		else if(bla == 1){
+		// 			filtro("bastardos");
+		// 		}
+		// 	});
+		// }
+	
+
 
 // function mudarconteudo(){//printar json/quadros no catalogo-quadros
 // 	$('#conteudo').empty();

@@ -1,41 +1,42 @@
 doctype html
 html
-	head
+head
 	title= "catalogo"
-	link(rel='stylesheet', href='/stylesheets/bootstrap.min.css')
-	link(rel='stylesheet', href='/stylesheets/materialize.min.css')
-	link(rel='stylesheet', href='/stylesheets/font-awesome.min.css')
-	link(href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet")
-	link(rel='stylesheet', href='/stylesheets/style.css')
 	script(src='/javascripts/jquery-3.1.1.min.js')
 	script(src='/javascripts/bootstrap.min.js')
 	script(src='/javascripts/materialize.min.js')
+	script(src='/javascripts/jquery.zoom.min.js')
 	script(src='/javascripts/javascript.js')
-   
+	link(rel='stylesheet', href='/stylesheets/bootstrap.min.css')
+	link(rel='stylesheet', href='/stylesheets/materialize.min.css')
+	link(rel='stylesheet', href='/stylesheets/font-awesome.min.css')
+	link(rel='stylesheet', href='https://fonts.googleapis.com/icon?family=Material+Icons')
+	link(rel='stylesheet', href='/stylesheets/style.css')
+
 	body
 
-		include logo 
+		include logo
 		include body
 	
 		div.titulopromo
 			h2 Meu Carrinho
 		div.branco
-			table.cart(width='100%', cellspacing='0', cellpadding='5')
+			table.cart(width='100%' cellspacing='0' cellpadding='5')
 				tbody
 					tr.cartHeader(valign='middle')
 						td.cart-dashed-line-border(colspan='2')
 							| Produto
 						td.cart-dashed-line-border(width='90px', align='right')
 							| Quantidade
-						td.cart-dashed-line-border.cart-item-unit-price(width='110px', align='right')
+						td.cart-dashed-line-border.cart-item-unit-price(width='110px' align='right')
 							| Valor unit&aacute;rio
-						td.cart-dashed-line-border.cart-item-total-price(width='90px', align='right')
+						td.cart-dashed-line-border.cart-item-total-price(width='90px' align='right')
 							| Valor total
 
-				tr(valign='top', align='left')
-					td.cart-dashed-line-border(width='55px', align='left')
-						a(href='/pd-2D79CF.html')
-							img.imageBorder(width='55', src='//s3.amazonaws.com/img.iluria.com/product/2D79CF/6BE562/75x75.jpg')
+				tr(valign='top' align='left')
+					td.cart-dashed-line-border(width='55px' align='left')
+						a(href="http://localhost:52000/produto/detalhado/"+dados.quadros[val].Código)
+							img.imageBorder(width='55' src='//s3.amazonaws.com/img.iluria.com/product/2D79CF/6BE562/75x75.jpg')
 
 					td.cart-dashed-line-border(width='100%')
 						.nomeproduto Quadro 2001: Uma Odisseia no Espa&ccedil;o
@@ -54,17 +55,12 @@ html
 
 					td.cart-dashed-line-border(align='right')
 						span.productQuantity
-							input#2D79CFC4CB4B_quantity.productQuantityField(type='text', value='1', onkeydown="$('#shipping-info').hide(); $('#update-quantity-button-2D79CF12797099').show(); $('#cart-buttons').hide();")
+							input#2D79CFC4CB4B_quantity.productQuantityField(type='text' value='1' onkeydown="$('#shipping-info').hide(); $('#update-quantity-button-2D79CF12797099').show(); $('#cart-buttons').hide();")
 							span.iluria-cart-mini-button
-								a#update-quantity-button-2D79CF12797099(style='display:none', href="javascript: Iluria.inlineCart.updateQuantity('2D79CF',document.getElementById('2D79CFC4CB4B_quantity').value,  12797099);")
+								a#update-quantity-button-2D79CF12797099(style='display:none' href="javascript: Iluria.inlineCart.updateQuantity('2D79CF',document.getElementById('2D79CFC4CB4B_quantity').value,  12797099);")
 									| confirmar
 
-					td.cart-dashed-line-border(align='right')
-						span.productUnitPrice #{dados[0].Preço1}
-						td.cart-dashed-line-border(align='right')
-							span.productTotalPrice #{dados[0].Preço1}
-
-
-
-			
-			
+					//- td.cart-dashed-line-border(align='right')
+					//- 	span.productUnitPrice #{dados.quadros[x].Preço1}
+					//- 	td.cart-dashed-line-border(align='right')
+					//- 		span.productTotalPrice #{dados.quadros[x].Preço1}

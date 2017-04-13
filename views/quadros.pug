@@ -7,9 +7,10 @@ head
 	link(rel='stylesheet', href='/stylesheets/font-awesome.min.css')
 	link(href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet")
 	link(rel='stylesheet', href='/stylesheets/style.css')
-	script(src='/javascripts/jquery-3.1.1.min.js')
-	script(src='/javascripts/bootstrap.min.js')
-	script(src='/javascripts/materialize.min.js')
+	script(src='/../javascripts/jquery-3.1.1.min.js')
+	script(src='/../javascripts/bootstrap.min.js')
+	script(src='/../javascripts/materialize.min.js')
+	script(src='/javascripts/jquery.zoom.min.js')
 	script(src='/../javascripts/javascript.js')
 
 body
@@ -39,23 +40,23 @@ body
 							span.arrow
 						ul#filmes.sub-menu.collapse
 							ul.list
-									li#alice Alice no País das Maravilhas
-									li#bastardos Bastardos Inglórios
-									li Batman
-									li Cisne Negro
-									li Clube da Luta
-									li Donnie Darko
-									li Guardiões da Galáxia
-									li Hobbit
-									li Harry Potter
-									li Interstellar
-									li Kill Bill
-									li Logan
-									li Mad Max
-									li Poderoso Chefão
-									li Robocop
-									li Senhor dos Anéis
-									li Star Wars
+									li(data-id="alice").filter Alice no País das Maravilhas
+									li(data-id="bastardos").filter Bastardos Inglórios
+									li(data-id="batman").filter Batman
+									li(data-id="cisne").filter Cisne Negro
+									li(data-id="clube").filter Clube da Luta
+									li(data-id="donnie").filter Donnie Darko
+									li(data-id="alice").filter Guardiões da Galáxia
+									li(data-id="alice").filter Hobbit
+									li(data-id="alice").filter Harry Potter
+									li(data-id="alice").filter Interstellar
+									li(data-id="alice").filter Kill Bill
+									li(data-id="alice").filter Logan
+									li(data-id="alice").filter Mad Max
+									li(data-id="alice").filter Poderoso Chefão
+									li(data-id="alice").filter Robocop
+									li(data-id="alice").filter Senhor dos Anéis
+									li(data-id="alice").filter Star Wars
 						li.collapsed(data-toggle='collapse', data-target='#musica')
 							a(href='#')
 							i.fa.fa-music.fa-sm

@@ -1,27 +1,5 @@
 var server = 'http://localhost:52000/dados';
 var troca=0;
-$(document).ready(function () {
-	printQuadros();
-	printCanecas();
-	$('#resultados-busca').hide();
-	$(function(){
-		$(".dropdown").hover(
-			function(){
-				$('.dropdown-menu', this).stop( true, true ).fadeIn("fast");
-				$(this).toggleClass('open');
-				$('b', this).toggleClass("caret caret-up");
-			},
-			function(){
-				$('.dropdown-menu', this).stop( true, true ).fadeOut("fast");
-				$(this).toggleClass('open');
-				$('b', this).toggleClass("caret caret-up");
-			}
-		);
-	});
-
-	$('.myCarousel').carousel({
-		interval: 3000
-	});
 
 
 function filtroquadros(flt){//filtra os quadros
@@ -44,19 +22,6 @@ function filtrocanecas(flto){//filtra as canecas
 	for (x in data.canecas) {
 		if (data.canecas[x].Nome.search(regex) != -1){
 			$('#canecas').append('<div class="col-md-4 imagem"><h2>'+data.canecas[x].Nome+'</h2><p><div class="grid"><figure class="effect-zoe"><a href="http://localhost:52000/produto/detalhado/'+data.canecas[x].Código+'"><img src='+data.canecas[x].Imagem+'><figcaption><p class="icon-links"><a href="#"><i class="material-icons small"> shopping_cart</i></a><a href="#"><i class="material-icons small"> star</i></a></p></figcaption></a></figure><div><h1>A partir de R$ '+data.canecas[x].Preço1+'</h1><p>'+data.canecas[x].Pagamento+'</p></div></div></p></div>');
-		}
-	
-	}	
-	});
-}//
-
-function  mudarpreço(flto){//filtra as canecas
-	$('#preço').empty();
-	var regex = new RegExp(flto, "i");
-	$.get('/dados', function(data) {
-	for (x in data.canecas) {
-		if (data.canecas[x].Nome.search(regex) != -1){
-			$('#canecas').append('<div class="col-md-4 imagem"><h2>'+data.canecas[x].Nome+'</h2><p><div class="grid"><figure class="effect-zoe"><a href="http://localhost:52000/produto/detalhado/'+data.canecas[x].Código+'"><img src='+data.canecas[x].Imagem+'><figcaption><p class="icon-links"><a href="#"><i class="material-icons small"> shopping_cart</i></a><a href="#"><i class="material-icons small"> star</i></a></p></figcaption></a></figure><div><h1>'+data.canecas[x].Preço1+'</h1><p>'+data.canecas[x].Pagamento+'</p></div></div></p></div>');
 		}
 	
 	}	
@@ -97,11 +62,13 @@ $('#txt-search').keyup(function(){
 	});
 });
 
-// 	var count = 0;//recebendo o valor 5 que você disse
-// $('#aumenta').click(function(){
-// 	alert(count);
-// 	count++;
-// });
+$(document).ready(function () {
+	printQuadros();
+	printCanecas();
+	$('#resultados-busca').hide();
+	$('.myCarousel').carousel({
+		interval: 3000
+	});
 
 $('#zoom').zoom();//Zoom na imagem do produto selecionado
 
@@ -120,19 +87,6 @@ $('.dropdown-button').dropdown({
 $('.dropdown-button').dropdown('open');
 $('.dropdown-button').dropdown('close');
         
-	// $("#status").click(function(){
-	// 	$('#bla').append('<h3>' +data[cod].Preço1+ '</h3>');
-	// 	// tudo();
-	// });
-
-	// $("#status2").click(function(){
-	// 	$('#bla').append('<h3>' +data[cod].Preço2+ '</h3>');
-	// 	// tudo();
-	// });
-
-	// clicabotao();
-
-
 	$('#menu-content').on('click', '.filter', function(){
 		var classe = $(this).data('id');
 		filtroquadros(classe);
@@ -146,18 +100,15 @@ $('.dropdown-button').dropdown('close');
 	$('#dropdown1').on('click', '.opcao', function(){
 		var classe = $(this).data('id');
 		console.log(classe);
-		mudarpreço(classe);
+		// mudarpreço(classe);
 	});
-
-
-
 });
 
 function printQuadros(){//printar json/quadros no catalogo-quadros
 	$('#quadros').empty();
 	$.get(server, function(dados) {
 		for (var x = 0; x < 72; x++){
-				$('#quadros').append('<div class="col-md-4 imagem"><h2>'+dados.quadros[x].Nome+'</h2><p><div class="grid"><figure class="effect-zoe"><a href="http://localhost:52000/produto/detalhado/'+dados.quadros[x].Código+'"><img src='+dados.quadros[x].Imagem+'><figcaption><p class="icon-links"><a href="#"><i class="material-icons small"> shopping_cart</i></a><a href="#"><i class="material-icons small"> star</i></a></p></figcaption></a></figure><div><h1>A partir de R$ '+dados.quadros[x].Preço1+'</h1><p>'+dados.quadros[x].Pagamento+'</p></div></div></p></div>');
+				$('#quadros').append('<div class="col-md-4 imagem"><h2>'+dados.quadros[x].Nome+'</h2><p><div class="grid"><figure class="effect-zoe"><a data-id="'+dados.quadros[x].Código+'" href="http://localhost:52000/quadro/detalhado/'+dados.quadros[x].Código+'"><img src='+dados.quadros[x].Imagem+'><figcaption><p class="icon-links"><a href="#"><i class="material-icons small"> shopping_cart</i></a><a href="#"><i class="material-icons small"> star</i></a></p></figcaption></a></figure><div><h1>A partir de R$ '+dados.quadros[x].Preço1+'</h1><p>'+dados.quadros[x].Pagamento+'</p></div></div></p></div>');
 		}
 	});
 }
@@ -166,9 +117,13 @@ function printCanecas(){//printar json/canecas no catalogo-canecas
 	$('#canecas').empty();
 	$.get(server, function(dados) {
 		for (var x = 0; x < 13; x++){
-				$('#canecas').append('<div class="col-md-4 imagem"><h2>'+dados.canecas[x].Nome+'</h2><p><div class="grid"><figure class="effect-zoe"><a href="http://localhost:52000/produto/detalhado/'+dados.canecas[x].Código+'"><img src='+dados.canecas[x].Imagem+'><figcaption>	<p class="icon-links"><a href="#"><i class="material-icons small"> shopping_cart</i></a><a href="#"><i class="material-icons small"> star</i></a></p></figcaption></a></figure><div><h1>A partir de R$ '+dados.canecas[x].Preço1+'</h1><p>'+dados.canecas[x].Pagamento+'</p></div></div></p></div>');
+				$('#canecas').append('<div class="col-md-4 imagem"><h2>'+dados.canecas[x].Nome+'</h2><p><div class="grid"><figure class="effect-zoe"><a data-id="'+dados.canecas[x].Código+'" href="http://localhost:52000/caneca/detalhada/'+dados.canecas[x].Código+'"><img src='+dados.canecas[x].Imagem+'><figcaption>	<p class="icon-links"><a href="#"><i class="material-icons small"> shopping_cart</i></a><a href="#"><i class="material-icons small"> star</i></a></p></figcaption></a></figure><div><h1>A partir de R$ '+dados.canecas[x].Preço1+'</h1><p>'+dados.canecas[x].Pagamento+'</p></div></div></p></div>');
 		}
 	});
+}
+
+function printProduto(){//printar json/canecas no catalogo-canecas
+	
 }
 
 // function clicabotao(){

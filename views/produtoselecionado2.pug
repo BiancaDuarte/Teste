@@ -1,0 +1,53 @@
+doctype html
+html
+head
+	title= "caneca"
+	script(src='/javascripts/jquery-3.1.1.min.js')
+	script(src='/javascripts/bootstrap.min.js')
+	script(src='/javascripts/materialize.min.js')
+	script(src='/javascripts/jquery.zoom.min.js')
+	script(src='/javascripts/javascript.js')
+	link(rel='stylesheet', href='/stylesheets/bootstrap.min.css')
+	link(rel='stylesheet', href='/stylesheets/materialize.min.css')
+	link(rel='stylesheet', href='/stylesheets/font-awesome.min.css')
+	link(rel='stylesheet', href='https://fonts.googleapis.com/icon?family=Material+Icons')
+	link(rel='stylesheet', href='/stylesheets/style.css')
+
+body
+
+	include logo 
+	include body
+
+	div.titulopromo
+	div.branco
+		div.container
+			#produto
+			div.col-md-6.image
+				br
+				span#zoom.zoom
+					img(src=dados.canecas[cod].Imagem, alt='Daisy on the Ohoopee')
+				br
+				.row
+					div.col-md-2
+						a.fa.fa-facebook(href='#')
+					div.col-md-2
+						a.fa.fa-pinterest(href='#')
+					div.col-md-8
+
+			div.col-md-6.info
+				h1 #{dados.canecas[cod].Nome}
+				div.informacoes.info
+					h3 A partir de R$ #{dados.canecas[cod].Preço1}
+
+				div.dados
+					b Material: 
+					p #{dados.canecas[cod].Material}
+					b Capacidade:
+					p #{dados.canecas[cod].Capacidade}.
+					b Obs: 
+					p #{dados.canecas[cod].Observações}.
+					b Estoque:  #{dados.canecas[cod].Estoque1}
+
+				br
+				a.waves-effect.waves-light.btn-large Comprar
+					i.material-icons.left shopping_cart

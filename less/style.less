@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Farsan');
 @laranjadrop: #ef6c00 ;
+@fonte: 'Farsan', cursive;
 body {
 	padding: 0px;
 	font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
@@ -17,22 +18,24 @@ a {
 .brand {
     text-align: center !important;
     font-size: 28px;
-    font-family: 'Farsan', cursive;
+    font-family: @fonte;
     line-height: 50px !important;
   }
 
-  .out p{
+.out{
+  p{
     color: #424242;
   }
   
-  .out form{
+  form{
     text-align: center;
   }
-  .out strong{
+  strong{
     font-size: 22px;
-    font-family: 'Farsan', cursive;
+    font-family: @fonte;
     cursor: pointer;
   }
+}
   label{
     text-align: center;
   }
@@ -52,26 +55,27 @@ a {
     min-height: 100%;
 }
 
-.list {
+.list{
     color: #fff;
     list-style: none;
     padding-left: 0px;
+
+  > li, h5 {
+      padding: 5px 0px 5px 40px;
+  }
+  >li:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+      border-left: 5px solid white;
+      color: white;
+      cursor: pointer;
+      font-weight: bolder;
+      padding-left: 35px;
+  }
 }
 
-.list> li, h5 {
-    padding: 5px 0px 5px 40px;
-}
-.list>li:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-    border-left: 5px solid white;
-    color: white;
-    cursor: pointer;
-    font-weight: bolder;
-    padding-left: 35px;
-}.main-content{
+.main-content{
 text-align:center;
 }
-
 
 .laranja{
 	
@@ -81,16 +85,11 @@ text-align:center;
 	margin: 0 auto;
 }
  .veja h1{
-   font-family: 'Farsan', cursive;
+   font-family: @fonte;
   color: @laranjadrop;
   text-align: center;
   font-size: 55px;
  }
-
-.logo nav {
-    height: 56px;
-    line-height: 56px;
-}
 
 .searchbar{
   margin-left: 350px;
@@ -107,10 +106,10 @@ text-align:center;
 }
 
 .branco{
-	width: 80%;
+  width: 80%;
   margin: 0 auto;
-	background-color: white;
-	height: auto;
+  background-color: white;
+  height: auto;
 }
 
 .brancojson{
@@ -121,14 +120,16 @@ text-align:center;
 }
 
 .pretojson{
-   width: 100%;
+  width: 100%;
   background-color: black;
   height: 80px;
   padding: 1px;
   margin: 0 auto;
 }
 
-.preto, .titulocatalogo, .titulopromo{
+.preto, 
+.titulocatalogo, 
+.titulopromo{
   width: 80%;
   background-color: black;
   height: 80px;
@@ -136,65 +137,58 @@ text-align:center;
   margin: 0 auto;
 }
 
-.preto, .titulocatalogo, .titulopromo, .pretojson h2{
-  font-family: 'Farsan', cursive;
+.preto, 
+.titulocatalogo, 
+.titulopromo, 
+.pretojson h2{
+  font-family: @fonte;
   color: white;
   text-align: center;
   font-size: 40px;
 }
 
 .container{
-	width: 100%;
+  width: 100%;
 }
 
 .container-nav{
-	width: 100%;
-	padding: 0px;
-	margin: 0;
+  width: 100%;
+  padding: 0px;
+  margin: 0;
 }
 
-.imagem h2{
-	font-family: 'Farsan', cursive;
-	color: black;
-  font-size: 32px;
-  text-align: center;
-  cursor: pointer;
-}
+.imagem{ 
 
-.imagem h1{
-  font-family: 'Farsan', cursive;
-  font-size: 30px;
-  color: red;
-  text-align: center;
-}
+  h2{
+    font-family: @fonte;
+    color: black;
+    font-size: 32px;
+    text-align: center;
+    cursor: pointer;
+  }
 
-.imagem p{
-  font-family: 'Farsan', cursive;
-  font-size: 19px;
-  color: grey;
-  text-align: center;
-}
+   h1{
+    font-family: @fonte;
+    font-size: 30px;
+    color: red;
+    text-align: center;
+  }
 
-#resultados-busca h3{
-   font-family: 'Farsan', cursive;
-  font-size: 19px;
-  color: red;
-  text-align: center;
-}
+   p{
+    font-family: @fonte;
+    font-size: 19px;
+    color: grey;
+    text-align: center;
+  }
 
-#resultados-busca h5{
-   font-family: 'Farsan', cursive;
-   cursor: pointer;
-  font-size: 20px;
-  color: black;
-  text-align: center;
-}
+  img {
+     width: 100%;
+     background: #FFF;
+     overflow: hidden;
+     cursor: pointer;
+  }
 
-#resultados-busca img{
-  width: 300px;
-  height: 100px;
 }
-
 .imagem:hover h1, .imagem:hover p {
     color: black;
 }
@@ -209,6 +203,7 @@ text-align:center;
    /* Gradiente */
 }
 
+
 .cordoitem:hover {
    /* Gradiente */
    background: 0%  #ff5500;
@@ -216,40 +211,9 @@ text-align:center;
    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ededed', endColorstr=' #ff5500',GradientType=0 );
    /* Gradiente */
 }
-.imagem img {
-   width: 100%;
-   background: #FFF;
-   overflow: hidden;
-   cursor: pointer;
-}
-
-.dropdown-toggle{
-	margin-left: 80px;
-}
-
-.dropdown li a  {
-	font-family: 'Farsan', cursive;
-	font-size: 25px;
-	text-align: center;
-} 
-
-.caret{
-	color: @laranjadrop;
-}
-
- .dropdown h1  {
-	font-family: 'Farsan', cursive;
-	font-size: 40px;
-	text-align: center;
-	opacity: 1;
-	color: white;
-} 
-.navbar-static-top{
-	margin-top: 0px;
-}
 
 .item img{
-	cursor:pointer;
+  cursor:pointer;
 }
 .carousel{
     background: black;
@@ -259,8 +223,13 @@ text-align:center;
     margin-top: 20px;
 }
 
-.margin{
-  margin: 0px;
+.carousel .item img{
+    margin: 0 auto;
+    height: 0 auto; /* Align slide image horizontally center */
+}
+
+.carrinho{
+  float: right;
 }
 
 .separador{
@@ -279,28 +248,29 @@ text-align:center;
     margin-left: 10px;
   }
 }
-.carousel .item img{
-    margin: 0 auto;
-    height: 0 auto; /* Align slide image horizontally center */
-}
-.carrinho{
-	float: right;
-}
 
- .logo i {
-	float: right;
-}
+.logo {
+  i {
+    float: right;
+  }
+   
+  input {
+    width: 40%;
+  }
 
-.logo input {
-	width: 40%;
-}
+  img {
+     height: 100%;
+     cursor: pointer;
+  }
 
-.logo img {
-   height: 100%;
-   cursor: pointer;
-}
-.logo ul{
-  margin-top: 80px;
+  ul{
+    margin-top: 80px;
+  }
+
+  nav {
+      height: 56px;
+      line-height: 56px;
+  }
 }
 
 @font-face {
@@ -323,75 +293,78 @@ text-align:center;
 }
 
 /* Common style */
-.grid figure {
-  position: relative;
-  float: left;
-  overflow: hidden;
-  margin: 10px 1%;
-  min-width: 100%;
-  max-width: 480px;
-  max-height: 360px;
-  width: 48%;
-  text-align: center;
-  cursor: pointer;
-}
+.grid{
 
-.grid figure img {
-  position: relative;
-  display: block;
-  min-height: 100%;
-  width: 100%;
-}
+  figure {
+    position: relative;
+    float: left;
+    overflow: hidden;
+    margin: 10px 1%;
+    min-width: 100%;
+    max-width: 480px;
+    max-height: 360px;
+    width: 48%;
+    text-align: center;
+    cursor: pointer;
+  }
 
-.grid figure figcaption {
-  color: #fff;
-  text-transform: uppercase;
-  font-size: 1.25em;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-}
+  figure img {
+    position: relative;
+    display: block;
+    min-height: 100%;
+    width: 100%;
+  }
 
-.grid figure figcaption::before,
-.grid figure figcaption::after {
-  pointer-events: none;
-}
+  figure figcaption {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1.25em;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
 
-.grid figure figcaption,
-.grid figure figcaption > a {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 50%;
-}
+  figure figcaption::before,
+  figure figcaption::after {
+    pointer-events: none;
+  }
 
-/* Anchor will cover the whole item by default */
-/* For some effects it will show as a button */
-.grid figure figcaption > a {
-  z-index: 1000;
-  text-indent: 200%;
-  white-space: nowrap;
-  font-size: 0;
-  opacity: 0;
-}
+  figure figcaption,
+  figure figcaption > a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+  }
 
-.grid figure h2 {
-  word-spacing: -0.15em;
-  font-weight: 300;
-}
+  /* Anchor will cover the whole item by default */
+  /* For some effects it will show as a button */
+  figure figcaption > a {
+    z-index: 1000;
+    text-indent: 200%;
+    white-space: nowrap;
+    font-size: 0;
+    opacity: 0;
+  }
 
-.grid figure h2 span {
-  font-weight: 800;
-}
+  figure h2 {
+    word-spacing: -0.15em;
+    font-weight: 300;
+  }
 
-.grid figure h2,
-.grid figure p {
-  margin: 0;
-}
+  figure h2 span {
+    font-weight: 800;
+  }
 
-.grid figure p {
-  letter-spacing: 1px;
-  font-size: 68.5%;
+  figure h2,
+  figure p {
+    margin: 0;
+  }
+
+  figure p {
+    letter-spacing: 1px;
+    font-size: 68.5%;
+  }
 }
 
 figure.effect-zoe figcaption {
@@ -440,6 +413,7 @@ figure.effect-zoe p.icon-links a {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
 
 .icon-eye::before {
   content: '\e000';
@@ -493,6 +467,7 @@ figure.effect-zoe:hover p.icon-links a:first-child {
 }
 
 #resultados-busca{
+
   background-color: #26A69A;
   padding: 10px;
   border-style: outset black;
@@ -504,6 +479,26 @@ figure.effect-zoe:hover p.icon-links a:first-child {
   max-height: 400px; 
   overflow-y: auto;
   box-shadow: 0px 10px 20px #444;
+
+  h3{
+     font-family: @fonte;
+    font-size: 19px;
+    color: red;
+    text-align: center;
+  }
+
+  h5{
+     font-family: @fonte;
+     cursor: pointer;
+    font-size: 20px;
+    color: black;
+    text-align: center;
+  }
+
+  img{
+    width: 300px;
+    height: 100px;
+  }
 }
 
 header
@@ -557,13 +552,13 @@ margin-top: 35px;
 
 .info{
   text-align: center;
-  font-family: 'Farsan', cursive;
+  font-family: @fonte;
   font-size: 20px;
 }
 
 .dados{
   text-align: left;
-  font-family: 'Farsan', cursive;
+  font-family: @fonte;
   font-size: 23px;
 }
 
@@ -571,60 +566,63 @@ margin-top: 35px;
   margin-left: 50px;
 }
 
-.image img{
-  padding: 30px;
-  margin-top: 20px;
-}
+.image{
 
-.image a{
-  margin-left: 50px;
+  img{
+    padding: 30px;
+    margin-top: 20px;
+  }
+
+  a{
+    margin-left: 50px;
+  }
 }
 
 .opcao p{
 font-size: 20px;
 }
 
-.fa {
+.fa{
   padding: 20px;
   font-size: 30px;
   width: 80px;
   text-align: center;
   text-decoration: none;
   margin: 5px 2px;
+
+  :hover {
+      opacity: 0.9;
+  }
 }
 
-.fa:hover {
-    opacity: 0.9;
-}
-
-.fa-facebook {
+.fa-facebook{
   background: #3B5998;
   color: white;
 }
 
-.fa-instagram {
+.fa-instagram{
   background: #125688;
   color: white;
 }
 
-.fa-pinterest {
+.fa-pinterest{
   background: #cb2027;
   color: white;
 }
 
-.zoom {
+.zoom{
   display:inline-block;
   position: relative;
-}
 
-.zoom img {
-  display: block;
-}
+  img{
+    display: block;
+  }
 
-.zoom img::selection{
-  background-color: transparent;
-  width: 1024px;
-  height: 1024px;
+  img::selection{
+    background-color: transparent;
+    width: 1024px;
+    height: 1024px;
+  }
 }
 
 #zoom img:hover { cursor: url(grab.cur), default; }

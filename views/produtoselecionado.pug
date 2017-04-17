@@ -21,6 +21,7 @@ body
 	div.titulopromo
 	div.branco
 		div.container
+			#produto
 			div.col-md-6.image
 				br
 				span#zoom.zoom
@@ -61,27 +62,27 @@ body
 				a.waves-effect.waves-light.btn-large Comprar
 					i.material-icons.left shopping_cart
 
-		div.veja
-			div.container
-				h1 Veja também
-					div.row
-						each val in [7, 9, 3, 67]
-							div.col-md-3.imagem
-									h2= dados.quadros[val].Nome
-										p
-											.grid
-												figure.effect-zoe
-													a(href="http://localhost:52000/produto/detalhado/"+dados.quadros[val].Código)
-														img(src=dados.quadros[val].Imagem)
-														figcaption
-															p.icon-links
-																a(href="#" )
-																	i.material-icons.small shopping_cart
-																a(href="#") 
-																	i.material-icons.small star
-												div
-													h1 A partir de R$#{dados.quadros[val].Preço1}
-													p #{dados.quadros[val].Pagamento}
+		//- div.veja
+		//- 	div.container
+		//- 		h1 Veja também
+		//- 			div.row
+		//- 				each val in [7, 9, 3, 67]
+		//- 					div.col-md-3.imagem
+		//- 							h2= dados.quadros[val].Nome
+		//- 								p
+		//- 									.grid
+		//- 										figure.effect-zoe
+		//- 											a(href="http://localhost:52000/produto/detalhado/"+dados.quadros[val].Código)
+		//- 												img(src=dados.quadros[val].Imagem)
+		//- 												figcaption
+		//- 													p.icon-links
+		//- 														a(href="#" )
+		//- 															i.material-icons.small shopping_cart
+		//- 														a(href="#") 
+		//- 															i.material-icons.small star
+		//- 										div
+		//- 											h1 A partir de R$#{dados.quadros[val].Preço1}
+		//- 											p #{dados.quadros[val].Pagamento}
 						
 						
 			

@@ -29,7 +29,6 @@ function filtroquadros(flt){//filtra os quadros
 	var regex = new RegExp(flt, "i");
 	$.get('/dados', function(data) {
 	for (x in data.quadros) {
-		console.log(data.quadros[x]);
 		if (data.quadros[x].Nome.search(regex) != -1){
 			$('#quadros').append('<div class="col-md-4 imagem"><h2>'+data.quadros[x].Nome+'</h2><p><div class="grid"><figure class="effect-zoe"><a href="http://localhost:52000/produto/detalhado/'+data.quadros[x].Código+'"><img src='+data.quadros[x].Imagem+'><figcaption><p class="icon-links"><a href="#"><i class="material-icons small"> shopping_cart</i></a><a href="#"><i class="material-icons small"> star</i></a></p></figcaption></a></figure><div><h1>A partir de R$ '+data.quadros[x].Preço1+'</h1><p>'+data.quadros[x].Pagamento+'</p></div></div></p></div>');
 		}
@@ -43,7 +42,6 @@ function filtrocanecas(flto){//filtra as canecas
 	var regex = new RegExp(flto, "i");
 	$.get('/dados', function(data) {
 	for (x in data.canecas) {
-		console.log(data.canecas[x]);
 		if (data.canecas[x].Nome.search(regex) != -1){
 			$('#canecas').append('<div class="col-md-4 imagem"><h2>'+data.canecas[x].Nome+'</h2><p><div class="grid"><figure class="effect-zoe"><a href="http://localhost:52000/produto/detalhado/'+data.canecas[x].Código+'"><img src='+data.canecas[x].Imagem+'><figcaption><p class="icon-links"><a href="#"><i class="material-icons small"> shopping_cart</i></a><a href="#"><i class="material-icons small"> star</i></a></p></figcaption></a></figure><div><h1>A partir de R$ '+data.canecas[x].Preço1+'</h1><p>'+data.canecas[x].Pagamento+'</p></div></div></p></div>');
 		}
@@ -52,6 +50,17 @@ function filtrocanecas(flto){//filtra as canecas
 	});
 }//
 
+function mudarpreço(flto){//filtra as canecas
+	$('#preço').empty();
+	$.get('/dados', function(data) {
+	for (x in data.canecas) {
+		if (data.canecas[x].Nome.search(regex) != -1){
+			$('#canecas').append('<div class="col-md-4 imagem"><h2>'+data.canecas[x].Nome+'</h2><p><div class="grid"><figure class="effect-zoe"><a href="http://localhost:52000/produto/detalhado/'+data.canecas[x].Código+'"><img src='+data.canecas[x].Imagem+'><figcaption><p class="icon-links"><a href="#"><i class="material-icons small"> shopping_cart</i></a><a href="#"><i class="material-icons small"> star</i></a></p></figcaption></a></figure><div><h1>'+data.canecas[x].Preço1+'</h1><p>'+data.canecas[x].Pagamento+'</p></div></div></p></div>');
+		}
+	
+	}	
+	});
+}//
 
 $('#txt-search').keyup(function(){
 	var searchField = $(this).val();
@@ -73,7 +82,7 @@ $('#txt-search').keyup(function(){
 				var nome = categorias[y].Nome;
 					if (nome.search(regex) != -1){
 						resultados += '<div class="col-md-12 well">';
-						resultados += '<div class="col-md-3"><img class="img-responsive" src="'+categorias[y].Imagem+'" alt="'+ categorias[y].Nome +'" /></div>';
+						resultados += '<div class="col-md-3"><img class="img-responsive" src="'+categorias[y].Imagem+'" alt="'+ categorias[y].Nome +'" /></div><a href="http://localhost:52000/produto/detalhado/'+categorias[y].Código+'">';
 						resultados += '<div class="col-md-7">';
 						resultados += '<h5>' + nome + '</h5>';
 						resultados += '<h3> A partir de R$ ' + categorias[y].Preço1 + '</h3>'
@@ -121,16 +130,24 @@ $('.dropdown-button').dropdown('close');
 	// });
 
 	// clicabotao();
+
+
 	$('#menu-content').on('click', '.filter', function(){
 		var classe = $(this).data('id');
 		filtroquadros(classe);
-		console.log(classe);
 	});
-		$('#menu-content').on('click', '.filter', function(){
+
+	$('#menu-content').on('click', '.filter', function(){
 		var classe = $(this).data('id');
 		filtrocanecas(classe);
-		console.log(classe);
 	});
+
+	$('#dropdown1').on('click', '.opcao', function(){
+		var classe = $(this).data('id');
+		console.log(classe);
+		mudarpreço(classe);
+	});
+
 
 
 });

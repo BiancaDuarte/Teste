@@ -23,7 +23,6 @@ body
 		div.container
 			div.col-md-6.image
 				br
-				//- img(src=dados[cod].Imagem)#zoom_01
 				span#zoom.zoom
 					img(src=dados.quadros[cod].Imagem, alt='Daisy on the Ohoopee')
 				br
@@ -37,16 +36,16 @@ body
 			div.col-md-6.info
 				h1 #{dados.quadros[cod].Nome}
 				div.informacoes.info
-					h3#bla  A partir de R$ #{dados.quadros[cod].Preço1}
+					h3 A partir de R$ #{dados.quadros[cod].Preço1}
 				.row
 					div.col-md-4
 					div.col-md-4
 						a.dropdown-button.btn(data-beloworigin='true', href='#', data-activates='dropdown1') Selecione o tamanho:
 						ul#dropdown1.dropdown-content
 							li
-								a#op(href='#!' value='P1') #{dados.quadros[cod].Tamanho1}
+								a#op1(data-id="55,60").opcao #{dados.quadros[cod].Tamanho1}
 							li
-								a#op(href='#!' value='P2') #{dados.quadros[cod].Tamanho2}
+								a#op2(data-id="68,80").opcao #{dados.quadros[cod].Tamanho2}
 					div.col-md-4
 
 				div.dados

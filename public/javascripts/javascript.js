@@ -50,8 +50,9 @@ function filtrocanecas(flto){//filtra as canecas
 	});
 }//
 
-function mudarpreço(flto){//filtra as canecas
+function  mudarpreço(flto){//filtra as canecas
 	$('#preço').empty();
+	var regex = new RegExp(flto, "i");
 	$.get('/dados', function(data) {
 	for (x in data.canecas) {
 		if (data.canecas[x].Nome.search(regex) != -1){

@@ -37,16 +37,16 @@ body
 			div.col-md-6.info
 				h1 #{dados.quadros[cod].Nome}
 				div.informacoes.info
-					h3 A partir de R$ #{dados.quadros[cod].Preço1}
+					h3(id="preço") A partir de R$ #{dados.quadros[cod].Preço1}
 				.row
 					div.col-md-4
 					div.col-md-4
 						a.dropdown-button.btn(data-beloworigin='true', href='#', data-activates='dropdown1') Selecione o tamanho:
 						ul#dropdown1.dropdown-content
 							li
-								a#op1(data-id="55,60").opcao #{dados.quadros[cod].Tamanho1}
+								a#op1(data-id=dados.quadros[cod].Preço1).opcao #{dados.quadros[cod].Tamanho1}
 							li
-								a#op2(data-id="68,80").opcao #{dados.quadros[cod].Tamanho2}
+								a#op2(data-id=dados.quadros[cod].Preço2).opcao #{dados.quadros[cod].Tamanho2}
 					div.col-md-4
 
 				div.dados
@@ -59,8 +59,11 @@ body
 					b Estoque:  #{dados.quadros[cod].Estoque1}
 
 				br
+
 				a.waves-effect.waves-light.btn-large Comprar
 					i.material-icons.left shopping_cart
+
+
 
 		//- div.veja
 		//- 	div.container

@@ -2,15 +2,17 @@ doctype html
 html
 	head
 	title= "catalogo"
-	link(rel='stylesheet', href='/stylesheets/bootstrap.min.css')
-	link(rel='stylesheet', href='/stylesheets/materialize.min.css')
-	link(rel='stylesheet', href='/stylesheets/font-awesome.min.css')
-	link(href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet")
-	link(rel='stylesheet', href='/stylesheets/style.css')
 	script(src='/javascripts/jquery-3.1.1.min.js')
 	script(src='/javascripts/bootstrap.min.js')
 	script(src='/javascripts/materialize.min.js')
+	script(src='/javascripts/jquery.zoom.min.js')
 	script(src='/javascripts/javascript.js')
+	link(rel='stylesheet', href='/stylesheets/bootstrap.min.css')
+	link(rel='stylesheet', href='/stylesheets/materialize.min.css')
+	link(rel='stylesheet', href='/stylesheets/font-awesome.min.css')
+	link(rel='stylesheet', href='https://fonts.googleapis.com/icon?family=Material+Icons')
+	link(rel='stylesheet', href='/stylesheets/style.css')
+
    
 	body
 
@@ -28,14 +30,19 @@ html
 									p
 										.grid
 											figure.effect-zoe
-												a(href="http://localhost:52000/produto/detalhado/"+dados.quadros[val].Código)
+												a(href="http://localhost:52000/quadro/detalhado/"+dados.quadros[val].Código)
 													img(src=dados.quadros[val].Imagem)
 													figcaption
 														p.icon-links
-															a(href="http://localhost:52000/carrinho/"+dados.quadros[val].Código)
+															a(href="#")
 																i.material-icons.small shopping_cart
+														div.favorite
 															a(href="#") 
 																i.material-icons.small star
 											div
 												h1 A partir de R$#{dados.quadros[val].Preço1}
 												p #{dados.quadros[val].Pagamento}
+		//- div.favorite
+		//- 	p Add to favorites
+		
+		button#reveal  Reveal Favorites

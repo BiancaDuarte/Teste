@@ -44,9 +44,9 @@ body
 						a.dropdown-button.btn(data-beloworigin='true', href='#', data-activates='dropdown1') Selecione o tamanho:
 						ul#dropdown1.dropdown-content
 							li
-								a#op1(data-id=dados.quadros[cod].Preço1).opcao #{dados.quadros[cod].Tamanho1}
+								a#op1(data-id=dados.quadros[cod].Preço1, data-estoque=dados.quadros[cod].Estoque1).opcao #{dados.quadros[cod].Tamanho1}
 							li
-								a#op2(data-id=dados.quadros[cod].Preço2).opcao #{dados.quadros[cod].Tamanho2}
+								a#op2(data-id=dados.quadros[cod].Preço2, data-estoque=dados.quadros[cod].Estoque2).opcao #{dados.quadros[cod].Tamanho2}
 					div.col-md-4
 
 				div.dados
@@ -56,11 +56,12 @@ body
 					p #{dados.quadros[cod].Impressão}.
 					b Obs: 
 					p #{dados.quadros[cod].Observações}.
-					b Estoque:  #{dados.quadros[cod].Estoque1}
+					b(id="estoque") Estoque: #{dados.quadros[cod].Estoque1}
 
 				br
-
-				a.waves-effect.waves-light.btn-large Comprar
+			
+				p SEDEX - R$ #{dados.quadros[cod].Frete}/prazo após pagamento: 14 dias úteis 
+				a.waves-effect.waves-light.btn-large Adicionar ao carrinho
 					i.material-icons.left shopping_cart
 
 

@@ -28,7 +28,6 @@ function filtrocanecas(flto){//filtra as canecas
 	});
 }//
 
-
 $(document).ready(function () {
 $('#txt-search').keyup(function(){
 	var searchField = $(this).val();
@@ -99,9 +98,12 @@ $('.dropdown-button').dropdown('close');
 
 	$('#dropdown1').on('click', '.opcao', function(){
 		var classe = $(this).data('id');
+		var estoque = $(this).data('estoque');
 		console.log(classe);
 		printPreço(classe);
+		printEstoque(estoque);
 	});
+
 
 	var favorites = [];
     var counter = 0;
@@ -109,12 +111,17 @@ $('.dropdown-button').dropdown('close');
     $('.favorite').click(function() {
         ++counter;
         favorites.push("\"" + $(this).text() + " " + counter + "\"");
+        $('#contador').empty();
         $('#contador').append('<p>'+counter+'</p>');
     });
 
-    // $('#reveal').click(function() {
-    //    alert(favorites); 
-    // });
+     $('.favorite').click(function() {
+        $('.favorite').toggleClass("vermelho");	
+     });
+
+    $('#reveal').click(function() {
+       alert(counter); 
+    });
 });
 
 function printQuadros(){//printar json/quadros no catalogo-quadros
@@ -140,23 +147,14 @@ function printPreço(classe){//troca de preço no item selecionado
 	$('#preço').append('<h3> R$ '+classe+'</h3>');
 }
 
-// function clicabotao(){
-// 	$(".migui").click(function(){
-// 		var bla=0;
-// 		for(bla = 0; bla < 2; bla++){
-	
-		// 		if(bla == 0){
-		// 		console.log(bla);
-		// 			console.log('entrei');
-		// 			filtro("alice");
-		// 		}
+function printEstoque(estoque){//troca de estoque no item selecionado
+	$('#estoque').empty();
+	$('#estoque').append('<b> Estoque: '+estoque+'</b>');
+}
 
-		// 		else if(bla == 1){
-		// 			filtro("bastardos");
-		// 		}
-		// 	});
-		// }
-	
+// function trocacor(coraçao){
+// 	$('#cor').append('<i> '+vermelho+' </i>')
+// }
 
 // function tudo(){
 // $.get(json, function(data) {

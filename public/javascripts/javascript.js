@@ -115,8 +115,8 @@ $('.dropdown-button').dropdown('close');
         $('#contador').append('<p>'+counter+'</p>');
     });
 
-     $('.favorite').click(function() {
-        $('.favorite').toggleClass("vermelho");	
+     $("button").click(function(){
+        $('#cor').toggleClass("vermelho");	
      });
 
     $('#reveal').click(function() {

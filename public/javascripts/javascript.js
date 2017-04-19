@@ -1,5 +1,6 @@
 var server = 'http://localhost:52000/dados';
-var troca=0;
+var fav = 'http://localhost:52000/favoritos/'
+var troca=0, ID;
 
 
 function filtroquadros(flt){//filtra os quadros
@@ -29,6 +30,19 @@ function filtrocanecas(flto){//filtra as canecas
 }//
 
 $(document).ready(function () {
+
+$('#quadros').on('click', ".favorite", function(){
+	ID = $(this).data("id");
+	favoritos();
+	contador();
+});
+
+$('#canecas').on('click', ".favorite", function(){
+	ID = $(this).data("id");
+	favoritos();
+	contador();
+});
+
 $('#txt-search').keyup(function(){
 	var searchField = $(this).val();
 	if(searchField === '')  {
@@ -72,20 +86,20 @@ $('#txt-search').keyup(function(){
 $('#zoom').zoom();//Zoom na imagem do produto selecionado
 
 $('.dropdown-button').dropdown({
-      inDuration: 300,
-      outDuration: 225,
-      constrainWidth: false, // Does not change width of dropdown to that of the activator
-      hover: true, // Activate on hover
-      gutter: 0, // Spacing from edge
-      belowOrigin: false, // Displays dropdown below the button
-      alignment: 'left', // Displays dropdown with edge aligned to the left of button
-      stopPropagation: false // Stops event propagation
-    }
+	  inDuration: 300,
+	  outDuration: 225,
+	  constrainWidth: false, // Does not change width of dropdown to that of the activator
+	  hover: true, // Activate on hover
+	  gutter: 0, // Spacing from edge
+	  belowOrigin: false, // Displays dropdown below the button
+	  alignment: 'left', // Displays dropdown with edge aligned to the left of button
+	  stopPropagation: false // Stops event propagation
+	}
   );
 
 $('.dropdown-button').dropdown('open');
 $('.dropdown-button').dropdown('close');
-        
+		
 	$('#menu-content').on('click', '.filter', function(){
 		var classe = $(this).data('id');
 		filtroquadros(classe);
@@ -106,29 +120,46 @@ $('.dropdown-button').dropdown('close');
 
 
 	var favorites = [];
-    var counter = 0;
+	var counter = 0;
 
-    $('.favorite').click(function() {
-        ++counter;
-        favorites.push("\"" + $(this).text() + " " + counter + "\"");
-        $('#contador').empty();
-        $('#contador').append('<p>'+counter+'</p>');
-    });
+	function contador(){
+		var counter = 0;
+		$.get(server, function(dados) {
+		for (var x = 0; x < 72; x++){
+			if(dados.quadros[x].Favoritos=="s")
+				counter++;
+		}
+		for (var x = 0; x < 13; x++){
+			if(dados.canecas[x].Favoritos=="s")
+				counter++;
+		}
+			$('#contador').empty();
+			$('#contador').append('<p>'+counter+'</p>');
+		});
+	}
 
-     $("button").click(function(){
-        $('#cor').toggleClass("vermelho");	
-     });
+	contador();
 
-    $('#reveal').click(function() {
-       alert(counter); 
-    });
+	$('.favorite').click(function() {
+
+		contador();
+
+		$('#cor').toggleClass("vermelho");
+		ID = $(this).data("id");
+		console.log('id = '+ID); // id que pe usado no get dos favoritos
+		favoritos();
+	});
+
+	$('#reveal').click(function() {
+	   alert(counter); 
+	});
 });
 
 function printQuadros(){//printar json/quadros no catalogo-quadros
 	$('#quadros').empty();
 	$.get(server, function(dados) {
 		for (var x = 0; x < 72; x++){
-				$('#quadros').append('<div id="'+dados.quadros[x].Código+'" class="col-md-4 imagem"><h2>'+dados.quadros[x].Nome+'</h2><p><div class="grid"><figure class="effect-zoe"><a data-id="'+dados.quadros[x].Código+'" href="http://localhost:52000/quadro/detalhado/'+dados.quadros[x].Código+'"><img src='+dados.quadros[x].Imagem+'><figcaption><p class="icon-links"><a href="#"><i class="material-icons small"> shopping_cart</i></a><a href="#"><i class="material-icons small"> star</i></a></p></figcaption></a></figure><div><h1>A partir de R$ '+dados.quadros[x].Preço1+'</h1><p>'+dados.quadros[x].Pagamento+'</p></div></div></p></div>');
+				$('#quadros').append('<div id="'+dados.quadros[x].Código+'" class="col-md-4 imagem"><h2>'+dados.quadros[x].Nome+'</h2><p><div class="grid"><figure class="effect-zoe"><a data-id="'+dados.quadros[x].Código+'" href="http://localhost:52000/quadro/detalhado/'+dados.quadros[x].Código+'"><img src='+dados.quadros[x].Imagem+'><figcaption><p class="icon-links"><a href="#"><i class="material-icons small"> shopping_cart</i></a><a><i id="cor'+dados.quadros[x].Código+'" class="material-icons small favorite" data-id='+dados.quadros[x].Código+'> star</i></a></p></figcaption></a></figure><div><h1>A partir de R$ '+dados.quadros[x].Preço1+'</h1><p>'+dados.quadros[x].Pagamento+'</p></div></div></p></div>');
 		}
 	});
 }
@@ -137,7 +168,7 @@ function printCanecas(){//printar json/canecas no catalogo-canecas
 	$('#canecas').empty();
 	$.get(server, function(dados) {
 		for (var x = 0; x < 13; x++){
-				$('#canecas').append('<div class="col-md-4 imagem"><h2>'+dados.canecas[x].Nome+'</h2><p><div class="grid"><figure class="effect-zoe"><a data-id="'+dados.canecas[x].Código+'" href="http://localhost:52000/caneca/detalhada/'+dados.canecas[x].Código+'"><img src='+dados.canecas[x].Imagem+'><figcaption>	<p class="icon-links"><a href="#"><i class="material-icons small"> shopping_cart</i></a><a href="#"><i class="material-icons small" id="estrela"> star</i></a></p></figcaption></a></figure><div><h1>A partir de R$ '+dados.canecas[x].Preço1+'</h1><p>'+dados.canecas[x].Pagamento+'</p></div></div></p></div>');
+				$('#canecas').append('<div class="col-md-4 imagem"><h2>'+dados.canecas[x].Nome+'</h2><p><div class="grid"><figure class="effect-zoe"><a data-id="'+dados.canecas[x].Código+'" href="http://localhost:52000/caneca/detalhada/'+dados.canecas[x].Código+'"><img src='+dados.canecas[x].Imagem+'><figcaption>	<p class="icon-links"><a href="#"><i class="material-icons small"> shopping_cart</i></a><a><i id="cor'+dados.canecas[x].Código+'" data-id='+dados.canecas[x].Código+' class="material-icons small favorite" id="estrela"> star</i></a></p></figcaption></a></figure><div><h1>A partir de R$ '+dados.canecas[x].Preço1+'</h1><p>'+dados.canecas[x].Pagamento+'</p></div></div></p></div>');
 		}
 	});
 }
@@ -150,6 +181,21 @@ function printPreço(classe){//troca de preço no item selecionado
 function printEstoque(estoque){//troca de estoque no item selecionado
 	$('#estoque').empty();
 	$('#estoque').append('<b> Estoque: '+estoque+'</b>');
+}
+
+function favoritos(){// get dos favoritos
+	$.ajax({
+		type: 'GET',
+		dataType: 'json',
+		url: fav+ID,
+		success: function(result){
+			console.log('Produto adicionado com sucesso!');
+
+		},
+		error: function(status){
+			console.log('status');
+		}
+	});
 }
 
 // function trocacor(coraçao){

@@ -23,21 +23,22 @@ html
 		div.branco
 			div.container
 				div.row
-					each val in [0, 7, 22, 44, 48, 55, 66, 69]
-						div.col-md-4.imagem
-							h2= dados.quadros[val].Nome
-							p
-								.grid
-									figure.effect-zoe
-										a(href="http://localhost:52000/quadro/detalhado/"+dados.quadros[val].Código)
-											img(src=dados.quadros[val].Imagem)
-											figcaption
-												p.icon-links
-													a(href="#")
-														i.material-icons.small shopping_cart
-													button Favoritar
-													a(href="#") 
-														i(id='cor').material-icons.small.favorite star
-									div
-										h1 A partir de R$#{dados.quadros[val].Preço1}
-										p #{dados.quadros[val].Pagamento}
+					- for (var x = 0; x < 72; x++)
+						if dados.quadros[x].promo == "s"
+							//- p Como eu amo a bianquinha s2
+							div.col-md-4.imagem
+								h2= dados.quadros[x].Nome
+								p
+									.grid
+										figure.effect-zoe
+											a(href="http://localhost:52000/quadro/detalhado/"+dados.quadros[x].Código)
+												img(src=dados.quadros[x].Imagem)
+												figcaption
+													p.icon-links
+														a(href="#")
+															i.material-icons.small shopping_cart
+														a() 
+															i(id='cor'+dados.quadros[x].Código, data-id=dados.quadros[x].Código).material-icons.small.favorite star
+										div
+											h1 A partir de R$#{dados.quadros[x].Preço1}
+											p #{dados.quadros[x].Pagamento}

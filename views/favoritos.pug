@@ -7,10 +7,11 @@ html
 	link(rel='stylesheet', href='/stylesheets/font-awesome.min.css')
 	link(href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet")
 	link(rel='stylesheet', href='/stylesheets/style.css')
-	script(src='/javascripts/jquery-3.1.1.min.js')
-	script(src='/javascripts/bootstrap.min.js')
-	script(src='/javascripts/materialize.min.js')
-	script(src='/javascripts/javascript.js')
+	script(src='/../javascripts/jquery-3.1.1.min.js')
+	script(src='/../javascripts/bootstrap.min.js')
+	script(src='/../javascripts/materialize.min.js')
+	script(src='/javascripts/jquery.zoom.min.js')
+	script(src='/../javascripts/javascript.js')
    
 	body
 
@@ -18,8 +19,45 @@ html
 		include body
 	
 		div.titulopromo
-			h2 Quadros Favoritados
+			h2 Produtos Favoritados
 		div.branco
 			div.container
 				div.row
-					#quadros
+					- for (var x = 0; x < 72; x++)
+						if dados.quadros[x].Favoritos == "s"
+							//- p Como eu amo a bianquinha s2
+							div.col-md-4.imagem
+								h2= dados.quadros[x].Nome
+								p
+									.grid
+										figure.effect-zoe
+											a(href="http://localhost:52000/quadro/detalhado/"+dados.quadros[x].Código)
+												img(src=dados.quadros[x].Imagem)
+												figcaption
+													p.icon-links
+														a(href="#")
+															i.material-icons.small shopping_cart
+														a() 
+															i(id='cor'+dados.quadros[x].Código, data-id=dados.quadros[x].Código).material-icons.small.favorite star
+										div
+											h1 A partir de R$#{dados.quadros[x].Preço1}
+											p #{dados.quadros[x].Pagamento}
+					- for (var x = 0; x < 13; x++)
+						if dados.canecas[x].Favoritos == "s"
+							//- p Como eu amo a bianquinha s2
+							div.col-md-4.imagem
+								h2= dados.canecas[x].Nome
+								p
+									.grid
+										figure.effect-zoe
+											a(href="http://localhost:52000/caneca/detalhada/"+dados.canecas[x].Código)
+												img(src=dados.canecas[x].Imagem)
+												figcaption
+													p.icon-links
+														a(href="#")
+															i.material-icons.small shopping_cart
+														a() 
+															i(id='cor'+dados.canecas[x].Código, data-id=dados.canecas[x].Código).material-icons.small.favorite star
+										div
+											h1 A partir de R$#{dados.canecas[x].Preço1}
+											p #{dados.canecas[x].Pagamento}

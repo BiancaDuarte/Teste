@@ -59,5 +59,23 @@ head
 							span.iluria-cart-mini-button
 								a#update-quantity-button-2D79CF12797099(style='display:none' href="javascript: Iluria.inlineCart.updateQuantity('2D79CF',document.getElementById('2D79CFC4CB4B_quantity').value,  12797099);")
 									| confirmar
-
+									
+			- for (var x = 0; x < 72; x++)
+						if dados.quadros[x].Favoritos == "s"
+							div.col-md-4.imagem
+								h2= dados.quadros[x].Nome
+								p
+									.grid
+										figure.effect-zoe
+											a(href="http://localhost:52000/quadro/detalhado/"+dados.quadros[x].Código)
+												img(src=dados.quadros[x].Imagem)
+												figcaption
+													p.icon-links
+														a(href="#")
+															i.material-icons.small shopping_cart
+														a() 
+															i(id='cor'+dados.quadros[x].Código, data-id=dados.quadros[x].Código).material-icons.small.favorite star
+										div
+											h1 A partir de R$#{dados.quadros[x].Preço1}
+											p #{dados.quadros[x].Pagamento}
 					

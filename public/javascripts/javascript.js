@@ -31,6 +31,13 @@ function filtrocanecas(flto){//filtra as canecas
 
 $(document).ready(function () {
 
+$("#form").submit(function() {
+    if($("#campo").val()== null || $("#campo").val() ==""){
+        alert('campo vazio');      
+        return false;
+    }
+});
+
 $('#quadros').on('click', ".favorite", function(){
 	ID = $(this).data("id");
 	favoritos();

@@ -21,7 +21,7 @@ head
 		div.titulopromo
 			h2 Meu Carrinho
 		div.branco
-			table.cart(width='100%' cellspacing='0' cellpadding='5')
+			table(width='100%' cellspacing='0' cellpadding='5')
 				tbody
 					tr.cartHeader(valign='middle')
 						td.cart-dashed-line-border(colspan='2')
@@ -43,20 +43,25 @@ head
 									a.dropdown-button.btn(data-beloworigin='true', href='#', data-activates='dropdown1') Selecione o tamanho:
 									ul#dropdown1.dropdown-content
 										li
-											a#op1(data-id=dados.quadros[x].Preço1, data-estoque=dados.quadros[x].Estoque1).opcao #{dados.quadros[x].Tamanho1}
+											a#op1(data-preço=dados.quadros[x].Preço1, data-estoque=dados.quadros[x].Estoque1).opcao #{dados.quadros[x].Tamanho1}
 										li
-											a#op2(data-id=dados.quadros[x].Preço2, data-estoque=dados.quadros[x].Estoque2).opcao #{dados.quadros[x].Tamanho2}
+											a#op2(data-preço=dados.quadros[x].Preço2, data-estoque=dados.quadros[x].Estoque2).opcao #{dados.quadros[x].Tamanho2}
 										a(class="cart" data-id=dados.quadros[x].Código)
 										
-									button.cart(data-id= +dados.quadros[x].Código) Remover Carrinho
+									button.cart(data-id= +dados.quadros[x].Código)
+										i.material-icons delete
 
 								td.cart-dashed-line-border(width='100%')
 
 								td.cart-dashed-line-border(align='right')
 									span.productQuantity
-										input#2D79CFC4CB4B_quantity.productQuantityField(type='text' value='1' onkeydown="$('#shipping-info').hide(); $('#update-quantity-button-2D79CF12797099').show(); $('#cart-buttons').hide();")
+										a(data-quantidade=+dados.quadros[x].Código).btn-floating.btn-.waves-effect.waves-light.adiciona
+											i.material-icons fast_forward
+										a(data-quantidade=+dados.quadros[x].Código).btn-floating.btn-small.waves-effect.waves-light.remove
+											i.material-icons fast_rewind
+										input(id="quantidade"+dados.quadros[x].Código, type='text' value='1' readonly)
 										span.iluria-cart-mini-button
-											a#update-quantity-button-2D79CF12797099(style='display:none' href="javascript: Iluria.inlineCart.updateQuantity('2D79CF',document.getElementById('2D79CFC4CB4B_quantity').value,  12797099);")
+											a(style='display:none')
 												| Confirma
 
 								td.cart-dashed-line-border(width='100%')
@@ -76,24 +81,20 @@ head
 							td.cart-dashed-line-border(width='100%')
 								.nomeproduto #{dados.canecas[x].Nome}
 									.tamanhoproduto  #{dados.canecas[x].Capacidade}
-
-										script.
-											if(7 == 1)
-											$("#productShippingTime-1").text("7 dia útil");
-											else if(7 == 0)
-											$("#productShippingTime-1").text("mesmo dia");
-											else
-											$("#productShippingTime-1").text("7 dias úteis");      
-										.iluria-cart-mini-button
-											a(href="javascript: Iluria.inlineCart.removeFromCart('2D79CF', 12797099);")
-												| remover do carrinho
+								button.cart(data-id= +dados.canecas[x].Código) 
+									i.material-icons delete
 
 							td.cart-dashed-line-border(align='right')
 								span.productQuantity
-									input#2D79CFC4CB4B_quantity.productQuantityField(type='text' value='1' onkeydown="$('#shipping-info').hide(); $('#update-quantity-button-2D79CF12797099').show(); $('#cart-buttons').hide();")
+									a(data-quantidade=+dados.canecas[x].Código).btn-floating.btn-.waves-effect.waves-light.adiciona
+										i.material-icons fast_forward
+									a(data-quantidade=+dados.canecas[x].Código).btn-floating.btn-small.waves-effect.waves-light.remove
+										i.material-icons fast_rewind
+									input(id="quantidade"+dados.canecas[x].Código, type='text' value='1' readonly)
 									span.iluria-cart-mini-button
-										a#update-quantity-button-2D79CF12797099(style='display:none' href="javascript: Iluria.inlineCart.updateQuantity('2D79CF',document.getElementById('2D79CFC4CB4B_quantity').value,  12797099);")
-											| Confirmar
+										a(style='display:none')
+											| Confirma
+
 									
 			// - for (var x = 0; x < 72; x++)
 			// 			if dados.quadros[x].Favoritos == "s"

@@ -20,21 +20,23 @@ function contador(){
 	});
 }
 
-function carrinho(){// get do carrinho
-	$.ajax({
-		type: 'GET',
-		dataType: 'json',
-		url: carrinhoUrl+ID2,
-		success: function(result){
-			console.log('Produto adicionado com sucesso!');
-			contador();
-
-		},
-		error: function(status){
-			console.log('status');
-		}
+function contadorCarrinho(){
+	var counter2 = 0;
+	$.get(server, function(dados) {
+	for (var x = 0; x < 72; x++){
+		if(dados.quadros[x].Carrinho=="s")
+			counter2++;
+	}
+	for (var x = 0; x < 13; x++){
+		if(dados.canecas[x].Carrinho=="s")
+			counter2++;
+	}
+		$('#contador2').empty();
+		$('#contador2').append('<p>'+counter2+'</p>');
 	});
 }
+
+
 
 function filtroquadros(flt){//filtra os quadros
 	$('#quadros').empty();
@@ -62,6 +64,18 @@ function filtrocanecas(flto){//filtra as canecas
 }//
 
 $(document).ready(function () {
+
+	$('.adiciona').click(function(){
+		var quant = $(this).data("quantidade"); //pega o código do produto
+		mais(quant);//chama a função mais e soma "1" ao input
+	});
+
+	$('.remove').click(function(){
+		var quant = $(this).data("quantidade");
+		menos(quant);//diminui um valor do input
+	});
+
+	contadorCarrinho();
 
 $("#form").submit(function() {
     if($("#campo").val()== null || $("#campo").val() ==""){
@@ -97,6 +111,7 @@ $('#canecas').on('click', ".cart", function(){
 $('.cart').click(function() {
 	ID2 = $(this).data("id");
 	carrinho();
+	contadorCarrinho();
 });
 
 $('#txt-search').keyup(function(){
@@ -167,7 +182,7 @@ $('.dropdown-button').dropdown('close');
 	});
 
 	$('#dropdown1').on('click', '.opcao', function(){
-		var classe = $(this).data('id');
+		var classe = $(this).data('preço');
 		var estoque = $(this).data('estoque');
 		console.log(classe);
 		printPreço(classe);
@@ -187,7 +202,7 @@ $('.dropdown-button').dropdown('close');
 
 		$('#cor').toggleClass("vermelho");
 		ID = $(this).data("id");
-		console.log('id = '+ID); // id que pe usado no get dos favoritos
+		console.log('id = '+ID); // id que é usado no get dos favoritos
 		favoritos();
 	});
 });
@@ -236,25 +251,92 @@ function favoritos(){// get dos favoritos
 	});
 }
 
+function carrinho(){// get do carrinho
+	$.ajax({
+		type: 'GET',
+		dataType: 'json',
+		url: carrinhoUrl+ID2,
+		success: function(result){
+			console.log('Produto adicionado com sucesso!');
+			contadorCarrinho();
 
-// function trocacor(coraçao){
-// 	$('#cor').append('<i> '+vermelho+' </i>')
-// }
+		},
+		error: function(status){
+			console.log('status');
+		}
+	});
+}
 
-// function tudo(){
-// $.get(json, function(data) {
-//     for(var x=0; x<data.filmes.length; x++){
-//     	$('#imagem').append( '<img src='+data.filmes[x].Imagem+'>')
-//     	$('#informacoes').append('<h1>' +data.filmes[x].Nome+data.filmes[x].Preço1+data.filmes[x].Estoque1 + '</h1>'); 
-//     }
+function mais(cod){
+	$.get(server, function(dados) {
+		var count = $('#quantidade'+cod).val();
+		count++;
+		var flag2=0;
+		var codigoQuadro;
+		var codigoCaneca;
+		$('#quantidade'+cod).val(count);
 
-// });
-// };
+		for(i in dados.quadros){//varredura da posição do item no json verificando se é quadro
+			if(dados.quadros[i].Código == cod){
+				flag2 = 1;
+				codigoQuadro = i;
+			}
+		}
 
-// $.get(json, function(data) {
+		for(i in dados.canecas){//varredura da posição do item no json verificando se é caneca
+			if(dados.canecas[i].Código == cod){
+				flag2 = 2;
+				codigoCaneca = i;
+			}
+		}
 
-// });
+		if(flag2==1){//se for quadro, entra aqui, printando o preço
+			var preco = dados.quadros[codigoQuadro].Preço1 * count;
+			$('#total'+cod).empty();
+			$('#total'+cod).append(+preco);
+		}
+		else if(flag2==2){//se for caneca, entra aqui, printando o preço
+			var preco = dados.produtos[codigoCaneca].Preço1 * count;
+			$('#total'+cod).empty();
+			$('#total'+cod).append(+preco);
+		}
+		console.log(count);
+	});
+}
 
-// $("#").append(html);
-// $('#informacoes').append('<tr><td>'+data.filmes[x].Nome+'</td><td>'+data.filmes[x].Imagem+'</td><td>'+data.filmes[x].Preço1+'</td><td>'+data.filmes[x].Estoque+'</td>'+'</td></tr>');
+function menos(cod){
+	$.get(server, function(dados) {
+		var count = $('#quantidade'+cod).val();
+		count--;
+		var flag2=0;
+		var codigoQuadro;
+		var codigoCaneca;
+		if(count<1)//count nunca vai ser menor do que 1
+			count = 1;
+		$('#quantidade'+cod).val(count);
+		for(i in dados.quadros){
+			if(dados.quadros[i].Código == cod){
+				flag2 = 1;
+				codigoQuadro = i;
+			}
+		}
 
+		for(i in dados.canecas){
+			if(dados.canecas[i].Código == cod){
+				flag2 = 2;
+				codigoCaneca = i;
+			}
+		}
+		if(flag2==1){
+			var preco = dados.quadros[codigoQuadro].Preço1 * count;
+			$('#total'+cod).empty();
+			$('#total'+cod).append(+preco);
+		}
+		else if(flag2==2){
+			var preco = dados.produtos[codigoCaneca].Preço1 * count;
+			$('#total'+cod).empty();
+			$('#total'+cod).append(+preco);
+		}
+		console.log(count);
+	});
+}

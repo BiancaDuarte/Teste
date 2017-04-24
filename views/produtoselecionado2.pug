@@ -49,5 +49,5 @@ body
 					b Estoque:  #{dados.canecas[cod].Estoque1}
 
 				br
-				a.waves-effect.waves-light.btn-large Comprar
+				a.cart.waves-effect.waves-light.btn-large(data-id= +dados.canecas[cod].Código) Adicionar ao carrinho
 					i.material-icons.left shopping_cart

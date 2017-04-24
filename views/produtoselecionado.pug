@@ -38,16 +38,6 @@ body
 				h1 #{dados.quadros[cod].Nome}
 				div.informacoes.info
 					h3(id="preço") A partir de R$ #{dados.quadros[cod].Preço1}
-				.row
-					div.col-md-4
-					div.col-md-4
-						a.dropdown-button.btn(data-beloworigin='true', href='#', data-activates='dropdown1') Selecione o tamanho:
-						ul#dropdown1.dropdown-content
-							li
-								a#op1(data-id=dados.quadros[cod].Preço1, data-estoque=dados.quadros[cod].Estoque1).opcao #{dados.quadros[cod].Tamanho1}
-							li
-								a#op2(data-id=dados.quadros[cod].Preço2, data-estoque=dados.quadros[cod].Estoque2).opcao #{dados.quadros[cod].Tamanho2}
-					div.col-md-4
 
 				div.dados
 					b Moldura: 

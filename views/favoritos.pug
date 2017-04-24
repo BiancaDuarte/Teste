@@ -34,13 +34,14 @@ html
 												img(src=dados.quadros[x].Imagem)
 												figcaption
 													p.icon-links
-														a(href="#")
+														a()
 															i.material-icons.small shopping_cart
 														a() 
 															i(id='cor'+dados.quadros[x].Código, data-id=dados.quadros[x].Código).material-icons.small.favorite star
 										div
 											h1 A partir de R$#{dados.quadros[x].Preço1}
 											p #{dados.quadros[x].Pagamento}
+					
 					- for (var x = 0; x < 13; x++)
 						if dados.canecas[x].Favoritos == "s"
 							div.col-md-4.imagem
@@ -52,8 +53,8 @@ html
 												img(src=dados.canecas[x].Imagem)
 												figcaption
 													p.icon-links
-														a(href="#")
-															i.material-icons.small shopping_cart
+														a()
+															i(data-id= +dados.canecas[x].Código).cart.material-icons.small shopping_cart
 														a() 
 															i(id='cor'+dados.canecas[x].Código, data-id=dados.canecas[x].Código).material-icons.small.favorite star
 										div

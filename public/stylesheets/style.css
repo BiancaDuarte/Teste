@@ -561,3 +561,13 @@ a {
   text-decoration: none;
   color: black;
 }
+.nomeproduto {
+  text-align: left;
+  font-family: 'Farsan', cursive;
+  font-size: 23px;
+}
+.cartHeader {
+  text-align: center;
+  font-family: 'Farsan', cursive;
+  font-size: 40px;
+}

@@ -21,97 +21,88 @@ head
 		div.titulopromo
 			h2 Meu Carrinho
 		div.branco
-			table(width='100%' cellspacing='0' cellpadding='5')
-				tbody
-					tr.cartHeader(valign='middle')
-						td.cart-dashed-line-border(colspan='2')
-							| Produto
-						td.cart-dashed-line-border(width='90px', align='right')
-							| Quantidade
-						td.cart-dashed-line-border.cart-item-unit-price(width='110px' align='right')
-							| Valor unit&aacute;rio
-						td.cart-dashed-line-border.cart-item-total-price(width='90px' align='right')
-							| Valor total
+			table.table.table-hover(border='1')
+				thead
+					tr
+						th Produto
+						th Nome
+						th
+						th
+						th Valor Unitário
+						th
+						th Quantidade
+						th
+						th
+						th Subtotal
+
 				- for (var x = 0; x < 72; x++)
 						if dados.quadros[x].Carrinho == "s"
 							tr(valign='top', align='left')
 								td.cart-dashed-line-border(width='55px' align='left')
-									a(href='/pd-2D79CF.html')
-										img.imageBorder(width='55' src=dados.quadros[x].Imagem)
-								td.cart-dashed-line-border(width='100%')
-									.nomeproduto #{dados.quadros[x].Nome}
-									a.dropdown-button.btn(data-beloworigin='true', href='#', data-activates='dropdown1') Selecione o tamanho:
+									a(href="http://localhost:52000/quadro/detalhado/"+dados.quadros[x].Código)
+										img.imageBorder(width='120' src=dados.quadros[x].Imagem)
+								td.cart-dashed-line-border
+									.nomeproduto Quadro #{dados.quadros[x].Nome}
+									button.cart(data-id= +dados.quadros[x].Código)
+										i.material-icons.small delete
+								td.cart-dashed-line-border
+									a.dropdown-button.btn(data-beloworigin='true', href='#', data-activates='dropdown1') Tamanho:
 									ul#dropdown1.dropdown-content
 										li
 											a#op1(data-preço=dados.quadros[x].Preço1, data-estoque=dados.quadros[x].Estoque1).opcao #{dados.quadros[x].Tamanho1}
 										li
 											a#op2(data-preço=dados.quadros[x].Preço2, data-estoque=dados.quadros[x].Estoque2).opcao #{dados.quadros[x].Tamanho2}
 										a(class="cart" data-id=dados.quadros[x].Código)
-										
-									button.cart(data-id= +dados.quadros[x].Código)
-										i.material-icons delete
+									th.cart-dashed-line-border(align='right')
 
-								td.cart-dashed-line-border(width='100%')
-
-								td.cart-dashed-line-border(align='right')
-									span.productQuantity
-										a(data-quantidade=+dados.quadros[x].Código).btn-floating.btn-.waves-effect.waves-light.adiciona
-											i.material-icons fast_forward
-										a(data-quantidade=+dados.quadros[x].Código).btn-floating.btn-small.waves-effect.waves-light.remove
-											i.material-icons fast_rewind
-										input(id="quantidade"+dados.quadros[x].Código, type='text' value='1' readonly)
-										span.iluria-cart-mini-button
-											a(style='display:none')
-												| Confirma
-
-								td.cart-dashed-line-border(width='100%')
+								th.cart-dashed-line-border(align='right')
 									.nomeproduto 
 										p(id="preço") R$ #{dados.quadros[x].Preço1}
-								td.cart-dashed-line-border(width='100%')
-									.nomeproduto #{dados.quadros[x].Preço1}
+
+									span.productQuantity
+								th.cart-dashed-line-border(align='right')
+									a(data-quantidade=+dados.quadros[x].Código).btn-floating.btn-small.waves-effect.waves-light.remove
+										i.material-icons remove
+								th.cart-dashed-line-border(align='right')
+									input(id="quantidade"+dados.quadros[x].Código, type='text' value='1' readonly)
+								th.cart-dashed-line-border(align='right')
+									a(data-quantidade=+dados.quadros[x].Código).btn-floating.btn-.waves-effect.waves-light.adiciona
+										i.material-icons add
+
+								th.cart-dashed-line-border(align='right')
+								th.cart-dashed-line-border(align='right')
+									.nomeproduto(id='total'+dados.quadros[x].Código) #{dados.quadros[x].Preço1}
+
 
 
 				- for (var x = 0; x < 13; x++)
 					if dados.canecas[x].Carrinho == "s"
 						tr(valign='top', align='left')
 							td.cart-dashed-line-border(width='55px' align='left')
-								a(href='/pd-2D79CF.html')
-									img.imageBorder(width='55' src=dados.canecas[x].Imagem)
-
-							td.cart-dashed-line-border(width='100%')
+								a(href="http://localhost:52000/caneca/detalhada/"+dados.canecas[x].Código)
+									img.imageBorder(width='120' src=dados.canecas[x].Imagem)
+							td.cart-dashed-line-border
 								.nomeproduto #{dados.canecas[x].Nome}
-									.tamanhoproduto  #{dados.canecas[x].Capacidade}
-								button.cart(data-id= +dados.canecas[x].Código) 
-									i.material-icons delete
+									.nomeproduto Capacidade: #{dados.canecas[x].Capacidade}
+								button.cart(data-id= +dados.canecas[x].Código)
+									i.material-icons.small delete
+							th.cart-dashed-line-border(align='right')
 
-							td.cart-dashed-line-border(align='right')
+							th.cart-dashed-line-border(align='right')
+							th.cart-dashed-line-border(align='right')
+								.nomeproduto 
+									p R$ #{dados.canecas[x].Preço1}
 								span.productQuantity
-									a(data-quantidade=+dados.canecas[x].Código).btn-floating.btn-.waves-effect.waves-light.adiciona
-										i.material-icons fast_forward
-									a(data-quantidade=+dados.canecas[x].Código).btn-floating.btn-small.waves-effect.waves-light.remove
-										i.material-icons fast_rewind
-									input(id="quantidade"+dados.canecas[x].Código, type='text' value='1' readonly)
-									span.iluria-cart-mini-button
-										a(style='display:none')
-											| Confirma
 
-									
-			// - for (var x = 0; x < 72; x++)
-			// 			if dados.quadros[x].Favoritos == "s"
-			// 				div.col-md-4.imagem
-			// 					h2= dados.quadros[x].Nome
-			// 					p
-			// 						.grid
-			// 							figure.effect-zoe
-			// 								a(href="http://localhost:52000/quadro/detalhado/"+dados.quadros[x].Código)
-			// 									img(src=dados.quadros[x].Imagem)
-			// 									figcaption
-			// 										p.icon-links
-			// 											a(href="#")
-			// 												i.material-icons.small shopping_cart
-			// 											a() 
-			// 												i(id='cor'+dados.quadros[x].Código, data-id=dados.quadros[x].Código).material-icons.small.favorite star
-			// 							div
-			// 								h1 A partir de R$#{dados.quadros[x].Preço1}
-			// 								p #{dados.quadros[x].Pagamento}
-			// 		
+							th.cart-dashed-line-border(align='right')
+								a(data-quantidade=+dados.canecas[x].Código).btn-floating.btn-small.waves-effect.waves-light.remove
+									i.material-icons remove
+							th.cart-dashed-line-border(align='right')
+								input(id="quantidade"+dados.canecas[x].Código, type='text' value='1' readonly)
+							th.cart-dashed-line-border(align='right')
+								a(data-quantidade=+dados.canecas[x].Código).btn-floating.btn-.waves-effect.waves-light.adiciona
+									i.material-icons add
+							th.cart-dashed-line-border(align='right')
+
+							th.cart-dashed-line-border(align='right')
+								.nomeproduto(id='total'+dados.canecas[x].Código) #{dados.canecas[x].Preço1}

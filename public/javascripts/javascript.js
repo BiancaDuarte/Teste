@@ -4,7 +4,7 @@ var carrinhoUrl = 'http://localhost:52000/carrinho/';
 var troca=0, ID;
 
 
-function contador(){
+function contador(){//altera o número da contagem de favoritos no menu superior
 	var counter = 0;
 	$.get(server, function(dados) {
 	for (var x = 0; x < 72; x++){
@@ -20,7 +20,7 @@ function contador(){
 	});
 }
 
-function contadorCarrinho(){
+function contadorCarrinho(){//altera o número da contagem de itens no carrinho no menu superior
 	var counter2 = 0;
 	$.get(server, function(dados) {
 	for (var x = 0; x < 72; x++){
@@ -75,7 +75,7 @@ $(document).ready(function () {
 		menos(quant);//diminui um valor do input
 	});
 
-	contadorCarrinho();
+
 
 $("#form").submit(function() {
     if($("#campo").val()== null || $("#campo").val() ==""){
@@ -193,7 +193,7 @@ $('.dropdown-button').dropdown('close');
 	var favorites = [];
 	var counter = 0;
 
-
+	contadorCarrinho();
 	contador();
 
 	$('.favorite').click(function() {
@@ -205,6 +205,7 @@ $('.dropdown-button').dropdown('close');
 		console.log('id = '+ID); // id que é usado no get dos favoritos
 		favoritos();
 	});
+
 });
 
 function printQuadros(){//printar json/quadros no catalogo-quadros
@@ -296,11 +297,10 @@ function mais(cod){
 			$('#total'+cod).append(+preco);
 		}
 		else if(flag2==2){//se for caneca, entra aqui, printando o preço
-			var preco = dados.produtos[codigoCaneca].Preço1 * count;
+			var preco = dados.canecas[codigoCaneca].Preço1 * count;
 			$('#total'+cod).empty();
 			$('#total'+cod).append(+preco);
 		}
-		console.log(count);
 	});
 }
 
@@ -333,7 +333,7 @@ function menos(cod){
 			$('#total'+cod).append(+preco);
 		}
 		else if(flag2==2){
-			var preco = dados.produtos[codigoCaneca].Preço1 * count;
+			var preco = dados.canecas[codigoCaneca].Preço1 * count;
 			$('#total'+cod).empty();
 			$('#total'+cod).append(+preco);
 		}

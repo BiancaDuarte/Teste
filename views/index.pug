@@ -27,18 +27,18 @@ block content
 					#conteudo
 					each val in [9, 25, 35, 38, 47, 64]
 						div.col-md-4.imagem
-								h2= dados.quadros[val].Nome
-									p
-										.grid
-											figure.effect-zoe
-												a(href="http://localhost:52000/quadro/detalhado/"+dados.quadros[val].Código)
-													img(src=dados.quadros[val].Imagem)
-													figcaption
-														p.icon-links
-															a(href="#" )
-																i.material-icons.small shopping_cart
-															a(href="#") 
-																i.material-icons.small star
-											div
-												h1 A partir de R$#{dados.quadros[val].Preço1}
-												p #{dados.quadros[val].Pagamento}
+							h2= dados.quadros[val].Nome
+							p
+								.grid
+									figure.effect-zoe
+										a(href="http://localhost:52000/quadro/detalhado/"+dados.quadros[val].Código)
+											img(src=dados.quadros[val].Imagem)
+											figcaption
+												p.icon-links
+													a()
+														i(data-id= +dados.quadros[val].Código).cart.material-icons.small shopping_cart
+													a() 
+														i(id='cor'+dados.quadros[val].Código, data-id=dados.quadros[val].Código).material-icons.small.favorite star
+									div
+										h1 A partir de R$#{dados.quadros[val].Preço1}
+										p #{dados.quadros[val].Pagamento}

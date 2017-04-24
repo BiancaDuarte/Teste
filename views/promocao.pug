@@ -24,7 +24,7 @@ html
 			div.container
 				div.row
 					- for (var x = 0; x < 72; x++)
-						if dados.quadros[x].promo == "s"
+						if dados.quadros[x].Promo == "s"
 							//- p Como eu amo a bianquinha s2
 							div.col-md-4.imagem
 								h2= dados.quadros[x].Nome
@@ -35,8 +35,8 @@ html
 												img(src=dados.quadros[x].Imagem)
 												figcaption
 													p.icon-links
-														a(href="#")
-															i.material-icons.small shopping_cart
+														a()
+															i(data-id= +dados.quadros[x].Código).cart.material-icons.small shopping_cart
 														a() 
 															i(id='cor'+dados.quadros[x].Código, data-id=dados.quadros[x].Código).material-icons.small.favorite star
 										div

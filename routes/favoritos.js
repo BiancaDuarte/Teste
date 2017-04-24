@@ -38,27 +38,61 @@ router.get('/:cod', function(req, res, next){
 		}
 
 		if(flag==1){
-			var produto = data.quadros[posicao];
-			produto.Favoritos = "s";
-			console.log(produto);
-			data.quadros.splice(posicao, 1);
+			if(data.quadros[posicao].Favoritos=="n"){
+				var produto = data.quadros[posicao];
+				produto.Favoritos = "s";
+				console.log(produto);
+				data.quadros.splice(posicao, 1);
 
-			data.quadros.push(produto);
+				data.quadros.push(produto);
 
-			var dataJson = JSON.stringify(data);
-			file.write(dataJson, res);
+				var dataJson = JSON.stringify(data);
+				file.write(dataJson, res);
+			}
 		}
 
 		if(flag==2){
-			var produto = data.canecas[posicao];
-			produto.Favoritos = "s";
-			console.log(produto);
-			data.canecas.splice(posicao, 1);
+			if(data.canecas[posicao].Favoritos=="n"){
+				var produto = data.canecas[posicao];
+				produto.Favoritos = "s";
+				console.log(produto);
+				data.canecas.splice(posicao, 1);
 
-			data.canecas.push(produto);
+				data.canecas.push(produto);
 
-			var dataJson = JSON.stringify(data);
-			file.write(dataJson, res);
+				var dataJson = JSON.stringify(data);
+				file.write(dataJson, res);
+			}
+		}
+		
+		if(flag==1){
+			if(data.quadros[posicao].Favoritos=="s"){
+				var produto = data.quadros[posicao];
+				produto.Favoritos = "n";
+				console.log(produto);
+				data.quadros.splice(posicao, 1);
+
+				data.quadros.push(produto);
+
+				var dataJson = JSON.stringify(data);
+				file.write(dataJson, res);
+				console.log('Excluido com sucesso');
+			}
+		}
+
+		if(flag==2){
+			if(data.canecas[posicao].Favoritos=="s"){
+				var produto = data.canecas[posicao];
+				produto.Favoritos = "n";
+				console.log(produto);
+				data.canecas.splice(posicao, 1);
+
+				data.canecas.push(produto);
+
+				var dataJson = JSON.stringify(data);
+				file.write(dataJson, res);
+				console.log('Excluido com sucesso');
+			}
 		}
 
 

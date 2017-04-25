@@ -44,7 +44,7 @@ function filtroquadros(flt){//filtra os quadros
 	$.get('/dados', function(data) {
 	for (x in data.quadros) {
 		if (data.quadros[x].Nome.search(regex) != -1){
-			$('#quadros').append('<div class="col-md-4 imagem"><h2>'+data.quadros[x].Nome+'</h2><p><div class="grid"><figure class="effect-zoe"><a href="http://localhost:52000/quadro/detalhado/'+data.quadros[x].Código+'"><img src='+data.quadros[x].Imagem+'><figcaption><p class="icon-links"><a><i class="material-icons small"> shopping_cart</i></a><a><i class="material-icons small"> star</i></a></p></figcaption></a></figure><div><h1>A partir de R$ '+data.quadros[x].Preço1+'</h1><p>'+data.quadros[x].Pagamento+'</p></div></div></p></div>');
+			$('#quadros').append('<div class="col-md-4 imagem"><h2>'+data.quadros[x].Nome+'</h2><p><div class="grid"><figure class="effect-zoe"><a href="http://localhost:52000/quadro/detalhado/'+data.quadros[x].Código+'"><img src='+data.quadros[x].Imagem+'><figcaption><p class="icon-links"><a><i data-id='+data.quadros[x].Código+' class="cart material-icons small"> shopping_cart</i></a><a><i id="cor'+data.quadros[x].Código+'" class="material-icons small favorite" data-id='+data.quadros[x].Código+'> star</i></a></p></figcaption></a></figure><div><h1>A partir de R$ '+data.quadros[x].Preço1+'</h1><p>'+data.quadros[x].Pagamento+'</p></div></div></p></div>');
 		}
 	
 	}	
@@ -57,7 +57,7 @@ function filtrocanecas(flto){//filtra as canecas
 	$.get('/dados', function(data) {
 	for (x in data.canecas) {
 		if (data.canecas[x].Nome.search(regex) != -1){
-			$('#canecas').append('<div class="col-md-4 imagem"><h2>'+data.canecas[x].Nome+'</h2><p><div class="grid"><figure class="effect-zoe"><a href="http://localhost:52000/caneca/detalhada/'+data.canecas[x].Código+'"><img src='+data.canecas[x].Imagem+'><figcaption><p class="icon-links"><a><i class="material-icons small"> shopping_cart</i></a><a><i class="material-icons small"> star</i></a></p></figcaption></a></figure><div><h1>A partir de R$ '+data.canecas[x].Preço1+'</h1><p>'+data.canecas[x].Pagamento+'</p></div></div></p></div>');
+			$('#canecas').append('<div class="col-md-4 imagem"><h2>'+data.canecas[x].Nome+'</h2><p><div class="grid"><figure class="effect-zoe"><a href="http://localhost:52000/caneca/detalhada/'+data.canecas[x].Código+'"><img src='+data.canecas[x].Imagem+'><figcaption>	<p class="icon-links"><a><i data-id='+data.canecas[x].Código+' class="cart material-icons small"> shopping_cart</i></a><a><i id="cor'+data.canecas[x].Código+'" data-id='+data.canecas[x].Código+' class="material-icons small favorite" id="estrela"> star</i></a></p></figcaption></a></figure><div><h1>A partir de R$ '+data.canecas[x].Preço1+'</h1><p>'+data.canecas[x].Pagamento+'</p></div></div></p></div>');
 		}
 	}	
 	});
@@ -184,8 +184,9 @@ $('.dropdown-button').dropdown('close');
 	$('#dropdown1').on('click', '.opcao', function(){
 		var classe = $(this).data('preço');
 		var estoque = $(this).data('estoque');
+		var cod = $(this).data('cod');
 		console.log(classe);
-		printPreço(classe);
+		printPreço(classe, cod);
 		printEstoque(estoque);
 	});
 
@@ -226,9 +227,9 @@ function printCanecas(){//printar json/canecas no catalogo-canecas
 	});
 }
 
-function printPreço(classe){//troca de preço no item selecionado
-	$('#preço').empty();
-	$('#preço').append('<p> R$ '+classe+'</p>');
+function printPreço(classe, cod){//troca de preço no item selecionado
+	$('#preço'+cod).empty();
+	$('#preço'+cod).append('<p> R$ '+classe+'</p>');
 }
 
 function printEstoque(estoque){//troca de estoque no item selecionado

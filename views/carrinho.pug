@@ -33,7 +33,7 @@ head
 						th Quantidade
 						th
 						th
-						th Subtotal
+						th Subtotal (R$)
 
 				- for (var x = 0; x < 72; x++)
 						if dados.quadros[x].Carrinho == "s"
@@ -45,19 +45,17 @@ head
 									.nomeproduto Quadro #{dados.quadros[x].Nome}
 									button.cart(data-id= +dados.quadros[x].Código)
 										i.material-icons.small delete
-								td.cart-dashed-line-border
-									a.dropdown-button.btn(data-beloworigin='true', href='#', data-activates='dropdown1') Tamanho:
+								td.cart-dashed-line-borders
+									a.dropdown-button.btn(data-beloworigin='true', href='', data-activates='dropdown1') Tamanho:
 									ul#dropdown1.dropdown-content
 										li
-											a#op1(data-preço=dados.quadros[x].Preço1, data-estoque=dados.quadros[x].Estoque1).opcao #{dados.quadros[x].Tamanho1}
-										li
-											a#op2(data-preço=dados.quadros[x].Preço2, data-estoque=dados.quadros[x].Estoque2).opcao #{dados.quadros[x].Tamanho2}
-										a(class="cart" data-id=dados.quadros[x].Código)
-									th.cart-dashed-line-border(align='right')
+											a#op1(data-preço=dados.quadros[x].Preço1, data-cod=dados.quadros[x].Código, data-estoque=dados.quadros[x].Estoque1).opcao #{dados.quadros[x].Tamanho1}
+									a(class="cart" data-id=dados.quadros[x].Código)
+								th.cart-dashed-line-border(align='right')
 
 								th.cart-dashed-line-border(align='right')
-									.nomeproduto 
-										p(id="preço") R$ #{dados.quadros[x].Preço1}
+									.nomeproduto
+										p(id='preço'+dados.quadros[x].Código) R$ #{dados.quadros[x].Preço1}
 
 									span.productQuantity
 								th.cart-dashed-line-border(align='right')
@@ -83,10 +81,10 @@ head
 									img.imageBorder(width='120' src=dados.canecas[x].Imagem)
 							td.cart-dashed-line-border
 								.nomeproduto #{dados.canecas[x].Nome}
-									.nomeproduto Capacidade: #{dados.canecas[x].Capacidade}
 								button.cart(data-id= +dados.canecas[x].Código)
 									i.material-icons.small delete
 							th.cart-dashed-line-border(align='right')
+								.nomeproduto Capacidade: #{dados.canecas[x].Capacidade}
 
 							th.cart-dashed-line-border(align='right')
 							th.cart-dashed-line-border(align='right')
@@ -106,3 +104,17 @@ head
 
 							th.cart-dashed-line-border(align='right')
 								.nomeproduto(id='total'+dados.canecas[x].Código) #{dados.canecas[x].Preço1}
+
+				table.table.table-hover(border='1')
+					thead
+						tr
+							th 
+							th 
+							th
+							th
+							th 
+							th
+							th 
+							th
+							th
+							th Total:

@@ -25,6 +25,7 @@ html
 				div.row
 					- for (var x = 0; x < 72; x++)
 						if dados.quadros[x].Favoritos == "s"
+							//- p Como eu amo a bianquinha s2
 							div.col-md-4.imagem
 								h2= dados.quadros[x].Nome
 								p
@@ -35,7 +36,7 @@ html
 												figcaption
 													p.icon-links
 														a()
-															i.material-icons.small shopping_cart
+															i(data-id= +dados.quadros[x].Código).cart.material-icons.small shopping_cart
 														a() 
 															i(id='cor'+dados.quadros[x].Código, data-id=dados.quadros[x].Código).material-icons.small.favorite star
 										div

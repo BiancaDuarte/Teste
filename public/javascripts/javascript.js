@@ -1,6 +1,6 @@
-var server = 'http://localhost:52000/dados';
-var fav = 'http://localhost:52000/favoritos/';
-var carrinhoUrl = 'http://localhost:52000/carrinho/';
+var server = 'http://localhost:54000/dados';
+var fav = 'http://localhost:54000/favoritos/';
+var carrinhoUrl = 'http://localhost:54000/carrinho/';
 var troca=0, ID;
 
 
@@ -44,7 +44,7 @@ function filtroquadros(flt){//filtra os quadros
 	$.get('/dados', function(data) {
 	for (x in data.quadros) {
 		if (data.quadros[x].Nome.search(regex) != -1){
-			$('#quadros').append('<div class="col-md-4 imagem"><h2>'+data.quadros[x].Nome+'</h2><p><div class="grid"><figure class="effect-zoe"><a href="http://localhost:52000/quadro/detalhado/'+data.quadros[x].Código+'"><img src='+data.quadros[x].Imagem+'><figcaption><p class="icon-links"><a><i data-id='+data.quadros[x].Código+' class="cart material-icons small"> shopping_cart</i></a><a><i id="cor'+data.quadros[x].Código+'" class="material-icons small favorite" data-id='+data.quadros[x].Código+'> star</i></a></p></figcaption></a></figure><div><h1>A partir de R$ '+data.quadros[x].Preço1+'</h1><p>'+data.quadros[x].Pagamento+'</p></div></div></p></div>');
+			$('#quadros').append('<div class="col-md-4 imagem"><h2>'+data.quadros[x].Nome+'</h2><p><div class="grid"><figure class="effect-zoe"><a href="http://localhost:54000/quadro/detalhado/'+data.quadros[x].Código+'"><img src='+data.quadros[x].Imagem+'><figcaption><p class="icon-links"><a><i data-id='+data.quadros[x].Código+' class="cart material-icons small"> shopping_cart</i></a><a><i id="cor'+data.quadros[x].Código+'" class="material-icons small favorite" data-id='+data.quadros[x].Código+'> star</i></a></p></figcaption></a></figure><div><h1>A partir de R$ '+data.quadros[x].Preço1+'</h1><p>'+data.quadros[x].Pagamento+'</p></div></div></p></div>');
 		}
 	
 	}	
@@ -57,7 +57,7 @@ function filtrocanecas(flto){//filtra as canecas
 	$.get('/dados', function(data) {
 	for (x in data.canecas) {
 		if (data.canecas[x].Nome.search(regex) != -1){
-			$('#canecas').append('<div class="col-md-4 imagem"><h2>'+data.canecas[x].Nome+'</h2><p><div class="grid"><figure class="effect-zoe"><a href="http://localhost:52000/caneca/detalhada/'+data.canecas[x].Código+'"><img src='+data.canecas[x].Imagem+'><figcaption>	<p class="icon-links"><a><i data-id='+data.canecas[x].Código+' class="cart material-icons small"> shopping_cart</i></a><a><i id="cor'+data.canecas[x].Código+'" data-id='+data.canecas[x].Código+' class="material-icons small favorite" id="estrela"> star</i></a></p></figcaption></a></figure><div><h1>A partir de R$ '+data.canecas[x].Preço1+'</h1><p>'+data.canecas[x].Pagamento+'</p></div></div></p></div>');
+			$('#canecas').append('<div class="col-md-4 imagem"><h2>'+data.canecas[x].Nome+'</h2><p><div class="grid"><figure class="effect-zoe"><a href="http://localhost:54000/caneca/detalhada/'+data.canecas[x].Código+'"><img src='+data.canecas[x].Imagem+'><figcaption>	<p class="icon-links"><a><i data-id='+data.canecas[x].Código+' class="cart material-icons small"> shopping_cart</i></a><a><i id="cor'+data.canecas[x].Código+'" data-id='+data.canecas[x].Código+' class="material-icons small favorite" id="estrela"> star</i></a></p></figcaption></a></figure><div><h1>A partir de R$ '+data.canecas[x].Preço1+'</h1><p>'+data.canecas[x].Pagamento+'</p></div></div></p></div>');
 		}
 	}	
 	});
@@ -134,7 +134,7 @@ $('#txt-search').keyup(function(){
 				var nome = categorias[y].Nome;
 					if (nome.search(regex) != -1){
 						resultados += '<div class="col-md-12 well">';
-						resultados += '<div class="col-md-3"><img class="img-responsive" src="'+categorias[y].Imagem+'" alt="'+ categorias[y].Nome +'" /></div> <a href="http://localhost:52000/quadro/detalhado/'+categorias[y].Código+'">';
+						resultados += '<div class="col-md-3"><img class="img-responsive" src="'+categorias[y].Imagem+'" alt="'+ categorias[y].Nome +'" /></div> <a href="http://localhost:54000/quadro/detalhado/'+categorias[y].Código+'">';
 						resultados += '<div class="col-md-7">';
 						resultados += '<h5>' + nome + '</h5>';
 						resultados += '<h3> A partir de R$ ' + categorias[y].Preço1 + '</h3>'
@@ -213,7 +213,7 @@ function printQuadros(){//printar json/quadros no catalogo-quadros
 	$('#quadros').empty();
 	$.get(server, function(dados) {
 		for (var x = 0; x < 72; x++){
-				$('#quadros').append('<div id="'+dados.quadros[x].Código+'" class="col-md-4 imagem"><h2>'+dados.quadros[x].Nome+'</h2><p><div class="grid"><figure class="effect-zoe"><a data-id="'+dados.quadros[x].Código+'" href="http://localhost:52000/quadro/detalhado/'+dados.quadros[x].Código+'"><img src='+dados.quadros[x].Imagem+'><figcaption><p class="icon-links"><a><i data-id='+dados.quadros[x].Código+' class="cart material-icons small"> shopping_cart</i></a><a><i id="cor'+dados.quadros[x].Código+'" class="material-icons small favorite" data-id='+dados.quadros[x].Código+'> star</i></a></p></figcaption></a></figure><div><h1>A partir de R$ '+dados.quadros[x].Preço1+'</h1><p>'+dados.quadros[x].Pagamento+'</p></div></div></p></div>');
+				$('#quadros').append('<div id="'+dados.quadros[x].Código+'" class="col-md-4 imagem"><h2>'+dados.quadros[x].Nome+'</h2><p><div class="grid"><figure class="effect-zoe"><a data-id="'+dados.quadros[x].Código+'" href="http://localhost:54000/quadro/detalhado/'+dados.quadros[x].Código+'"><img src='+dados.quadros[x].Imagem+'><figcaption><p class="icon-links"><a><i data-id='+dados.quadros[x].Código+' class="cart material-icons small"> shopping_cart</i></a><a><i id="cor'+dados.quadros[x].Código+'" class="material-icons small favorite" data-id='+dados.quadros[x].Código+'> star</i></a></p></figcaption></a></figure><div><h1>A partir de R$ '+dados.quadros[x].Preço1+'</h1><p>'+dados.quadros[x].Pagamento+'</p></div></div></p></div>');
 		}
 	});
 }
@@ -222,7 +222,7 @@ function printCanecas(){//printar json/canecas no catalogo-canecas
 	$('#canecas').empty();
 	$.get(server, function(dados) {
 		for (var x = 0; x < 13; x++){
-				$('#canecas').append('<div class="col-md-4 imagem"><h2>'+dados.canecas[x].Nome+'</h2><p><div class="grid"><figure class="effect-zoe"><a data-id="'+dados.canecas[x].Código+'" href="http://localhost:52000/caneca/detalhada/'+dados.canecas[x].Código+'"><img src='+dados.canecas[x].Imagem+'><figcaption>	<p class="icon-links"><a><i data-id='+dados.canecas[x].Código+' class="cart material-icons small"> shopping_cart</i></a><a><i id="cor'+dados.canecas[x].Código+'" data-id='+dados.canecas[x].Código+' class="material-icons small favorite" id="estrela"> star</i></a></p></figcaption></a></figure><div><h1>A partir de R$ '+dados.canecas[x].Preço1+'</h1><p>'+dados.canecas[x].Pagamento+'</p></div></div></p></div>');
+				$('#canecas').append('<div class="col-md-4 imagem"><h2>'+dados.canecas[x].Nome+'</h2><p><div class="grid"><figure class="effect-zoe"><a data-id="'+dados.canecas[x].Código+'" href="http://localhost:54000/caneca/detalhada/'+dados.canecas[x].Código+'"><img src='+dados.canecas[x].Imagem+'><figcaption>	<p class="icon-links"><a><i data-id='+dados.canecas[x].Código+' class="cart material-icons small"> shopping_cart</i></a><a><i id="cor'+dados.canecas[x].Código+'" data-id='+dados.canecas[x].Código+' class="material-icons small favorite" id="estrela"> star</i></a></p></figcaption></a></figure><div><h1>A partir de R$ '+dados.canecas[x].Preço1+'</h1><p>'+dados.canecas[x].Pagamento+'</p></div></div></p></div>');
 		}
 	});
 }

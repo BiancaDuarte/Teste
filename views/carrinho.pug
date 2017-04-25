@@ -39,7 +39,7 @@ head
 						if dados.quadros[x].Carrinho == "s"
 							tr(valign='top', align='left')
 								td.cart-dashed-line-border(width='55px' align='left')
-									a(href="http://localhost:52000/quadro/detalhado/"+dados.quadros[x].Código)
+									a(href="http://localhost:54000/quadro/detalhado/"+dados.quadros[x].Código)
 										img.imageBorder(width='120' src=dados.quadros[x].Imagem)
 								td.cart-dashed-line-border
 									.nomeproduto Quadro #{dados.quadros[x].Nome}
@@ -77,7 +77,7 @@ head
 					if dados.canecas[x].Carrinho == "s"
 						tr(valign='top', align='left')
 							td.cart-dashed-line-border(width='55px' align='left')
-								a(href="http://localhost:52000/caneca/detalhada/"+dados.canecas[x].Código)
+								a(href="http://localhost:54000/caneca/detalhada/"+dados.canecas[x].Código)
 									img.imageBorder(width='120' src=dados.canecas[x].Imagem)
 							td.cart-dashed-line-border
 								.nomeproduto #{dados.canecas[x].Nome}

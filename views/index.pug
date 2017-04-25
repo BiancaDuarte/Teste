@@ -9,9 +9,9 @@ block promo
 		// Carousel items
 		.carousel-inner
 			.active.item
-				a(href="http://localhost:52000/promocao"): img(src='/images/promoquadros.png')       
+				a(href="http://localhost:54000/promocao"): img(src='/images/promoquadros.png')       
 			.item
-				a(href="http://localhost:52000/canecas"): img(src='/images/promoçãocaneca.jpg')           
+				a(href="http://localhost:54000/canecas"): img(src='/images/promoçãocaneca.jpg')           
 			
 			// Carousel nav
 			a.carousel-control.left(href='#myCarousel', data-slide='prev') &lsaquo;      
@@ -31,7 +31,7 @@ block content
 							p
 								.grid
 									figure.effect-zoe
-										a(href="http://localhost:52000/quadro/detalhado/"+dados.quadros[val].Código)
+										a(href="http://localhost:54000/quadro/detalhado/"+dados.quadros[val].Código)
 											img(src=dados.quadros[val].Imagem)
 											figcaption
 												p.icon-links
